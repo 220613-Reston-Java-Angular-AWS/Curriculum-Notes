@@ -42,7 +42,8 @@ In order to run Java code on a machine, the **JRE** or **Java Runtime Environmen
 To develop Java applications you need the **JDK**, or **Java Development Kit**. The JDK provides developer tools like a compiler, debugger, documentation tools (javadoc), and other command-line utilities. The JDK also includes the JRE, and by extension the JVM, so when you write your code you can compile and run it as well. 
   
   
-<div align="center"><img src="./../Documents/JDK_JRE_JVM.PNG"> </div>
+<div align="center"><img width="548" alt="jdk_jre_jvm" src="https://user-images.githubusercontent.com/104151366/172460562-31bea2c1-e086-43ed-9ae6-9715605739ff.png">
+</div>
   
   
 So, to recap - the JDK contains tools for Java development as well as a JRE, which contains the built-in Java libraries as well as a JVM, which actually executes our Java bytecode and runs it on the specific operating system it is installed upon.
