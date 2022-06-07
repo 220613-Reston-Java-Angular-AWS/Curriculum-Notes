@@ -5,7 +5,7 @@
 
 **NOTE**: It is VERY important that you install these technologies BEFORE training begins as we will not have much time to devote to environment setup due to the volume of content we'll cover in week 1 and throughout the session.
 
-> 🔴 Important! If you are on a Mac, please follow the environment guidelines in the [Mac Environment Setup Guide](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Environment-Setup/MAC_Environment-Setup.md). 
+> 🔴 🔴 Important! If you are on a Mac, please follow the environment guidelines in the [Mac Environment Setup Guide](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Environment-Setup/MAC_Environment-Setup.md). 🔴 🔴 
 
 <br>
 
@@ -51,9 +51,6 @@ The following technologies are required in order to complete this phase of the p
 
 - [**Docker**](#step-10-install-docker): Docker is an open source containerization platform. It enables developers to package applications into containers—standardized executable components combining application source code with the operating system (OS) libraries and dependencies required to run that code in any environment.
 
-<br>
-
-> ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Important! If you are on a Mac, please follow the environment guidelines in the [Mac Environment Setup Guide](https://github.com/sophiagavrila/mac-install-guide). 
 
 <br>
 
