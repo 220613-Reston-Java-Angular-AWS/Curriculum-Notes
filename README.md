@@ -9,7 +9,7 @@ Here you will find all of the notes from class along with study-guides, project 
 
 ### Slides can be found [here](https://docs.google.com/presentation/d/1lOrz4BWbZO4tkQlK94SQ08ARVwq9n5bCRLMNoEXTtec/edit?usp=sharing)
 
-### Environment Setup Guide can be found [here]([https://github.com/sophiagavrila/environment-setup](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/tree/main/Environment-Setup)).
+### Environment Setup Guide can be found [here](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/tree/main/Environment-Setup).
 ---
 
 ## Weekly Schedule:
