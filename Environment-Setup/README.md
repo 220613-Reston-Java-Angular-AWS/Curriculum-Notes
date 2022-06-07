@@ -17,7 +17,7 @@ The following technologies are required in order to complete this phase of the p
 
 <br>
 
-- [**Java SE Development Kit 8**](#-step-2-install-java-development-kit): We will be utilizing Java 8 as our primary language for the duration of the program. This software development kit will provide the compiler and runtime environment needed to quickly and efficiently develop Java applications.
+- [**Java SE Development Kit 8**](#step-2-install-java-development-kit): We will be utilizing Java 8 as our primary language for the duration of the program. This software development kit will provide the compiler and runtime environment needed to quickly and efficiently develop Java applications.
 
 <br>
 
