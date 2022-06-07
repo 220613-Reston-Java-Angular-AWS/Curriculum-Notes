@@ -90,7 +90,10 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 1. Navigate in your browser to [Git's Website](https://git-scm.com/download) and click the latest download for Windows. (For those using a different OS click the appropriate OS and look for the most recent stable release.)
 
-![](./images/Git-Download1.jpg) 
+<div align="center">
+<img width="1039" alt="Screen Shot 2022-06-07 at 6 58 08 PM" src="https://user-images.githubusercontent.com/104151366/172497029-4f638667-4b83-47b9-ac0d-0707763502eb.png">
+</div>
+
 
 2. Click yes to any security/firewall popup asking if you are sure you want to download the file. 
 
