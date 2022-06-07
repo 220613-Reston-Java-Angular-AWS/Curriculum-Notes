@@ -5,7 +5,7 @@
 
 **NOTE**: It is VERY important that you install these technologies BEFORE training begins as we will not have much time to devote to environment setup due to the volume of content we'll cover in week 1 and throughout the session.
 
-> 🔴 Important! If you are on a Mac, please follow the environment guidelines in the [Mac Environment Setup Guide](https://github.com/sophiagavrila/mac-install-guide). 
+> 🔴 Important! If you are on a Mac, please follow the environment guidelines in the [Mac Environment Setup Guide](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Environment-Setup/MAC_Environment-Setup.md). 
 
 <br>
 
