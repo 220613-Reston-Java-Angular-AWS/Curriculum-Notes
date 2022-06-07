@@ -77,7 +77,6 @@ These options will be clearly labeled on the websites you visit to download the 
 
 You should now see the following screen:
 
-![Image of Windows System Settings]
 <div align="center>
 <img width="876" alt="windows_1" src="https://user-images.githubusercontent.com/104151366/172496112-72a6d625-c3ab-4c6c-9a7e-29bcbe1fd5c2.png">
  </div>
