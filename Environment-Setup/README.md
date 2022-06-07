@@ -99,7 +99,9 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 3. The install file will begin downloading; most browsers will show the file that has just downloaded, click that file when it completes. If you do so skip to step 6. If the download is not apparent on your browser or disappears upon finishing go to step 4. 
 
-![](./images/Git-Download2.jpg)
+<img width="459" alt="Screen Shot 2022-06-07 at 7 05 23 PM" src="https://user-images.githubusercontent.com/104151366/172497685-71398090-54a5-4907-8d59-2b70b9c54e60.png">
+
+
 
 4. If you were not able to click the install exe file you just downloaded in your browser open your file explorer.
 
