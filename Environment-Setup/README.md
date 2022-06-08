@@ -102,39 +102,46 @@ You should see your operating system listed ("Windows 10" in the above example) 
 <img width="459" alt="Screen Shot 2022-06-07 at 7 05 23 PM" src="https://user-images.githubusercontent.com/104151366/172497685-71398090-54a5-4907-8d59-2b70b9c54e60.png">
 
 
-
 4. If you were not able to click the install exe file you just downloaded in your browser open your file explorer.
 
-![](./images/Git-File-Explore-Taskbar.jpg)
+<img width="758" alt="Screen Shot 2022-06-07 at 7 08 15 PM" src="https://user-images.githubusercontent.com/104151366/172497892-99f160f6-19e0-4834-8ba8-616d0b391a0e.png">
+
 
 5. In the window that opens click the "Downloads" folder, use the search bar in the upper right to search "git", and then double click on the Git installer exe file.
 
-![](./images/Git-Downloads-Folder.jpg)
+<img width="1042" alt="Screen Shot 2022-06-07 at 7 09 54 PM" src="https://user-images.githubusercontent.com/104151366/172497970-28757c3f-e78b-4084-81d9-5126b535a8bf.png">
+
 
 6. Click yes to any security pop-ups asking you if you want to allow the installer to make changes to your computer. 
 
 7. The install wizard will open to guide you through the process of installing Git. Read the license agreement and click "Next." 
-
-![](./images/Git-License.jpg)
+8. 
+<img width="607" alt="Screen Shot 2022-06-07 at 7 11 35 PM" src="https://user-images.githubusercontent.com/104151366/172498175-f1f8c655-4765-4ae1-a494-15ec89a8caf6.png">
 
 8. Accept the default installation path by clicking "Next."
 
-![](./images/Git-Filepath.jpg)
+<img width="533" alt="Screen Shot 2022-06-07 at 7 12 42 PM" src="https://user-images.githubusercontent.com/104151366/172498227-46f98d11-02c4-440d-85a2-5a5ec89619b0.png">
 
 9. Select your components. It is recommended to add a desktop icon. Leave the other boxes in their default setting. Click "Next."
 
-![](./images/Git-Components.jpg)
+<img width="613" alt="Screen Shot 2022-06-07 at 7 13 22 PM" src="https://user-images.githubusercontent.com/104151366/172498283-9a14717b-6542-49ac-beb2-e69cbe65b3f8.png">
+
 
 10. Leave the rest of the set up as the default configuration clicking Next until you get to the experimental options (which you should leave unchecked) and then click Install. This will run the actual install process. 
 
-![](./images/Git-editor.jpg)
-![](./images/Git-PATH.jpg)
-![](./images/Git-HTTPS.jpg)
-![](./images/Git-Line-End-Conversion.jpg)
-![](.images/Git-MinTTY.jpg)
-![](./images/Git-Default-Pull.jpg)
+<img width="621" alt="Screen Shot 2022-06-07 at 7 13 59 PM" src="https://user-images.githubusercontent.com/104151366/172498352-85ac2576-9bf6-4d33-9449-fb4ff3a94ce5.png">
+
+<img width="601" alt="Screen Shot 2022-06-07 at 7 14 40 PM" src="https://user-images.githubusercontent.com/104151366/172498417-ea01fc97-b53c-4d15-ac62-cc5ecfdca12d.png">
+
+<img width="614" alt="Screen Shot 2022-06-07 at 7 15 17 PM" src="https://user-images.githubusercontent.com/104151366/172498481-9113d147-104b-4962-9be7-d9153df7eabd.png">
+
+<img width="624" alt="Screen Shot 2022-06-07 at 7 15 45 PM" src="https://user-images.githubusercontent.com/104151366/172498527-32f1eb69-6cb9-4f93-8344-582a8d65e6c5.png">
+
+<img width="623" alt="Screen Shot 2022-06-07 at 7 16 22 PM" src="https://user-images.githubusercontent.com/104151366/172498667-9ca3667e-732e-41c4-8be0-711df37020e3.png">
+
+<!-- ![](./images/Git-Default-Pull.jpg)
 ![](.images/Git-Extras.jpg)
-![](.images/Git-Experimental.jpg)
+![](.images/Git-Experimental.jpg) -->
 
 11. After install you will get a a final window giving you the options to launch Git Bash and view the Readme notes. Select open Git Bash and deselect the view Readme notes. Click "Next."
 
@@ -142,7 +149,8 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 12. When Git Bash opens type "git --version" and hit Enter. If it return the version of Git you installed it correctly. 
 
-![](./images/Git-Version.jpg)
+<img width="364" alt="Screen Shot 2022-06-07 at 7 17 52 PM" src="https://user-images.githubusercontent.com/104151366/172498733-b79a181a-9ac9-498a-b35d-d80232305b57.png">
+
 
 <br>
 
@@ -152,91 +160,106 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 2. In the top right of the website click "View Accounts" and then "Create an Account." (If you already have an Oracle account you can just skip to step 5)
 
-![](./images/JDK-CreateAccount.jpg)
+<img width="1037" alt="Screen Shot 2022-06-07 at 7 18 20 PM" src="https://user-images.githubusercontent.com/104151366/172498806-c554a805-9644-488a-a517-dece3c2916a7.png">
+
 
 3. Fill in the form with your information (you may type "none" for Company Name) and then click the "Create Account" button. 
 
-![](./images/JDK-New-Account.jpg)
+<img width="896" alt="Screen Shot 2022-06-07 at 7 19 31 PM" src="https://user-images.githubusercontent.com/104151366/172498950-3ea8e8af-b276-44c8-b0d3-2c910f8aee47.png">
+
 
 4. Check your e-mail account for a new message from Oracle. (This may take a few minutes.) When you receive the e-mail open it and click the "Verify Email Address" button inside. This should direct you to a success screen. 
 
-![](./images/JDK-Inbox.jpg)
-![](./images/JDK-Email.jpg)
-![](./images/JDK-Success.jpg)
+<img width="704" alt="Screen Shot 2022-06-07 at 7 20 35 PM" src="https://user-images.githubusercontent.com/104151366/172499148-786b7051-03f9-4604-a89a-de4f87f125de.png">
+
 
 5. Return to [Oracle's JDK 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html?) website. Scroll to find the appropriate JDK for your Operating System and Architecture. (Windows 10 will be Windows x64 as shown below) and click to download. 
 
-![](./images/JDK-Download.jpg)
+<img width="770" alt="Screen Shot 2022-06-07 at 7 21 30 PM" src="https://user-images.githubusercontent.com/104151366/172499209-2c34cf9a-3cfb-42bd-962a-fc7240a50ed5.png">
+
 
 6. A popup will ask you to review the license before continuing. Do so and click the check box and then the download button.
 
-![](./images/JDK-License.jpg)
+<img width="769" alt="Screen Shot 2022-06-07 at 7 22 02 PM" src="https://user-images.githubusercontent.com/104151366/172499298-5c327106-7471-4e83-ae1c-6a60af0d1549.png">
+
 
 7. If you are not signed in a pop will appear asking you to do so. Enter your sign in information (your e-mail is your user name) and submit. The download should then begin. 
 
-![](./images/JDK-Signin.jpg)
+<img width="748" alt="Screen Shot 2022-06-07 at 7 22 27 PM" src="https://user-images.githubusercontent.com/104151366/172499468-f24e3a37-06cb-4dc5-a231-6b7e372bf3aa.png">
+
 
 8. Once the download is complete, click the file that downloads in your browser to open it and skip to step 11. If you do not see the file in your browser then proceed to step 9 to find it in your downloads folder. 
 
-![](./images/JDK-Downloaded.jpg)
+<img width="410" alt="Screen Shot 2022-06-07 at 7 22 47 PM" src="https://user-images.githubusercontent.com/104151366/172499506-556c9099-8ce7-40c8-98a4-ddafa0c898ff.png">
+
 
 9. If you could not open the JDK installer from your browser open your file explorer. 
 
-![](./images/Git-File-Explore-Taskbar.jpg)
+<img width="764" alt="Screen Shot 2022-06-07 at 7 24 40 PM" src="https://user-images.githubusercontent.com/104151366/172499704-849b0f45-7326-4d36-9009-28adc7da6442.png">
+
 
 10. In the window that opens click the "Downloads" folder, search (in the top right) for "jdk" and double click the jdk installer.
 
-![](./images/JDK-Downloads.jpg)
+<img width="778" alt="Screen Shot 2022-06-07 at 7 25 07 PM" src="https://user-images.githubusercontent.com/104151366/172499754-4c8a9fc5-257a-4777-ace2-b237ff51691b.png">
+
 
 11. The installer will inform you that the license has been updated from previous versions. Review the license if you have not already and click next. 
 
-![](./images/JDK-Wizard1.jpg)
+<img width="769" alt="Screen Shot 2022-06-07 at 7 25 31 PM" src="https://user-images.githubusercontent.com/104151366/172499782-54c6e412-8fc7-42ca-a279-58c4cc488fc1.png">
+
 
 12. The installer will continue and you should just accept the default setup. IMPORTANT: Make note of the file path for the installation directory! You WILL need this later. Click "Next."
 
-![](./images/JDK-Wizard2.jpg)
+<img width="657" alt="Screen Shot 2022-06-07 at 7 25 50 PM" src="https://user-images.githubusercontent.com/104151366/172499806-aa85a438-1b19-48c6-a32f-dd079680addf.png">
+
 
 13. The install will begin extracting files and will ask to confirm the installation directory of the JRE. Confirm the default directory by clicking "Next."
 
-![](./images/JDK-Wizard3.jpg)
-![](./images/JDK-Wizard4.jpg)
+<img width="767" alt="Screen Shot 2022-06-07 at 7 26 21 PM" src="https://user-images.githubusercontent.com/104151366/172499845-e0d73da6-768d-4d14-8e8e-9617f64344fd.png">
+
 
 14. Java will finish installing and you can then click "Close."
 
-![](./images/JDK-Wizard5.jpg)
-![](./images/JDK-Wizard6.jpg)
+<img width="647" alt="Screen Shot 2022-06-07 at 7 26 46 PM" src="https://user-images.githubusercontent.com/104151366/172499878-daeb50d6-7f9c-4628-8e6d-77e684944ed8.png">
+
 
 15. Use your system search tool (next to the windows button) to look for "Edit the system environment variables" in the control panel. Be sure that you open the SYSTEM environment not the ones just for your account. 
 
-![](./images/JDK-SysEnv.jpg)
+<img width="770" alt="Screen Shot 2022-06-07 at 7 27 14 PM" src="https://user-images.githubusercontent.com/104151366/172499942-c6ecb2ba-e33c-4c21-8dbd-bce99d781b16.png">
+
 
 16. Click the "Environment Variables" button in the window that opens.
 
-![](./images/JDK-SysProp.jpg)
+<img width="582" alt="Screen Shot 2022-06-07 at 7 27 48 PM" src="https://user-images.githubusercontent.com/104151366/172499969-06d03be5-25af-4c55-822a-08178eb458fa.png">
+
 
 17. Under "System Variables" click the "New" button. 
 
-![](./images/JDK-EnvVar.jpg)
+<img width="700" alt="Screen Shot 2022-06-07 at 7 28 28 PM" src="https://user-images.githubusercontent.com/104151366/172500028-d76ad019-3a77-47da-ab72-ad1b546bc7bd.png">
+
 
 18. Name the new variable "JAVA_HOME" and give it the value of the directory where your JDK was installed to. (See Step 12.) If you are unsure of your directory path you can go to C:\Program Files\Java in your file explorer then click on the JDK folder to open it. You can then copy the path from the navigation bar at the top of the file explorer. 
 
-![](./images/JDK-JavaHome.jpg)
+<img width="760" alt="Screen Shot 2022-06-07 at 7 29 11 PM" src="https://user-images.githubusercontent.com/104151366/172500115-faa06ced-5d4c-49c6-98e6-b17fdd3ad328.png">
+
 
 19. In your system variables then select the "Path" variable and click "Edit."
 
-![](./images/JDK-PathEdit.jpg)
+<img width="759" alt="Screen Shot 2022-06-07 at 7 30 12 PM" src="https://user-images.githubusercontent.com/104151366/172500216-20fd7e42-ab47-4f6b-bd50-d41dca0daa74.png">
+
 
 20. Click "New" to create a new line. Add the path to the JDK bin folder in this line, it will be the same as the path in JAVA_HOME with a "\bin" at the end. 
 
-![](./images/JDK-PathNew.jpg)
+<img width="651" alt="Screen Shot 2022-06-07 at 7 32 30 PM" src="https://user-images.githubusercontent.com/104151366/172500442-169688bd-d80c-4bb0-9254-9a28cfe3f50f.png">
+
 
 21. Click "OK" to close the Environment Variables window. 
 
-![](./images/JDK-End.jpg)
 
 22. Open Git Bash, type "java -version" and hit Enter. If the JDK is installed correctly you should see Java with the version number you downloaded. 
 
-![](./images/JDK-Version.jpg)
+<img width="629" alt="Screen Shot 2022-06-07 at 7 33 20 PM" src="https://user-images.githubusercontent.com/104151366/172500517-b47a99f3-9733-4ec5-8f75-bcac92979042.png">
+
 
 <br>
 
@@ -244,30 +267,34 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 1. Navigate to the [Spring Tools](https://spring.io/tools) website and download Spring Tools 4 for Eclipse. 
 
-![](./images/STS-Web.jpg)
+<img width="779" alt="Screen Shot 2022-06-07 at 7 34 17 PM" src="https://user-images.githubusercontent.com/104151366/172500594-e917c823-c23c-41dc-961e-99f1d4d8e29c.png">
+
 
 2. Once the download has finished go to your downloads folder, search for the spring-tool-suite jar file and double click it to begin the install process. NOTE: STS will install to the directory the jar file is in when you open it. If you would like STS to install to another directory than your downloads directory, move the jar file before opening it.
 
-![](./images/STS-Jar.jpg)
+<img width="606" alt="Screen Shot 2022-06-07 at 7 34 37 PM" src="https://user-images.githubusercontent.com/104151366/172500630-b9290241-7eda-4bfe-b7af-088847fc0c6c.png">
+
 
 3. An unnamed progress bar will appear as STS is installed into your directory. 
 
-![](./images/STS-Unpack.jpg)
+<img width="214" alt="Screen Shot 2022-06-07 at 7 34 57 PM" src="https://user-images.githubusercontent.com/104151366/172500669-10fa4fcd-a2df-492b-82ff-51928f398207.png">
+
 
 4. Once the install is complete you will have an STS folder in the directory. Double click it to enter it. 
 
-![](./images/STS-Folder.jpg)
+<img width="721" alt="Screen Shot 2022-06-07 at 7 35 14 PM" src="https://user-images.githubusercontent.com/104151366/172500701-a04229ae-05f4-4ecc-9ad0-2db4dfd70dcf.png">
+
 
 5. Once inside the folder double click the SpringToolSuite4 application icon to start STS and ensure it runs correctly. If you encounter any errors check all the path variables you configured in the previous setup guides. 
 
-![](./images/STS-Ready.jpg)
+<img width="721" alt="Screen Shot 2022-06-07 at 7 35 34 PM" src="https://user-images.githubusercontent.com/104151366/172500750-9d59575d-0423-4849-90c5-e6a121ab2353.png">
+
 
 6. If STS opens without errors you will be asked to create a workspace. You can just click "Cancel" at this time. 
 
 7. If you would like to place a shortcut to STS on your desktop (which is highly recommended) you can right-click the SpringToolSuite4 application, hover over "Send to" and click "Desktop (create shortcut)". You will now have a desktop icon from which you can open STS.
 
-![](./images/STS-Shortcut.jpg)
-![](./images/STS-Desktop.jpg)
+<img width="680" alt="Screen Shot 2022-06-07 at 7 36 08 PM" src="https://user-images.githubusercontent.com/104151366/172500827-012b37af-0d4d-4cc2-bbb3-379206cc8060.png">
 
 <br>
 
@@ -275,68 +302,66 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 1. Navigate in your web browser to the [Maven Download Page](https://maven.apache.org/download.cgi) and scroll down to the "Files" section. Click the Binary zip archive link to download. Approve any firewall/security popups asking if you are sure you want to download the file. 
 
-![](./images/MVN-Download.jpg)
+<img width="697" alt="Screen Shot 2022-06-07 at 7 36 47 PM" src="https://user-images.githubusercontent.com/104151366/172500887-dd4b7f5f-8448-40d5-aae9-c2ab825d4b2a.png">
 
 2. The download should appear in your browser. When it completes right-click and click "Show in folder." Skip to step 4. If you were unable to right-click and show in folder proceed to step 3. 
 
-![](./images/MVN-OpenFile.jpg)
+<img width="524" alt="Screen Shot 2022-06-07 at 7 37 15 PM" src="https://user-images.githubusercontent.com/104151366/172500955-d311baf0-329b-4eca-8c47-a84ea3f73280.png">
 
 3. If you could not open the file location from your browser, open your file explorer, click downloads, and search "maven" in the upper right search bar. You should see the file you just downloaded. 
 
-![](./images/Git-File-Explore-Taskbar.jpg)
-![](./images/MVN-Downloads.jpg)
+<img width="779" alt="Screen Shot 2022-06-07 at 7 38 33 PM" src="https://user-images.githubusercontent.com/104151366/172501064-aca44d9a-464a-46b4-8526-8ab83aa4e6f2.png">
 
 4. Right click the Maven zip archive you just downloaded and click "Extract All..."
 
-![](./images/MVN-Extract.jpg)
+<img width="762" alt="Screen Shot 2022-06-07 at 7 39 03 PM" src="https://user-images.githubusercontent.com/104151366/172501117-5ca9da3f-e743-4d6d-9357-5bbf198da1f3.png">
 
 5. Your extraction wizard will open. Set the file path to "C:\Maven" and click the box to show extracted files when complete. Then click "Extract."
 
-![](./images/MVN-Unzip.jpg)
+<img width="733" alt="Screen Shot 2022-06-07 at 7 39 35 PM" src="https://user-images.githubusercontent.com/104151366/172501168-541330c5-0a3b-4974-8234-f08b20f69dcb.png">
 
 6. Your file will be unzipped and your file explore will open a window to C:\Maven containing the folder with your maven version. Double click to open that folder. 
 
-![](./images/MVN-File.jpg)
+<img width="779" alt="Screen Shot 2022-06-07 at 7 40 02 PM" src="https://user-images.githubusercontent.com/104151366/172501211-3bd46208-43fb-4f4e-bf4f-153e07fe84ac.png">
 
 7. Now inside the versions specific folder, click the navigation bar and the top and copy the file path. You will need this for your environment variables. 
 
-![](./images/MVN-FilePath.jpg)
+<img width="777" alt="Screen Shot 2022-06-07 at 7 40 19 PM" src="https://user-images.githubusercontent.com/104151366/172501253-f6ff3a89-fc78-44a5-9671-c1528265627b.png">
 
 8. Use your system search tool (next to the windows button) to look for "Edit the system environment variables" in the control panel. Be sure that you open the SYSTEM environment not the ones just for your account. 
 
-![](./images/JDK-SysEnv.jpg)
+<img width="781" alt="Screen Shot 2022-06-07 at 7 41 03 PM" src="https://user-images.githubusercontent.com/104151366/172501315-bf805ca4-836a-4443-a02f-30865637f60d.png">
 
 9. Click the "Environment Variables" button in the window that opens.
 
-![](./images/JDK-SysProp.jpg)
+<img width="580" alt="Screen Shot 2022-06-07 at 7 41 54 PM" src="https://user-images.githubusercontent.com/104151366/172501375-fa7f596a-d838-4598-a035-255283e04921.png">
 
 10. Under "System Variables" click the "New" button. 
 
-![](./images/JDK-EnvVar.jpg)
 
 11. Name the new variable "M2_HOME" and give it the value of the file path you copied in step 7. Then click "OK."
 
-![](./images/MVN-M2HOME.jpg)
+<img width="790" alt="Screen Shot 2022-06-07 at 7 42 32 PM" src="https://user-images.githubusercontent.com/104151366/172501441-d617c464-7b92-4a5e-a5d8-e102e2581d83.png">
 
 12. Click the new button again. Give the variable the name "M2" and the file path "%M2_HOME%\bin" then click "OK."
 
-![](./images/MVN-M2.jpg)
+<img width="760" alt="Screen Shot 2022-06-07 at 7 43 11 PM" src="https://user-images.githubusercontent.com/104151366/172501507-38d4dde2-15b1-4870-bd87-9845bd2b33aa.png">
+
 
 13. In your system variables then select the "Path" variable and click "Edit."
 
-![](./images/JDK-PathEdit.jpg)
+<img width="669" alt="Screen Shot 2022-06-07 at 7 43 58 PM" src="https://user-images.githubusercontent.com/104151366/172501593-60dad87b-70e6-4357-a0e4-cc3f2fcf01fb.png">
 
 14. Click new to open a new line and type in "%M2%" then click "OK."
 
-![](./images/MVN-Path.jpg)
+<img width="640" alt="Screen Shot 2022-06-07 at 7 44 42 PM" src="https://user-images.githubusercontent.com/104151366/172501669-8f873d99-db52-4b85-8afc-c27e6302eea8.png">
 
 15. Click "OK" to close the Environment Variables window. 
 
-![](./images/JDK-End.jpg)
 
 16. Open CMD prompt (or a GitBash terminal) and type `mvn --version` then hit Enter. If that returns the maven version you have it set up correctly. 
 
-![](./images/MVN-Version.jpg)
+<img width="660" alt="Screen Shot 2022-06-07 at 7 45 38 PM" src="https://user-images.githubusercontent.com/104151366/172501735-d2272aa9-d4f4-4f6a-9a8e-7eb27ba51383.png">
 
 <br>
 
@@ -352,21 +377,22 @@ Please look at the row for **version 13.x** as we will downloading this version.
 
 You'll then be prompted to save the file. Click "Save File".
 
-![Save Postgres Installer](./images/save-postgres.PNG)
+<img width="454" alt="Screen Shot 2022-06-07 at 7 46 54 PM" src="https://user-images.githubusercontent.com/104151366/172501840-67fd92e9-9425-4aee-8296-6cb98fa2d56b.png">
 
 The file should now be located in your "Downloads" folder.
 
-![Postgres In Downloads Folder](./images/postgres-in-downloads.PNG)
+<img width="778" alt="Screen Shot 2022-06-07 at 7 48 58 PM" src="https://user-images.githubusercontent.com/104151366/172502047-939b559a-0511-4717-bc3d-74b1fbb5c110.png">
 
 Double click the file, which should launch the installer. You might be asked if you want the application to make changes to your device. Say "yes".
 
 You'll be presented with several menus in the Setup Wizard.
 
-![Postgres Setup Wizard](./images/postgres-setup.PNG)
+<img width="568" alt="Screen Shot 2022-06-07 at 7 49 30 PM" src="https://user-images.githubusercontent.com/104151366/172502103-97fa3e27-9393-4dbb-8095-e000810dc98d.png">
 
 Hit "Next" until you get to the "Select Components" menu. Here, you'll want to select and/or deselect the following and then click "Next":
 
-![Postgres Components](./images/postgres-components.PNG)
+<img width="579" alt="Screen Shot 2022-06-07 at 7 50 04 PM" src="https://user-images.githubusercontent.com/104151366/172502160-bee32de9-8b8e-4ddb-885e-655f4630c1ea.png">
+
 
 Continue to hit "Next" until you reach the "Password" menu. Here you will be tasked with providing a password for the default Postgres user (which is "postgres"). 
 
@@ -375,7 +401,7 @@ Continue to hit "Next" until you reach the "Password" menu. Here you will be tas
 
 ## ❗ ❗ DO NOT FORGET YOUR POSTGRES PASSWORD AND DON'T MAKE IT A COMMON PASSWORD YOU TYPICALLY USE ❗ ❗
 
-![Postgres Password](./images/postgres-password.PNG)
+<img width="585" alt="Screen Shot 2022-06-07 at 7 51 00 PM" src="https://user-images.githubusercontent.com/104151366/172502237-244a638a-f55f-4718-860e-4b79d729d542.png">
 
 After you've decided on a password, hit "Next" on the remaining menus and allow time for Postgres to be installed. Once the installation is complete, you might be asked if you want to launch Stack Builder. You can say "no".
 
@@ -389,7 +415,7 @@ In order to install DBeaver, please visit [DBeaver's official website](https://d
 
 Once you navigate to the website, you should see the following:
 
-![DBeaver Home](./images/dbeaver-home.PNG)
+<img width="784" alt="Screen Shot 2022-06-07 at 7 51 40 PM" src="https://user-images.githubusercontent.com/104151366/172502313-de778e00-491e-4fd0-a0e7-a4b96db4b80a.png">
 
 Once you click it, you'll notice that there are two options: Community Edition and Enterprise Edition. Please select the **Community Edition** as it is free. Do NOT select the Enterprise Edition.
 
@@ -397,11 +423,11 @@ You will find the installers for the Community Edition if you scroll down the pa
 
 Once you've clicked on the installer that is compatible with your system, you'll be prompted to save the file. Save it and note where you've saved it on your machine. These files are usually stored in your computer's "Downloads" folder by default.
 
-![Save DBeaver Installer](./images/dbeaver-installer.PNG)
+<img width="452" alt="Screen Shot 2022-06-07 at 7 52 16 PM" src="https://user-images.githubusercontent.com/104151366/172502371-2fed7fd5-3752-4017-9093-34567c005b99.png">
 
 Now navigate to the folder where the installer is stored. For this example, we've downloaded the file to the "Downloads" folder.
 
-![Installer In Downloads Folder](./images/dbeaver-download.PNG)
+<img width="773" alt="Screen Shot 2022-06-07 at 7 52 53 PM" src="https://user-images.githubusercontent.com/104151366/172502428-f76e50c9-cea0-4498-89b3-e28faa9b7d92.png">
 
 Double click the installer. Once you've done so, the installer will be launched. The installer should take you through the process of setting up DBeaver. You'll be asked, for instance, to select a language of choice and review license terms before you install the software. 
 
@@ -409,7 +435,7 @@ Double click the installer. Once you've done so, the installer will be launched.
 
 When you arrive at the portion of the setup which is titled "Choose Components", please select "DBeaver Community", **"Inlcude Java**, and "Associate .SQL files".
 
-![DBeaver Components](./images/dbeaver-components.PNG)
+<img width="515" alt="Screen Shot 2022-06-07 at 7 53 23 PM" src="https://user-images.githubusercontent.com/104151366/172502481-a0a94af8-753e-420f-95e5-de3dbb793d7b.png">
 
 Click next, then click "Install", then click "Finish".
 
@@ -423,17 +449,19 @@ In order to download Postman, please visit [Postman's official website](https://
 
 Once you've navigated to the site, you should see the following:
 
-![Postman Home](./images/postman-home.PNG)
+<img width="763" alt="Screen Shot 2022-06-07 at 7 54 00 PM" src="https://user-images.githubusercontent.com/104151366/172502541-c2c70ecb-b310-4581-8443-c0a7998ed659.png">
+
 
 Note that the default download is for Windows. If you wish to download Postman for Mac or Linux, you should click on one of the links highlighted in the small box beneath the version number and "RELEASE NOTES" link. You can see these links at the bottom of the image provided above for reference.
 
 You should now click the "Download" button, at which point you'll be prompted to select either Windows 32-bit or Windows 64-bit (assuming you're downloading Postman for Windows). Choose the option which is compatible with your system. You'll then be prompted to save the file.
 
-![Postman Download](./images/postman-download.PNG)
+<img width="450" alt="Screen Shot 2022-06-07 at 7 54 26 PM" src="https://user-images.githubusercontent.com/104151366/172502599-161a7d28-c006-46dd-aa80-fbf01b82d22c.png">
 
 Once you've saved the file, open your "Downloads" folder and double click the newly downloaded installer.
 
-![Postman Installer in Downloads Folder](./images/postman-installer.PNG)
+<img width="770" alt="Screen Shot 2022-06-07 at 7 55 01 PM" src="https://user-images.githubusercontent.com/104151366/172502647-b853d5a3-6945-462a-83d1-5d8425301f79.png">
+
 
 Upon double clicking the executable, the installer will be launched and the program will be installed. In order to verify that it has been installed correctly, you can search for "Postman" on your machine by using your search bar.
 
@@ -447,19 +475,20 @@ In order to download Visual Studio Code, please visit [Visual Studio Code's offi
 
 Once you've navigated to the website, you should see the following:
 
-![Image of Visual Studio Code download options](./images/vs-code.PNG)
+<img width="773" alt="Screen Shot 2022-06-07 at 7 55 42 PM" src="https://user-images.githubusercontent.com/104151366/172502695-29628648-fb93-43d9-8c1c-5e762c330e66.png">
 
 Choose the installer that is compatible with your system. Once you've clicked the installer of your choice, you'll be prompted to save the file. Do so.
 
-![Downloading Visual Studio Code Installer](./images/save-vscode.PNG)
+<img width="458" alt="Screen Shot 2022-06-07 at 7 56 06 PM" src="https://user-images.githubusercontent.com/104151366/172502743-9e4d7087-28e7-473c-9eaf-7a2d10f0db2b.png">
 
 Once you've saved the installer, it should be located in your "Downloads" folder.
 
-![Visual Studio Code Download](./images/vscode-download.PNG)
+<img width="764" alt="Screen Shot 2022-06-07 at 7 56 27 PM" src="https://user-images.githubusercontent.com/104151366/172502775-e8535a4b-be62-444c-aab7-718918646a56.png">
 
 Double click the installer. Once you've done so, the installer should be launched. Accept the license agreement and proceed until you reach a menu titled "Select Additional Tasks". Once you've arrived here, be sure to check all of the boxes that are checked in the image!
 
-![Open with Code](./images/open-with-code.PNG)
+<img width="527" alt="Screen Shot 2022-06-07 at 7 56 53 PM" src="https://user-images.githubusercontent.com/104151366/172502808-e9453101-40e5-482a-8b0a-2986880491b3.png">
+
 
 After you've done so, hit "Next" and then "Install" on the next menu. If your installation was successful, you should be able to search for "Visual Studio Code" on your machine.
 
@@ -471,43 +500,46 @@ In order to download Tomcat, please visit [Apache Tomcat's official website](htt
 
 Once you've navigated to the site, you should see the following screen:
 
-![Tomcat Home](./images/tomcat-home.PNG)
+<img width="770" alt="Screen Shot 2022-06-07 at 7 57 45 PM" src="https://user-images.githubusercontent.com/104151366/172502881-0e0bd4f7-1c94-48c7-a938-b4fc912b16af.png">
 
 Scroll down until you see the section labeled "Tomcat 8.5.56" as shown below. Click the "Download" link at the bottom of this section.
 
-![Tomcat 8](./images/tomcat-8.PNG)
+<img width="765" alt="Screen Shot 2022-06-07 at 7 58 09 PM" src="https://user-images.githubusercontent.com/104151366/172502937-8e081211-cf38-40df-921b-86f50db7aa6d.png">
 
 **Note**: At the time of this tutorial, the version of Tomcat 8 was 8.5.56. In the future, this will not be the case. That said, please choose any version of Tomcat 8 that is available. In other words, Tomcat 8.x.xx is a valid choice as well.
 
 After you've clicked the "Download" link, you should be taken to yet another page. Scroll down until you see the following:
 
-![Tomcat Distros](./images/tomcat-distros.PNG)
+<img width="774" alt="Screen Shot 2022-06-07 at 7 58 47 PM" src="https://user-images.githubusercontent.com/104151366/172503083-075cc1ec-c44c-4b37-af26-eb6ff8ca1063.png">
+
 
 Click the "zip" option under the "Core" section. It should be the first option listed. You should see the following after you've clicked the link, after which you should opt to save the file.
 
-![Save Tomcat](./images/save-tomcat.PNG)
+<img width="457" alt="Screen Shot 2022-06-07 at 7 59 09 PM" src="https://user-images.githubusercontent.com/104151366/172503145-b3b6bcaa-4b7f-400f-bcbb-5cec51cabe85.png">
 
 Now go into your system's "Downloads" folder. You should see a folder that is labeled "apache-tomcat-8.x.xx".
 
-![Tomcat Zip](./images/tomcat-zip.PNG)
+<img width="768" alt="Screen Shot 2022-06-07 at 7 59 27 PM" src="https://user-images.githubusercontent.com/104151366/172503212-7c38c8f5-f31c-420f-a351-14dda6a5ad52.png">
 
 Right click the folder. Once you do so, you should see a list of options. Choose the option that reads "Extract All...". You'll then be asked to select a destination for the extracted files. You may choose any location on your computer you wish to by hitting the "Browse" button, but for this tutorial, we will be choosing to place the extracted files in the "Program Files" folder.
 
 **Note**: Please keep note of where you choose to place the extracted files as you'll need this information in the next step.
 
-![Program Files](./images/program-files.PNG)
+<img width="585" alt="Screen Shot 2022-06-07 at 7 59 54 PM" src="https://user-images.githubusercontent.com/104151366/172503314-512a18ec-a771-40ed-9596-2047511bd5b6.png">
+
 
 Once you've selected a destination, hit the "Extract" button at the bottom of the box.
 
 After you've done so, wait for the files to be extracted. Then go the location where you specified the extracted files should be placed. In our case, we are navigating to the "Program Files" directory.
 
-![Program Files Directory](./images/program-files-directory.PNG)
+<img width="772" alt="Screen Shot 2022-06-07 at 8 00 20 PM" src="https://user-images.githubusercontent.com/104151366/172503414-1383aeef-d505-4988-a7af-b52c3e15f32b.png">
 
 There you should see the files you just extracted in a folder called "apache-tomcat-8.x.xx". Go inside of this folder by double clicking it. Once inside, copy the path to it by clicking on the bar that shows your file path near the top of the box. It should be directly to the left of the search bar. In this example, the bar contains the text:
 
     Local Disk (C:) > Program Files > apache-tomcat-8.5.56
 
-![Inside of Tomcat Folder](./images/inside-tomcat.PNG)
+<img width="768" alt="Screen Shot 2022-06-07 at 8 01 04 PM" src="https://user-images.githubusercontent.com/104151366/172503597-cfe19d30-6f88-49aa-a1c0-cca310420d29.png">
+
 
 Once you've clicked on the bar, copy the address. In this example, the address is:
 
@@ -517,19 +549,19 @@ Once you've clicked on the bar, copy the address. In this example, the address i
 
 Now go into your search bar and type "Edit the System Environment Variables".
 
-![Edit System Environment Variables](./images/JDK-SysEnv.jpg)
+<img width="767" alt="Screen Shot 2022-06-07 at 9 14 01 PM" src="https://user-images.githubusercontent.com/104151366/172510208-1d1a3c99-32c2-402d-ade5-46cea518e004.png">
 
 Then click on the "Environment Variables" button at the bottom of the box that appears.
 
-![Edit Environment Variables](./images/JDK-SysProp.jpg)
+<img width="584" alt="Screen Shot 2022-06-07 at 9 14 22 PM" src="https://user-images.githubusercontent.com/104151366/172510234-0a5a5820-e494-42b7-80de-e32ea09cb774.png">
 
 A new box should pop up. At this point, you should click the "New" button at the  bottom of the box.
 
-![New System Variable](./images/JDK-EnvVar.jpg)
+<img width="703" alt="Screen Shot 2022-06-07 at 9 15 13 PM" src="https://user-images.githubusercontent.com/104151366/172510332-5f0a07ff-c7d4-4c23-b469-5f8801890a4a.png">
 
 Yet another box will then pop up. It will prompt you for a "Variable name" and "Variable value". Enter the following into these boxes:
 
-![Catalina Home](./images/catalina_home.PNG)
+<img width="645" alt="Screen Shot 2022-06-07 at 9 15 33 PM" src="https://user-images.githubusercontent.com/104151366/172510371-99620046-fa49-4776-bf08-f1cc067e3f9e.png">
 
 The variable name MUST be exactly what is typed above. The variable value should equivalent to the path to your Tomcat folder you copied during the last step.
 
@@ -539,7 +571,7 @@ Once you've entered this information, hit "OK". You should then hit "OK" again o
 
 In order to verify that your environment variable was properly set, please open your terminal (e.g. type "Command Prompt" into the Windows search bar) and type the following:
 
-![Echo Catalina Home](./images/echo.PNG)
+<img width="778" alt="Screen Shot 2022-06-07 at 9 16 00 PM" src="https://user-images.githubusercontent.com/104151366/172510438-1f190426-d9a3-4aca-98ef-5d7ab8cf2dc0.png">
 
 At this point, the value of the CATALINA_HOME environment variable should be displayed.
 
