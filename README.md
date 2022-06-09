@@ -7,7 +7,7 @@ Here you will find all of the notes from class along with study-guides, project 
 ### Most Recent QC Guide can be found [here]() :star:
 > QC is important! It is meant to simulate the interview process.  Check out [this guide on how to do well](). 
 
-### Slides can be found [here](https://docs.google.com/presentation/d/1lOrz4BWbZO4tkQlK94SQ08ARVwq9n5bCRLMNoEXTtec/edit?usp=sharing)
+### Slides can be found [here](https://docs.google.com/presentation/d/1i5SkYskb_f87kHqP0zk8kwiCJUA1ZSQNi9MGjoGm5NA/edit#slide=id.p)
 
 ### Environment Setup Guide can be found [here](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/tree/main/Environment-Setup).
 ---
