@@ -76,40 +76,11 @@ $ echo $JAVA_HOME
 
 <br>
 
-## Step 4:  Install Spring Tool Suite 4
+## Step 4:  Install IntelliJ
 
-Navigate to https://spring.io/tools and download the appropriate version of Spring Tool.
+Navigate to https://www.jetbrains.com/idea/download/#section=mac and download the appropriate version of IntelliJ.
 
-If your installation was successful, you should now be able to search for <code>Spring Tool Suite</code> in your spotlight search using <code>cmd+space</code>.
-
-Once downloaded, open Spring Tool and navigate to your preferences. 
-
-<img width="315" alt="Screen Shot 2022-06-09 at 11 55 19 AM" src="https://user-images.githubusercontent.com/104151366/172891458-65542ecb-feab-4a6c-8777-3522ea13375e.png">
-
-1. Select **Java** in the left panel of your preferences and click on **Installed JREs**.
-
-<img width="631" alt="Screen Shot 2022-06-09 at 11 55 53 AM" src="https://user-images.githubusercontent.com/104151366/172891615-71240043-199e-4495-99c9-d991d2f06dea.png">
-
-<img width="234" alt="Screen Shot 2022-06-09 at 11 56 43 AM" src="https://user-images.githubusercontent.com/104151366/172891706-e2f77372-4d37-4575-bcb6-6dcad079c39c.png">
-
-
-2. Click **add** on the right side of your preferences menu and select **Standard VM**.
-
-<img width="418" alt="Screen Shot 2022-06-09 at 11 57 19 AM" src="https://user-images.githubusercontent.com/104151366/172891875-7be64328-3daf-4899-9b35-0cb2d0582213.png">
-
-3. Click the Directory button to navigate to your installed Java versions. 
-    
-    * When the finder window opens select your HD.
-    * Select **Library** and look for **Java** listed below.
-    * Click on **Java** and navigate into **JavaVirtualMachines** where you should see an <code>adoptopenjdk-8.jdk</code>.
-    * Select this JDK and navigate to **Contents** and then **Home**.
-    * With home highlighted, click **Open**. 
-
-<img width="527" alt="Screen Shot 2022-06-09 at 11 58 53 AM" src="https://user-images.githubusercontent.com/104151366/172892082-a2966844-1589-4119-8e9d-c0c81fbe2f87.png">
-
-You should now see this:
-
-<img width="516" alt="Screen Shot 2022-06-09 at 11 59 19 AM" src="https://user-images.githubusercontent.com/104151366/172892166-132458a9-589f-4400-bed0-7c861366baff.png">
+If your installation was successful, you should now be able to search for <code>IntelliJ</code> in your spotlight search using <code>cmd+space</code>.
 
 <br>
 
