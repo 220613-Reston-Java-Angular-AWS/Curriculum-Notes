@@ -4,7 +4,7 @@ Here you will find all of the notes from class along with study-guides, project 
 
 <br>
 
-### Most Recent QC Guide can be found [here]() :star:
+<!-- ### Most Recent QC Guide can be found [here]() :star: -->
 > QC is important! It is meant to simulate the interview process.  Check out [this guide on how to do well](). 
 
 ### Slides can be found [here](https://docs.google.com/presentation/d/1i5SkYskb_f87kHqP0zk8kwiCJUA1ZSQNi9MGjoGm5NA/edit#slide=id.p)
@@ -18,8 +18,9 @@ Here you will find all of the notes from class along with study-guides, project 
   
 * **Tuesday** will be our 1-on-1 check-in days - you will have a 15 minute check-in with me, Tiffany.  If you're not scheduled to meet with me you should be working on your projects/exercises or reviewing the past QC/studying for an upcoming QC. QC's are often held on Mondays (sometimes Tuesdays).
 
-* Every **Monday at 10:00am EST** we will begin class with a quiz :pencil2: which will last for 1 hour.  We reconvene and begin the new content for that week at 11am.
-  > The Monday quizzes serve as a review for all of the material covered in the week prior.
+* Every **Monday,Wednesday,Friday at 10:30am EST** we will begin class with a quiz :pencil2: which will last for 30 min.  We reconvene and begin the new content for that week at 11:00.
+  > The Monday, Wednesday and Friday quizzez will serve as DSA - Data Structure & Algorithms practice as well.
+  > Note Mondays at 10am, I will review topics from the previous week!
 
 * 1 hour lunch breaks are scheduled as follows:
   - **Monday, Thursday, Friday**: 1pm - 2pm EST
