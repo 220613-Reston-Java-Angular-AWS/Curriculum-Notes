@@ -10,7 +10,7 @@ The package manager that we'll be using for this guide is called Homebrew. It's 
 
 ## Step 1: Install Homebrew
 
-<img src="./images/brew-1.png" width="500"/>
+<img width="525" alt="Screen Shot 2022-06-09 at 11 53 08 AM" src="https://user-images.githubusercontent.com/104151366/172891023-fd75a700-8fb6-4dd6-84e4-428732b874a3.png">
 
 Open your terminal and run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
@@ -18,7 +18,7 @@ Then run `brew`.
 
 The result should look like the following:
 
-<img src="./images/brew-2.png" width="300"/>
+<img width="319" alt="Screen Shot 2022-06-09 at 11 53 40 AM" src="https://user-images.githubusercontent.com/104151366/172891120-97103a1a-b943-405a-8fb3-f0283e6decf4.png">
 
 ## Step 2: Install Git
 
@@ -84,21 +84,18 @@ If your installation was successful, you should now be able to search for <code>
 
 Once downloaded, open Spring Tool and navigate to your preferences. 
 
-<img src="./images/sts-1.png" width="300"/>
+<img width="315" alt="Screen Shot 2022-06-09 at 11 55 19 AM" src="https://user-images.githubusercontent.com/104151366/172891458-65542ecb-feab-4a6c-8777-3522ea13375e.png">
 
 1. Select **Java** in the left panel of your preferences and click on **Installed JREs**.
 
+<img width="631" alt="Screen Shot 2022-06-09 at 11 55 53 AM" src="https://user-images.githubusercontent.com/104151366/172891615-71240043-199e-4495-99c9-d991d2f06dea.png">
 
-<img src="./images/sts-2.png" width="600"/>
-
-
-<img src="./images/sts-3.png" width="200"/>
+<img width="234" alt="Screen Shot 2022-06-09 at 11 56 43 AM" src="https://user-images.githubusercontent.com/104151366/172891706-e2f77372-4d37-4575-bcb6-6dcad079c39c.png">
 
 
 2. Click **add** on the right side of your preferences menu and select **Standard VM**.
 
-
-<img src="./images/sts-4.png" width="400"/>
+<img width="418" alt="Screen Shot 2022-06-09 at 11 57 19 AM" src="https://user-images.githubusercontent.com/104151366/172891875-7be64328-3daf-4899-9b35-0cb2d0582213.png">
 
 3. Click the Directory button to navigate to your installed Java versions. 
     
@@ -108,11 +105,11 @@ Once downloaded, open Spring Tool and navigate to your preferences.
     * Select this JDK and navigate to **Contents** and then **Home**.
     * With home highlighted, click **Open**. 
 
-<img src="./images/sts-5.png" width="500"/>
+<img width="527" alt="Screen Shot 2022-06-09 at 11 58 53 AM" src="https://user-images.githubusercontent.com/104151366/172892082-a2966844-1589-4119-8e9d-c0c81fbe2f87.png">
 
 You should now see this:
 
-<img src="./images/sts-6.png" width="500"/>
+<img width="516" alt="Screen Shot 2022-06-09 at 11 59 19 AM" src="https://user-images.githubusercontent.com/104151366/172892166-132458a9-589f-4400-bed0-7c861366baff.png">
 
 <br>
 
