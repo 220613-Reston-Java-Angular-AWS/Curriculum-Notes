@@ -21,7 +21,7 @@ The following technologies are required in order to complete this phase of the p
 
 <br>
 
-- [**Spring Tool Suite 4**](#step-3-install-spring-tool-suite-4): We will be using Spring Tool Suite 4 as our *integrated development environment* (IDE). Though you don't need an IDE to write code, an IDE provides several features that make rapid development (e.g. quickly writing and refactoring code) easier.
+- [**IntelliJ IDEA **]: We will be using IntelliJ as our *integrated development environment* (IDE). Though you don't need an IDE to write code, an IDE provides several features that make rapid development (e.g. quickly writing and refactoring code) easier.
 
 <br>
 
@@ -263,38 +263,9 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 <br>
 
-## Step 3: Install Spring Tool Suite 4
+## Step 3: Install IntelliJ
 
-1. Navigate to the [Spring Tools](https://spring.io/tools) website and download Spring Tools 4 for Eclipse. 
-
-<img width="779" alt="Screen Shot 2022-06-07 at 7 34 17 PM" src="https://user-images.githubusercontent.com/104151366/172500594-e917c823-c23c-41dc-961e-99f1d4d8e29c.png">
-
-
-2. Once the download has finished go to your downloads folder, search for the spring-tool-suite jar file and double click it to begin the install process. NOTE: STS will install to the directory the jar file is in when you open it. If you would like STS to install to another directory than your downloads directory, move the jar file before opening it.
-
-<img width="606" alt="Screen Shot 2022-06-07 at 7 34 37 PM" src="https://user-images.githubusercontent.com/104151366/172500630-b9290241-7eda-4bfe-b7af-088847fc0c6c.png">
-
-
-3. An unnamed progress bar will appear as STS is installed into your directory. 
-
-<img width="214" alt="Screen Shot 2022-06-07 at 7 34 57 PM" src="https://user-images.githubusercontent.com/104151366/172500669-10fa4fcd-a2df-492b-82ff-51928f398207.png">
-
-
-4. Once the install is complete you will have an STS folder in the directory. Double click it to enter it. 
-
-<img width="721" alt="Screen Shot 2022-06-07 at 7 35 14 PM" src="https://user-images.githubusercontent.com/104151366/172500701-a04229ae-05f4-4ecc-9ad0-2db4dfd70dcf.png">
-
-
-5. Once inside the folder double click the SpringToolSuite4 application icon to start STS and ensure it runs correctly. If you encounter any errors check all the path variables you configured in the previous setup guides. 
-
-<img width="721" alt="Screen Shot 2022-06-07 at 7 35 34 PM" src="https://user-images.githubusercontent.com/104151366/172500750-9d59575d-0423-4849-90c5-e6a121ab2353.png">
-
-
-6. If STS opens without errors you will be asked to create a workspace. You can just click "Cancel" at this time. 
-
-7. If you would like to place a shortcut to STS on your desktop (which is highly recommended) you can right-click the SpringToolSuite4 application, hover over "Send to" and click "Desktop (create shortcut)". You will now have a desktop icon from which you can open STS.
-
-<img width="680" alt="Screen Shot 2022-06-07 at 7 36 08 PM" src="https://user-images.githubusercontent.com/104151366/172500827-012b37af-0d4d-4cc2-bbb3-379206cc8060.png">
+Choose the community edition and the proper version for your operating system. Once downloaded you should be able to open right away 
 
 <br>
 
