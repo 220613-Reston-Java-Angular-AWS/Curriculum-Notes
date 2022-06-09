@@ -21,7 +21,7 @@ The following technologies are required in order to complete this phase of the p
 
 <br>
 
-- [**IntelliJ IDEA **](#step-3): We will be using IntelliJ as our *integrated development environment* (IDE). Though you don't need an IDE to write code, an IDE provides several features that make rapid development (e.g. quickly writing and refactoring code) easier.
+- [**IntelliJ IDEA**](#step-3): We will be using IntelliJ as our *integrated development environment* (IDE). Though you don't need an IDE to write code, an IDE provides several features that make rapid development (e.g. quickly writing and refactoring code) easier.
 
 <br>
 
