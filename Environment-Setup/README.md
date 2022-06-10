@@ -444,24 +444,9 @@ Note that you'll likely have to sign up for an account to use the application. P
 
 In order to download Visual Studio Code, please visit [Visual Studio Code's official website](https://code.visualstudio.com/download).
 
-Once you've navigated to the website, you should see the following:
+A step by step can be found here [VS Code Installation Guide](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Environment-Setup/Installing%20Visual%20Studio%20Code.pdf).
 
-<img width="773" alt="Screen Shot 2022-06-07 at 7 55 42 PM" src="https://user-images.githubusercontent.com/104151366/172502695-29628648-fb93-43d9-8c1c-5e762c330e66.png">
-
-Choose the installer that is compatible with your system. Once you've clicked the installer of your choice, you'll be prompted to save the file. Do so.
-
-<img width="458" alt="Screen Shot 2022-06-07 at 7 56 06 PM" src="https://user-images.githubusercontent.com/104151366/172502743-9e4d7087-28e7-473c-9eaf-7a2d10f0db2b.png">
-
-Once you've saved the installer, it should be located in your "Downloads" folder.
-
-<img width="764" alt="Screen Shot 2022-06-07 at 7 56 27 PM" src="https://user-images.githubusercontent.com/104151366/172502775-e8535a4b-be62-444c-aab7-718918646a56.png">
-
-Double click the installer. Once you've done so, the installer should be launched. Accept the license agreement and proceed until you reach a menu titled "Select Additional Tasks". Once you've arrived here, be sure to check all of the boxes that are checked in the image!
-
-<img width="527" alt="Screen Shot 2022-06-07 at 7 56 53 PM" src="https://user-images.githubusercontent.com/104151366/172502808-e9453101-40e5-482a-8b0a-2986880491b3.png">
-
-
-After you've done so, hit "Next" and then "Install" on the next menu. If your installation was successful, you should be able to search for "Visual Studio Code" on your machine.
+If your installation was successful, you should now be able to search for and find "DBeaver" using your computer's search bar.
 
 <br>
 
