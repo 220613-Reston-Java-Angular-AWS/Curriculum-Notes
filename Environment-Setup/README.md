@@ -283,21 +283,21 @@ Please look at the row for **version 13.x** as we will downloading this version.
 
 You'll then be prompted to save the file. Click "Save File".
 
-<img width="454" alt="Screen Shot 2022-06-07 at 7 46 54 PM" src="https://user-images.githubusercontent.com/104151366/172501840-67fd92e9-9425-4aee-8296-6cb98fa2d56b.png">
+![](./../images/postgre-savefile.png)
 
 The file should now be located in your "Downloads" folder.
 
-<img width="778" alt="Screen Shot 2022-06-07 at 7 48 58 PM" src="https://user-images.githubusercontent.com/104151366/172502047-939b559a-0511-4717-bc3d-74b1fbb5c110.png">
+![](./../images/postgre-downloads.png)
 
 Double click the file, which should launch the installer. You might be asked if you want the application to make changes to your device. Say "yes".
 
 You'll be presented with several menus in the Setup Wizard.
 
-<img width="568" alt="Screen Shot 2022-06-07 at 7 49 30 PM" src="https://user-images.githubusercontent.com/104151366/172502103-97fa3e27-9393-4dbb-8095-e000810dc98d.png">
+![](./../images/postgre-wizard.png)
 
 Hit "Next" until you get to the "Select Components" menu. Here, you'll want to select and/or deselect the following and then click "Next":
 
-<img width="579" alt="Screen Shot 2022-06-07 at 7 50 04 PM" src="https://user-images.githubusercontent.com/104151366/172502160-bee32de9-8b8e-4ddb-885e-655f4630c1ea.png">
+![](./../images/postgre-components.png)
 
 
 Continue to hit "Next" until you reach the "Password" menu. Here you will be tasked with providing a password for the default Postgres user (which is "postgres"). 
@@ -307,7 +307,7 @@ Continue to hit "Next" until you reach the "Password" menu. Here you will be tas
 
 ## ❗ ❗ DO NOT FORGET YOUR POSTGRES PASSWORD AND DON'T MAKE IT A COMMON PASSWORD YOU TYPICALLY USE ❗ ❗
 
-<img width="585" alt="Screen Shot 2022-06-07 at 7 51 00 PM" src="https://user-images.githubusercontent.com/104151366/172502237-244a638a-f55f-4718-860e-4b79d729d542.png">
+![](./../images/postgre-password.png)
 
 After you've decided on a password, hit "Next" on the remaining menus and allow time for Postgres to be installed. Once the installation is complete, you might be asked if you want to launch Stack Builder. You can say "no".
 
@@ -321,7 +321,7 @@ In order to install DBeaver, please visit [DBeaver's official website](https://d
 
 Once you navigate to the website, you should see the following:
 
-<img width="784" alt="Screen Shot 2022-06-07 at 7 51 40 PM" src="https://user-images.githubusercontent.com/104151366/172502313-de778e00-491e-4fd0-a0e7-a4b96db4b80a.png">
+![](./../images/dbeaver-website.png)
 
 Once you click it, you'll notice that there are two options: Community Edition and Enterprise Edition. Please select the **Community Edition** as it is free. Do NOT select the Enterprise Edition.
 
@@ -329,11 +329,9 @@ You will find the installers for the Community Edition if you scroll down the pa
 
 Once you've clicked on the installer that is compatible with your system, you'll be prompted to save the file. Save it and note where you've saved it on your machine. These files are usually stored in your computer's "Downloads" folder by default.
 
-<img width="452" alt="Screen Shot 2022-06-07 at 7 52 16 PM" src="https://user-images.githubusercontent.com/104151366/172502371-2fed7fd5-3752-4017-9093-34567c005b99.png">
+![](./../images/dbeaver-downloads.png)
 
 Now navigate to the folder where the installer is stored. For this example, we've downloaded the file to the "Downloads" folder.
-
-<img width="773" alt="Screen Shot 2022-06-07 at 7 52 53 PM" src="https://user-images.githubusercontent.com/104151366/172502428-f76e50c9-cea0-4498-89b3-e28faa9b7d92.png">
 
 Double click the installer. Once you've done so, the installer will be launched. The installer should take you through the process of setting up DBeaver. You'll be asked, for instance, to select a language of choice and review license terms before you install the software. 
 
@@ -341,7 +339,6 @@ Double click the installer. Once you've done so, the installer will be launched.
 
 When you arrive at the portion of the setup which is titled "Choose Components", please select "DBeaver Community", **"Inlcude Java**, and "Associate .SQL files".
 
-<img width="515" alt="Screen Shot 2022-06-07 at 7 53 23 PM" src="https://user-images.githubusercontent.com/104151366/172502481-a0a94af8-753e-420f-95e5-de3dbb793d7b.png">
 
 Click next, then click "Install", then click "Finish".
 
@@ -355,18 +352,15 @@ In order to download Postman, please visit [Postman's official website](https://
 
 Once you've navigated to the site, you should see the following:
 
-<img width="763" alt="Screen Shot 2022-06-07 at 7 54 00 PM" src="https://user-images.githubusercontent.com/104151366/172502541-c2c70ecb-b310-4581-8443-c0a7998ed659.png">
+![](./../images/postman.png)
 
 
 Note that the default download is for Windows. If you wish to download Postman for Mac or Linux, you should click on one of the links highlighted in the small box beneath the version number and "RELEASE NOTES" link. You can see these links at the bottom of the image provided above for reference.
 
 You should now click the "Download" button, at which point you'll be prompted to select either Windows 32-bit or Windows 64-bit (assuming you're downloading Postman for Windows). Choose the option which is compatible with your system. You'll then be prompted to save the file.
 
-<img width="450" alt="Screen Shot 2022-06-07 at 7 54 26 PM" src="https://user-images.githubusercontent.com/104151366/172502599-161a7d28-c006-46dd-aa80-fbf01b82d22c.png">
 
 Once you've saved the file, open your "Downloads" folder and double click the newly downloaded installer.
-
-<img width="770" alt="Screen Shot 2022-06-07 at 7 55 01 PM" src="https://user-images.githubusercontent.com/104151366/172502647-b853d5a3-6945-462a-83d1-5d8425301f79.png">
 
 
 Upon double clicking the executable, the installer will be launched and the program will be installed. In order to verify that it has been installed correctly, you can search for "Postman" on your machine by using your search bar.
@@ -391,45 +385,41 @@ In order to download Tomcat, please visit [Apache Tomcat's official website](htt
 
 Once you've navigated to the site, you should see the following screen:
 
-<img width="770" alt="Screen Shot 2022-06-07 at 7 57 45 PM" src="https://user-images.githubusercontent.com/104151366/172502881-0e0bd4f7-1c94-48c7-a938-b4fc912b16af.png">
+![](./../images/apache-tomcat.png)
 
 Scroll down until you see the section labeled "Tomcat 8.5.56" as shown below. Click the "Download" link at the bottom of this section.
 
-<img width="765" alt="Screen Shot 2022-06-07 at 7 58 09 PM" src="https://user-images.githubusercontent.com/104151366/172502937-8e081211-cf38-40df-921b-86f50db7aa6d.png">
+![](./../images/tomcat-8.png)
 
 **Note**: At the time of this tutorial, the version of Tomcat 8 was 8.5.56. In the future, this will not be the case. That said, please choose any version of Tomcat 8 that is available. In other words, Tomcat 8.x.xx is a valid choice as well.
 
 After you've clicked the "Download" link, you should be taken to yet another page. Scroll down until you see the following:
 
-<img width="774" alt="Screen Shot 2022-06-07 at 7 58 47 PM" src="https://user-images.githubusercontent.com/104151366/172503083-075cc1ec-c44c-4b37-af26-eb6ff8ca1063.png">
+![](./../images/tomcat-zip.png)
 
 
 Click the "zip" option under the "Core" section. It should be the first option listed. You should see the following after you've clicked the link, after which you should opt to save the file.
 
-<img width="457" alt="Screen Shot 2022-06-07 at 7 59 09 PM" src="https://user-images.githubusercontent.com/104151366/172503145-b3b6bcaa-4b7f-400f-bcbb-5cec51cabe85.png">
+![](./../images/tomcat-zip-2.png)
 
 Now go into your system's "Downloads" folder. You should see a folder that is labeled "apache-tomcat-8.x.xx".
-
-<img width="768" alt="Screen Shot 2022-06-07 at 7 59 27 PM" src="https://user-images.githubusercontent.com/104151366/172503212-7c38c8f5-f31c-420f-a351-14dda6a5ad52.png">
 
 Right click the folder. Once you do so, you should see a list of options. Choose the option that reads "Extract All...". You'll then be asked to select a destination for the extracted files. You may choose any location on your computer you wish to by hitting the "Browse" button, but for this tutorial, we will be choosing to place the extracted files in the "Program Files" folder.
 
 **Note**: Please keep note of where you choose to place the extracted files as you'll need this information in the next step.
 
-<img width="585" alt="Screen Shot 2022-06-07 at 7 59 54 PM" src="https://user-images.githubusercontent.com/104151366/172503314-512a18ec-a771-40ed-9596-2047511bd5b6.png">
+![](./../images/tomcat-extract-files.png)
 
 
 Once you've selected a destination, hit the "Extract" button at the bottom of the box.
 
 After you've done so, wait for the files to be extracted. Then go the location where you specified the extracted files should be placed. In our case, we are navigating to the "Program Files" directory.
 
-<img width="772" alt="Screen Shot 2022-06-07 at 8 00 20 PM" src="https://user-images.githubusercontent.com/104151366/172503414-1383aeef-d505-4988-a7af-b52c3e15f32b.png">
-
 There you should see the files you just extracted in a folder called "apache-tomcat-8.x.xx". Go inside of this folder by double clicking it. Once inside, copy the path to it by clicking on the bar that shows your file path near the top of the box. It should be directly to the left of the search bar. In this example, the bar contains the text:
 
     Local Disk (C:) > Program Files > apache-tomcat-8.5.56
 
-<img width="768" alt="Screen Shot 2022-06-07 at 8 01 04 PM" src="https://user-images.githubusercontent.com/104151366/172503597-cfe19d30-6f88-49aa-a1c0-cca310420d29.png">
+![](./../images/tomcat-program-files.png)
 
 
 Once you've clicked on the bar, copy the address. In this example, the address is:
@@ -440,19 +430,19 @@ Once you've clicked on the bar, copy the address. In this example, the address i
 
 Now go into your search bar and type "Edit the System Environment Variables".
 
-<img width="767" alt="Screen Shot 2022-06-07 at 9 14 01 PM" src="https://user-images.githubusercontent.com/104151366/172510208-1d1a3c99-32c2-402d-ade5-46cea518e004.png">
+![](./../images/edit-systems.png)
 
 Then click on the "Environment Variables" button at the bottom of the box that appears.
 
-<img width="584" alt="Screen Shot 2022-06-07 at 9 14 22 PM" src="https://user-images.githubusercontent.com/104151366/172510234-0a5a5820-e494-42b7-80de-e32ea09cb774.png">
+![](./../images/tomcat-env-var.png)
 
 A new box should pop up. At this point, you should click the "New" button at the  bottom of the box.
 
-<img width="703" alt="Screen Shot 2022-06-07 at 9 15 13 PM" src="https://user-images.githubusercontent.com/104151366/172510332-5f0a07ff-c7d4-4c23-b469-5f8801890a4a.png">
+![](./../images/tomcat-new-env.png)
 
 Yet another box will then pop up. It will prompt you for a "Variable name" and "Variable value". Enter the following into these boxes:
 
-<img width="645" alt="Screen Shot 2022-06-07 at 9 15 33 PM" src="https://user-images.githubusercontent.com/104151366/172510371-99620046-fa49-4776-bf08-f1cc067e3f9e.png">
+![](./../images/tomcat-catalina.png)
 
 The variable name MUST be exactly what is typed above. The variable value should equivalent to the path to your Tomcat folder you copied during the last step.
 
@@ -462,7 +452,7 @@ Once you've entered this information, hit "OK". You should then hit "OK" again o
 
 In order to verify that your environment variable was properly set, please open your terminal (e.g. type "Command Prompt" into the Windows search bar) and type the following:
 
-<img width="778" alt="Screen Shot 2022-06-07 at 9 16 00 PM" src="https://user-images.githubusercontent.com/104151366/172510438-1f190426-d9a3-4aca-98ef-5d7ab8cf2dc0.png">
+![](./../images/cataline-home.png)
 
 At this point, the value of the CATALINA_HOME environment variable should be displayed.
 
