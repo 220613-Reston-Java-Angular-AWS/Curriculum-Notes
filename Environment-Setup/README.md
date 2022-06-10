@@ -159,8 +159,11 @@ You should see your operating system listed ("Windows 10" in the above example) 
 1. Navigate in your web browser to [Oracle's JDK 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html?) website. NOTE: If you are experiencing errors when trying to load the webpage try another browser. If you still are having trouble, try again later. 
 
 
-cvjbsdlcbsldkbvlskbfvc slkv ;k.zn z
-djbvsoklfbsolfkbvslkfbv lskbcv
+2. In the top right of the website click "View Accounts" and then "Create an Account." (If you already have an Oracle account you can just skip to step 3)
+
+3. Return to Oracle's JDK 8 website. Scroll to find the appropriate JDK for your Operating System and Architecture. (Windows 10 will be Windows x64) and click to download.
+
+A step by step guide can be found here []().
 
 <br>
 
