@@ -163,7 +163,7 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 3. Return to Oracle's JDK 8 website. Scroll to find the appropriate JDK for your Operating System and Architecture. (Windows 10 will be Windows x64) and click to download.
 
-A step by step guide can be found here []().
+A step by step guide can be found here [Install JDK](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Environment-Setup/Installing%20the%20Java%20Development%20Kit.pdf).
 
 <br>
 
