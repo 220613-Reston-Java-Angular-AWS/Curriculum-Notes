@@ -15,6 +15,8 @@ An OS, or operating system, is the software that allows you to interface with yo
 
 Windows is the most popular operating system, primarily because it comes pre-installed on PCs and is fairly easy to use. Similarly, macOS comes pre-installed on Mac (Apple) computers. Linux is most commonly found on servers, though it can be installed on personal computers as well, and it is an open-source operating system with many different distributions that differ slightly from each other (such as Debian and Red Hat Linux).
 
+### [Memory Usage and Computers](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-1/Memory%20Usage%20and%20Computers.md)
+More notes here.
 
 ## Unix
 
