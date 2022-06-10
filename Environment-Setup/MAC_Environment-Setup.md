@@ -10,7 +10,7 @@ The package manager that we'll be using for this guide is called Homebrew. It's 
 
 ## Step 1: Install Homebrew
 
-<img width="525" alt="Screen Shot 2022-06-09 at 11 53 08 AM" src="https://user-images.githubusercontent.com/104151366/172891023-fd75a700-8fb6-4dd6-84e4-428732b874a3.png">
+<![](./../images/install-homebrew.png)
 
 Open your terminal and run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
@@ -18,7 +18,7 @@ Then run `brew`.
 
 The result should look like the following:
 
-<img width="319" alt="Screen Shot 2022-06-09 at 11 53 40 AM" src="https://user-images.githubusercontent.com/104151366/172891120-97103a1a-b943-405a-8fb3-f0283e6decf4.png">
+<![](./../images/run-brew.png)
 
 ## Step 2: Install Git
 
