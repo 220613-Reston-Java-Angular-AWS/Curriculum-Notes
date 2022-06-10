@@ -163,39 +163,36 @@ A step by step guide can be found here [Install JDK](https://github.com/220613-R
 
 5. Java will finish installing and you can then click "Close."
 
-![](./images/JDK-Wizard5.jpg)
-![](./images/JDK-Wizard6.jpg)
-
 6. Use your system search tool (next to the windows button) to look for "Edit the system environment variables" in the control panel. Be sure that you open the SYSTEM environment not the ones just for your account. 
 
-![](./images/JDK-SysEnv.jpg)
+![](./../images/system-environment.png)
 
-16. Click the "Environment Variables" button in the window that opens.
+7. Click the "Environment Variables" button in the window that opens.
 
-![](./images/JDK-SysProp.jpg)
+![](./../images/environment-variables.png)
 
-17. Under "System Variables" click the "New" button. 
+8. Under "System Variables" click the "New" button. 
 
-![](./images/JDK-EnvVar.jpg)
+![](./../images/system-variables.png)
 
 18. Name the new variable "JAVA_HOME" and give it the value of the directory where your JDK was installed to. (See Step 12.) If you are unsure of your directory path you can go to C:\Program Files\Java in your file explorer then click on the JDK folder to open it. You can then copy the path from the navigation bar at the top of the file explorer. 
 
-![](./images/JDK-JavaHome.jpg)
+![](./../images/java-home-variables.png)
 
 19. In your system variables then select the "Path" variable and click "Edit."
 
-![](./images/JDK-PathEdit.jpg)
+![](./../images/set-path-variable.png)
 
 20. Click "New" to create a new line. Add the path to the JDK bin folder in this line, it will be the same as the path in JAVA_HOME with a "\bin" at the end. 
 
-![](./images/JDK-PathNew.jpg)
+![](./../images/java-home-bin.png)
 
 21. Click "OK" to close the Environment Variables window. 
 
 
 22. Open Git Bash, type "java -version" and hit Enter. If the JDK is installed correctly you should see Java with the version number you downloaded. 
 
-![](./images/JDK-Version.jpg)
+![](./../images/java-version.png)
 
 
 <br>
