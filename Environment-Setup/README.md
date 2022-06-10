@@ -199,7 +199,8 @@ A step by step guide can be found here [Install JDK](https://github.com/220613-R
 
 ## Step 3: Install IntelliJ
 
-Choose the community edition and the proper version for your operating system. Once downloaded you should be able to open right away 
+Choose the community edition and the proper version for your operating system. Once downloaded you should be able to open right away click [here](https://www.jetbrains.com/idea/download/#section=windows) to download.
+
 
 <br>
 
