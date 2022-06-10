@@ -77,7 +77,7 @@ These options will be clearly labeled on the websites you visit to download the 
 
 You should now see the following screen:
 
-![](.images/cpu_settings-info.png)
+![](./../images/cpu_settings-info.png)
                                                                                                                                              
 
 You should see your operating system listed ("Windows 10" in the above example) and the system type listed under the "System" tab (a 64-bit operating system in the above example).
