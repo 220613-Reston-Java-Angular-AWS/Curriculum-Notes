@@ -3,6 +3,9 @@
 
 ## Computer fundamentals: Types of Memory
 
+![](./../images/Location+External+memory.png)
+
+Link Here[]() for more details.
 
 ## OS: Fundamentals
 
