@@ -1,6 +1,6 @@
 # Monday - 
 
-## First Day Orientation
+### First Day Orientation
 
 ## Computer fundamentals: Types of Memory
 
