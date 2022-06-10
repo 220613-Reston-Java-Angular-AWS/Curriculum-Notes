@@ -1,4 +1,4 @@
-# Monday -  First Day! 
+# Monday -  First Day 
 
 
 ## Computer fundamentals: Types of Memory
@@ -17,3 +17,20 @@
 ## Introduction to SDLC
 
 <br>
+
+# Tuesday
+
+<br>
+
+#Wednesday
+
+<br>
+
+#Thursday
+
+<br>
+
+#Friday
+
+<br>
+
