@@ -88,54 +88,47 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 1. Navigate in your browser to [Git's Website](https://git-scm.com/download) and click the latest download for Windows. (For those using a different OS click the appropriate OS and look for the most recent stable release.)
 
-<div align="center">
-<img width="1039" alt="Screen Shot 2022-06-07 at 6 58 08 PM" src="https://user-images.githubusercontent.com/104151366/172497029-4f638667-4b83-47b9-ac0d-0707763502eb.png">
-</div>
+![](./../images/install_git.png)
 
 
 2. Click yes to any security/firewall popup asking if you are sure you want to download the file. 
 
 3. The install file will begin downloading; most browsers will show the file that has just downloaded, click that file when it completes. If you do so skip to step 6. If the download is not apparent on your browser or disappears upon finishing go to step 4. 
-
-<img width="459" alt="Screen Shot 2022-06-07 at 7 05 23 PM" src="https://user-images.githubusercontent.com/104151366/172497685-71398090-54a5-4907-8d59-2b70b9c54e60.png">
+![](./../images/git-download2.png)
 
 
 4. If you were not able to click the install exe file you just downloaded in your browser open your file explorer.
 
-<img width="758" alt="Screen Shot 2022-06-07 at 7 08 15 PM" src="https://user-images.githubusercontent.com/104151366/172497892-99f160f6-19e0-4834-8ba8-616d0b391a0e.png">
+![](./../images/git-download-2.png)
 
 
 5. In the window that opens click the "Downloads" folder, use the search bar in the upper right to search "git", and then double click on the Git installer exe file.
 
-<img width="1042" alt="Screen Shot 2022-06-07 at 7 09 54 PM" src="https://user-images.githubusercontent.com/104151366/172497970-28757c3f-e78b-4084-81d9-5126b535a8bf.png">
+![](./../images/git-downloads-folder.png)
 
 
 6. Click yes to any security pop-ups asking you if you want to allow the installer to make changes to your computer. 
 
 7. The install wizard will open to guide you through the process of installing Git. Read the license agreement and click "Next." 
-8. 
-<img width="607" alt="Screen Shot 2022-06-07 at 7 11 35 PM" src="https://user-images.githubusercontent.com/104151366/172498175-f1f8c655-4765-4ae1-a494-15ec89a8caf6.png">
+ 
+![](./../images/git-license.png)
 
 8. Accept the default installation path by clicking "Next."
 
-<img width="533" alt="Screen Shot 2022-06-07 at 7 12 42 PM" src="https://user-images.githubusercontent.com/104151366/172498227-46f98d11-02c4-440d-85a2-5a5ec89619b0.png">
+![](./../images/git-filepath.png)
 
 9. Select your components. It is recommended to add a desktop icon. Leave the other boxes in their default setting. Click "Next."
 
-<img width="613" alt="Screen Shot 2022-06-07 at 7 13 22 PM" src="https://user-images.githubusercontent.com/104151366/172498283-9a14717b-6542-49ac-beb2-e69cbe65b3f8.png">
+![](./../images/git-components.png)
 
 
 10. Leave the rest of the set up as the default configuration clicking Next until you get to the experimental options (which you should leave unchecked) and then click Install. This will run the actual install process. 
 
-<img width="621" alt="Screen Shot 2022-06-07 at 7 13 59 PM" src="https://user-images.githubusercontent.com/104151366/172498352-85ac2576-9bf6-4d33-9449-fb4ff3a94ce5.png">
-
-<img width="601" alt="Screen Shot 2022-06-07 at 7 14 40 PM" src="https://user-images.githubusercontent.com/104151366/172498417-ea01fc97-b53c-4d15-ac62-cc5ecfdca12d.png">
-
-<img width="614" alt="Screen Shot 2022-06-07 at 7 15 17 PM" src="https://user-images.githubusercontent.com/104151366/172498481-9113d147-104b-4962-9be7-d9153df7eabd.png">
-
-<img width="624" alt="Screen Shot 2022-06-07 at 7 15 45 PM" src="https://user-images.githubusercontent.com/104151366/172498527-32f1eb69-6cb9-4f93-8344-582a8d65e6c5.png">
-
-<img width="623" alt="Screen Shot 2022-06-07 at 7 16 22 PM" src="https://user-images.githubusercontent.com/104151366/172498667-9ca3667e-732e-41c4-8be0-711df37020e3.png">
+![](./../images/git-editor.png)
+![](./../images/git-PATH.png)
+![](./../images/git-HTTPS.png)
+![](./../images/git-line-end-conversions.png)
+![](./../images/git-default-pull.png)
 
 <!-- ![](./images/Git-Default-Pull.jpg)
 ![](.images/Git-Extras.jpg)
@@ -143,12 +136,10 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 11. After install you will get a a final window giving you the options to launch Git Bash and view the Readme notes. Select open Git Bash and deselect the view Readme notes. Click "Next."
 
-![](.images/Git-Finished.jpg)
 
 12. When Git Bash opens type "git --version" and hit Enter. If it return the version of Git you installed it correctly. 
 
-<img width="364" alt="Screen Shot 2022-06-07 at 7 17 52 PM" src="https://user-images.githubusercontent.com/104151366/172498733-b79a181a-9ac9-498a-b35d-d80232305b57.png">
-
+![](./../images/git-finished.png)
 
 <br>
 
