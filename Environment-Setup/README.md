@@ -208,66 +208,66 @@ Choose the community edition and the proper version for your operating system. O
 
 1. Navigate in your web browser to the [Maven Download Page](https://maven.apache.org/download.cgi) and scroll down to the "Files" section. Click the Binary zip archive link to download. Approve any firewall/security popups asking if you are sure you want to download the file. 
 
-<img width="697" alt="Screen Shot 2022-06-07 at 7 36 47 PM" src="https://user-images.githubusercontent.com/104151366/172500887-dd4b7f5f-8448-40d5-aae9-c2ab825d4b2a.png">
+![](./../images/install-maven.png)
 
 2. The download should appear in your browser. When it completes right-click and click "Show in folder." Skip to step 4. If you were unable to right-click and show in folder proceed to step 3. 
 
-<img width="524" alt="Screen Shot 2022-06-07 at 7 37 15 PM" src="https://user-images.githubusercontent.com/104151366/172500955-d311baf0-329b-4eca-8c47-a84ea3f73280.png">
+![](./../images/maven-folder.png)
 
 3. If you could not open the file location from your browser, open your file explorer, click downloads, and search "maven" in the upper right search bar. You should see the file you just downloaded. 
 
-<img width="779" alt="Screen Shot 2022-06-07 at 7 38 33 PM" src="https://user-images.githubusercontent.com/104151366/172501064-aca44d9a-464a-46b4-8526-8ab83aa4e6f2.png">
+![](./../images/maven-downloads.png)
 
 4. Right click the Maven zip archive you just downloaded and click "Extract All..."
 
-<img width="762" alt="Screen Shot 2022-06-07 at 7 39 03 PM" src="https://user-images.githubusercontent.com/104151366/172501117-5ca9da3f-e743-4d6d-9357-5bbf198da1f3.png">
+![](./../images/maven-extract.png)
 
 5. Your extraction wizard will open. Set the file path to "C:\Maven" and click the box to show extracted files when complete. Then click "Extract."
 
-<img width="733" alt="Screen Shot 2022-06-07 at 7 39 35 PM" src="https://user-images.githubusercontent.com/104151366/172501168-541330c5-0a3b-4974-8234-f08b20f69dcb.png">
+![](./../images/extract-file.png)
 
 6. Your file will be unzipped and your file explore will open a window to C:\Maven containing the folder with your maven version. Double click to open that folder. 
 
-<img width="779" alt="Screen Shot 2022-06-07 at 7 40 02 PM" src="https://user-images.githubusercontent.com/104151366/172501211-3bd46208-43fb-4f4e-bf4f-153e07fe84ac.png">
+![](./../images/unzipped-maven.png)
 
 7. Now inside the versions specific folder, click the navigation bar and the top and copy the file path. You will need this for your environment variables. 
 
-<img width="777" alt="Screen Shot 2022-06-07 at 7 40 19 PM" src="https://user-images.githubusercontent.com/104151366/172501253-f6ff3a89-fc78-44a5-9671-c1528265627b.png">
+![](./../images/env-var-copy.png)
 
 8. Use your system search tool (next to the windows button) to look for "Edit the system environment variables" in the control panel. Be sure that you open the SYSTEM environment not the ones just for your account. 
 
-<img width="781" alt="Screen Shot 2022-06-07 at 7 41 03 PM" src="https://user-images.githubusercontent.com/104151366/172501315-bf805ca4-836a-4443-a02f-30865637f60d.png">
+![](./../images/maven-env-var.png)
 
 9. Click the "Environment Variables" button in the window that opens.
 
-<img width="580" alt="Screen Shot 2022-06-07 at 7 41 54 PM" src="https://user-images.githubusercontent.com/104151366/172501375-fa7f596a-d838-4598-a035-255283e04921.png">
+![](./../images/maven-env-var-2.png)
 
 10. Under "System Variables" click the "New" button. 
 
 
 11. Name the new variable "M2_HOME" and give it the value of the file path you copied in step 7. Then click "OK."
 
-<img width="790" alt="Screen Shot 2022-06-07 at 7 42 32 PM" src="https://user-images.githubusercontent.com/104151366/172501441-d617c464-7b92-4a5e-a5d8-e102e2581d83.png">
+![](./../images/m2-home.png)
 
 12. Click the new button again. Give the variable the name "M2" and the file path "%M2_HOME%\bin" then click "OK."
 
-<img width="760" alt="Screen Shot 2022-06-07 at 7 43 11 PM" src="https://user-images.githubusercontent.com/104151366/172501507-38d4dde2-15b1-4870-bd87-9845bd2b33aa.png">
+![](./../images/m2.png)
 
 
 13. In your system variables then select the "Path" variable and click "Edit."
 
-<img width="669" alt="Screen Shot 2022-06-07 at 7 43 58 PM" src="https://user-images.githubusercontent.com/104151366/172501593-60dad87b-70e6-4357-a0e4-cc3f2fcf01fb.png">
+![](./../images/maven-path.png)
 
 14. Click new to open a new line and type in "%M2%" then click "OK."
 
-<img width="640" alt="Screen Shot 2022-06-07 at 7 44 42 PM" src="https://user-images.githubusercontent.com/104151366/172501669-8f873d99-db52-4b85-8afc-c27e6302eea8.png">
+![](./../images/m2-path.png)
 
 15. Click "OK" to close the Environment Variables window. 
 
 
 16. Open CMD prompt (or a GitBash terminal) and type `mvn --version` then hit Enter. If that returns the maven version you have it set up correctly. 
 
-<img width="660" alt="Screen Shot 2022-06-07 at 7 45 38 PM" src="https://user-images.githubusercontent.com/104151366/172501735-d2272aa9-d4f4-4f6a-9a8e-7eb27ba51383.png">
+![](./../images/maven-version.png)
 
 <br>
 
