@@ -165,6 +165,50 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 A step by step guide can be found here [Install JDK](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Environment-Setup/Installing%20the%20Java%20Development%20Kit.pdf).
 
+ IMPORTANT: Make note of the file path for the installation directory! You WILL need this later. 
+
+4. The install will begin extracting files and will ask to confirm the installation directory of the JRE. Confirm the default directory by clicking "Next."
+
+![](./images/JDK-Wizard3.jpg)
+![](./images/JDK-Wizard4.jpg)
+
+5. Java will finish installing and you can then click "Close."
+
+![](./images/JDK-Wizard5.jpg)
+![](./images/JDK-Wizard6.jpg)
+
+6. Use your system search tool (next to the windows button) to look for "Edit the system environment variables" in the control panel. Be sure that you open the SYSTEM environment not the ones just for your account. 
+
+![](./images/JDK-SysEnv.jpg)
+
+16. Click the "Environment Variables" button in the window that opens.
+
+![](./images/JDK-SysProp.jpg)
+
+17. Under "System Variables" click the "New" button. 
+
+![](./images/JDK-EnvVar.jpg)
+
+18. Name the new variable "JAVA_HOME" and give it the value of the directory where your JDK was installed to. (See Step 12.) If you are unsure of your directory path you can go to C:\Program Files\Java in your file explorer then click on the JDK folder to open it. You can then copy the path from the navigation bar at the top of the file explorer. 
+
+![](./images/JDK-JavaHome.jpg)
+
+19. In your system variables then select the "Path" variable and click "Edit."
+
+![](./images/JDK-PathEdit.jpg)
+
+20. Click "New" to create a new line. Add the path to the JDK bin folder in this line, it will be the same as the path in JAVA_HOME with a "\bin" at the end. 
+
+![](./images/JDK-PathNew.jpg)
+
+21. Click "OK" to close the Environment Variables window. 
+
+
+22. Open Git Bash, type "java -version" and hit Enter. If the JDK is installed correctly you should see Java with the version number you downloaded. 
+
+![](./images/JDK-Version.jpg)
+
+
 <br>
 
 ## Step 3: Install IntelliJ
