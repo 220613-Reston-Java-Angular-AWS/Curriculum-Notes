@@ -130,9 +130,6 @@ You should see your operating system listed ("Windows 10" in the above example) 
 ![](./../images/git-line-end-conversions.png)
 ![](./../images/git-default-pull.png)
 
-<!-- ![](./images/Git-Default-Pull.jpg)
-![](.images/Git-Extras.jpg)
-![](.images/Git-Experimental.jpg) -->
 
 11. After install you will get a a final window giving you the options to launch Git Bash and view the Readme notes. Select open Git Bash and deselect the view Readme notes. Click "Next."
 
@@ -158,8 +155,6 @@ A step by step guide can be found here [Install JDK](https://github.com/220613-R
 
 4. The install will begin extracting files and will ask to confirm the installation directory of the JRE. Confirm the default directory by clicking "Next."
 
-![](./images/JDK-Wizard3.jpg)
-![](./images/JDK-Wizard4.jpg)
 
 5. Java will finish installing and you can then click "Close."
 
