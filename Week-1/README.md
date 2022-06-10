@@ -1,12 +1,14 @@
-# Monday - 
+# Monday -  First Day! 
 
-### First Day Orientation
 
 ## Computer fundamentals: Types of Memory
 
+
 ## OS: Fundamentals
 
+
 ## Unix
+
 
 ## Commands
 
