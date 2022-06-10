@@ -5,7 +5,7 @@
 
 ![](./../images/Location+External+memory.png)
 
-Link Here[Types-of-Memory](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-1/types-of-memory.md) for more details.
+### Click [here](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-1/types-of-memory.md) for more details.
 
 ## OS: Fundamentals
 
