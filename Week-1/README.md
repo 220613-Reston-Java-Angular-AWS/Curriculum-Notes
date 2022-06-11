@@ -98,35 +98,35 @@ This module introduces the Software Development Lifecycle, the Waterfall and Agi
 
 <br>
 
-#Wednesday
+# Wednesday
 
-##Class vs Object
-##Pillars of OOP
-##Introduction to Java
-##JDK, JRE, JVM
-##First Java Program: HelloWorld
-##Methods and Parameters
-
-<br>
-
-#Thursday
-
-##Constructors
-##Packages and Imports
-##Wrapper Classes
-##Introduction to Git
-##Commits
-##Committing work
-##Working directory
-##Branches
-##Pull requests
+## Class vs Object
+## Pillars of OOP
+## Introduction to Java
+## JDK, JRE, JVM
+## First Java Program: HelloWorld
+## Methods and Parameters
 
 <br>
 
-#Friday
+# Thursday
 
-##Control Flow Statements
-##Casting
+## Constructors
+## Packages and Imports
+## Wrapper Classes
+## Introduction to Git
+## Commits
+## Committing work
+## Working directory
+## Branches
+## Pull requests
+
+<br>
+
+# Friday
+
+## Control Flow Statements
+## Casting
 
 ## Agile vs Waterfall (Review)
 
