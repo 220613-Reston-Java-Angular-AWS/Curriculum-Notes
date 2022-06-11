@@ -58,6 +58,7 @@ You can write/view files in the shell by making use of built-in text editors suc
 
 ## Introduction to SDLC
 This module introduces the Software Development Lifecycle, the Waterfall and Agile methodologies, and the Scrum, Kanban, Scrumban, and eXtreme Programming frameworks.
+![](./../images/sdlc-diagram.png)
  
 * [Lecture Notes](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-1/SDLC-Software-Development-Life-Cycle.md)
 
