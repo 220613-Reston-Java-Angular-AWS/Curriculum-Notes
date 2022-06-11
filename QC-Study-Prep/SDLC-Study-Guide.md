@@ -1,0 +1,68 @@
+## SDLC Study Guide
+
+- Software Development Lifecyle
+  - Requirements gathering and analysis
+  - Project planning and design
+  - Development
+  - Testing
+  - Deployment
+  - Maintainence
+- Methodologies
+  - Waterfall
+    - Big Design Up Front
+    - Emphasis on documentation
+    - Cannot go back to previous stages
+    - Clear milestones
+  - Agile
+    - Iterative model
+    - Requirements may change
+    - Emphasis on "failing fast" and gathering feedback
+  - Big Bang
+  - V-model
+- Agile vs Waterfall comparison
+- Waterfall
+- Agile principles
+  - Individual interactions over processes and tools
+  - Working software over thorough documentation
+  - Collaboration with customers over contract negotiations
+  - Responding to change over following a plan 
+- Agile frameworks
+  - Scrum
+  - eXtreme Programming (XP)
+  - Kanban
+- Scrum ceremonies
+  - Sprint planning
+  - Daily Scrum (standup)
+    - Work completed yesterday
+    - Work to do today
+    - Impediments and blockers to report
+  - Sprint Review
+  - Sprint Retrospective
+- Agile terminology
+  - User Acceptance Testing (UAT)
+  - Minimum Viable Product (MVP)
+  - Product backlog
+  - Sprint backlog
+  - Scrum board / Kanban board
+  - Epic
+  - Sprint
+  - Definition of Done
+  - User Story
+    - Card
+    - Conversation
+    - Confirmation
+  - Story pointing
+  - Pair Programming
+  - Product Owner
+  - Scrum master
+  - Test-driven development (TDD)
+  - Velocity
+  - Capacity
+- Functional vs non-functional requirements
+- Non-functional requirements
+  - Security
+  - Reliability
+  - Scalability
+  - Performance / Latency
+  - Maintainability
+  - Usability
