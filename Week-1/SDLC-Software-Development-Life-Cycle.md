@@ -56,7 +56,7 @@ Although we highlighted the dangers of allowing for changing feature requests in
  
 We will first explore Scrum, arguably the simplest of the Agile frameworks. It enforces certain ceremonies, led by a Scrum Master who ensures that the team is following Scrum practices. Development is broken into two to four week sprints.
  
-![](./images/scrum_iteration.jpg)
+![](./../images/scrum-framework.png)
  
 The above image shows the Scrum lifecycle. Before the sprint begins, the team moves some user stories from the project backlog (the list of user stories for the entire project) to the sprint backlog (the list of features that the team is planning to complete in the upcoming sprint). Throughout the sprint, the Scrum Master leads 15 minute daily standups, daily meetings where each team member details the progress they made the previous day, their plans for the coming day, and any roadblocks they have run into. The standup creates an environment where each team member knows how the project in totality is progressing, even though they may only be working on one component. It also allows for a set time where programmers can ask their peers, who may have more expertise and experience in a specific area, or simply a fresh pair of eyes, for help with any issues. As any programmer can attest, there are some bugs that you will never find by yourself.
  
@@ -74,7 +74,7 @@ As we touched on when discussing Agile, the very fluidity that gives Scrum benef
  
 The Kanban board, a vehicle for a visual representation of the progress of a project, is the hallmark trait of the Kanban framework. The image below shows an empty example Kanban board.
  
-![](./images/kanban_board.jpg)
+![](./../images/kanban-board.png)
  
 There is no firm requirement for the number of columns on the board, but there should generally be at least one column per SDLC phase. Kanban cards, visual representations of a single user story or work item, are placed in the columns. Team members who have completed their current task can simply refer to the board and choose a new card from the backlog to work on. There should never be more tasks in progress - i.e. not in the backlog/equivalent column or release/equivalent column - than there are developers on the team.
  
