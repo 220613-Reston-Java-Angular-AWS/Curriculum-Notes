@@ -42,15 +42,48 @@ Good tutorial that we will use in class [here](https://www.hpc.iastate.edu/guide
 
 You can write/view files in the shell by making use of built-in text editors such as `nano` and `vim` or `vi`.
 
-## Guides
+**Guides -**
 
 * [Beginner's Guide to Nano](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
 * [Beginner's Guide to Vim](https://www.linux.com/training-tutorials/vim-101-beginners-guide-vim/)
 
+[Here](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-1/Command-line-Text-Editors.md) we can find more details about command line text editors.
 
+### Text Editors - Not in command line 
+
+> [Sublime Text](https://www.sublimetext.com/) - You can navigate to where it says "Download" if you want.
+> TextEdit - that comes on all Mac OS
+> Notepad - that comes on all Window OS
 
 
 ## Introduction to SDLC
+This module introduces the Software Development Lifecycle, the Waterfall and Agile methodologies, and the Scrum, Kanban, Scrumban, and eXtreme Programming frameworks.
+ 
+* [Lecture Notes](./sdlc-lecture-notes.md)
+
+### Table of Contents
+
+* Team Development in the Software Industry
+* Software Development Lifecycle (SDLC)
+* The Waterfall Methodology
+  * Waterfall Drawbacks
+  * Benefits of Waterfall
+* Term Definitions
+* The Agile Methodology
+  * Agile Drawbacks
+    * Benefits of Agile
+    * The Scrum Framework
+      * Scrum Advantages
+      * Scrum Disadvantages
+    * Kanban
+      * Kanban Advantages
+      * Kanban Disadvantages
+    * Scrumban
+    * eXtreme Programming (XP)
+      * XP Downsides
+      * XP Benefits
+    * Agile Planning
+* A Home for Waterfall
 
 <br>
 
