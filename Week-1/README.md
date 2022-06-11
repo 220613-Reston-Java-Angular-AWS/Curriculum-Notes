@@ -1,7 +1,8 @@
 # Monday -  First Day 
 
-> 🔴 Important! Here you will find your Day 1 [Assessment](https://coding.revature.com/AuthenticateKey?id=4a53e844e7). 
-> 🔴 You will have **1 hour** to complete it
+🔴 Important! Here you will find your Day 1 [Assessment](https://coding.revature.com/AuthenticateKey?id=4a53e844e7). 
+
+🔴 You will have **1 hour** to complete it
 
 
 ## Computer fundamentals: Types of Memory
