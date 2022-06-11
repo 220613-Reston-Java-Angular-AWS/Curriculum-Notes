@@ -91,7 +91,11 @@ This module introduces the Software Development Lifecycle, the Waterfall and Agi
 # Tuesday
 
 ## Environment Variables
+> [Here](https://www.youtube.com/watch?v=bd65z5VZ7L4) is a great in depth video to the explains Environment Variables. 
+
 ## Package Managers
+
+
 ## File Permissions
 ## How To Do Well in QC
 ## Coding Challenges - General Guide
