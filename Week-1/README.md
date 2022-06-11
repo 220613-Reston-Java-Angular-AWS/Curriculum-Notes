@@ -34,8 +34,21 @@ Good tutorial that we will use in class [here](https://www.hpc.iastate.edu/guide
 
 ## Commands
 
+### Through the tutorial above we will pratice writing and executing commands in the terminal, however, [here](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-1/commands.md). is a breakdown of more commands 
+
+
 
 ## Command-Line Text Editors
+
+You can write/view files in the shell by making use of built-in text editors such as `nano` and `vim` or `vi`.
+
+## Guides
+
+* [Beginner's Guide to Nano](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
+* [Beginner's Guide to Vim](https://www.linux.com/training-tutorials/vim-101-beginners-guide-vim/)
+
+
+
 
 ## Introduction to SDLC
 
