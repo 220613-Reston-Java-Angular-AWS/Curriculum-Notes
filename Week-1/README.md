@@ -138,7 +138,7 @@ In Unix, file permissions can become very important. Every file in Unix has thre
 
 Each type of permission can have any combination of read (`r` or `4`), write (`w` or `2`), and execute (`x` or `1`) permissions. You can represent these permissions as either a number or a string of characters. For example, someone with read and write permissions has `6` or `rw` permissions.
 
-![Permissions table](./../images/file-permissions.png)
+![](./../images/file-permissions.png)
 
 ## Viewing permissions
 
