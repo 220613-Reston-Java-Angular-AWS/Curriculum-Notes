@@ -587,6 +587,24 @@ How were we able to create instances without defining a constructor?
 * When Java sees there are no constructors in a class, Java will insert a **default constructor**
 * the **default constructor** is a no arg constructor: `public Person(){}`
 
+## Static Keyword
+`Static` denotes a method, or field to be part of the class itself, rather than part of an object instantiated from the class. This means that all objects of that class share a single method or field. Consider the class below:
+  
+```
+public class Example {
+    public static int x = 5;
+}
+```
+  
+That static int x will be shared among all instances of this class. If we create two different objects from the class and print the value of x for each, they will both be 5. If we change one to 10 and then print them both again, both will show 10. There is only one version of x, which is kept in memory with the class itself.
+  
+Likewise we can classify methods as static as well. Static methods can be invoked on a class itself, and do not have access to non-static fields and methods. Consider a class with a non-static field, y. If you never instantiate an object from the class, y never exists. If you can invoke a static method without ever instantiating an object, and that method tries to access the field y, it would throw an error. Static methods can be invoked on a class object as well, and can be invoked on sub-classes as though inherited. 
+  
+Lastly, we can modify some classes to be static as well. We can't make a top-most class static (every .java file must contain one top-most class which the file is named after) but we can "nest" a class inside another. These nested classes can be made static. Static nested classes can only access static members of the outer class. Nested classes can access even private members of the outer class.
+  
+## Return Type
+Many methods return some data upon completion. Almost all methods must specify a return type. The only methods that do not are constructors. A method which does not return any data must have the `void` return type. When a method is invoked, it is eventually resolved as a returned value.
+
 ## Packages and Imports
 
 #### A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code.
@@ -598,7 +616,104 @@ How were we able to create instances without defining a constructor?
 
 ## Wrapper Classes
 
+Wrapper classes are classes that let you treat primitives as Objects. This is necessary - for example - for certain methods which only accept objects and not primitives. **Boxing** is the process of converting a primitive to its wrapper class. Java has a feature called **autoboxing** which will automatically convert primitives to wrapper classes implicitly. **Unboxing** is the reverse - converting a wrapper class to its primitive. Below the wrapper classes are listed:
+
+| Primitive | Wrapper Class | Size | Description |
+| --------- | ------------- | ------- | ----------- |
+| boolean   | Boolean       | N/A     | True/False. Size unspecified, depends on JVM |
+| byte      | Byte          | 8 bits  | numerical, integer value |
+| short     | Short         | 16 bits | signed numerical, integer value |
+| char      | Character     | 16 bits | unsigned numerical, Unicode character |
+| int       | Integer       | 32 bits | numerical, integer value |
+| long      | Long          | 64 bits | numerical, integer value |
+| float     | Float         | 32 bits | floating point value |
+| double    | Double        | 64 bits | floating point value |
+
+Wrapper classes have static helper methods like `.parseX()` and `.valueOf()` for explicit primitive conversion.
+
+```java
+public class AutoboxingExample {
+
+  public static void main(String[] args) {
+    int n = 5;
+    someMethod(n); // autoboxing is done here!
+	// 8
+  }
+  
+  public static void someMethod(Integer i) {
+    System.out.println(i + 3);
+  }
+}
+```
+## Java Compilation
+"Compilation" is a term that refers to the process of turning your source code into executable instructions (often called binaries). In the early days of programming compilation was one small set in a larger pipeline from source to binary. Now days we sort of include all of the steps into the blanket term "compile". You may also see people say "build". this is the same idea, and probably a more accurate term.
+  
+Many programming languages produce executable files when built, however Java does not. Executable files are binary files that contain a series of CPU instructions, called machine code. In this way your program is able to tell the CPU what to do. Java doesn't do this directly, instead Java produces bytecode when compiled. This bytecode, similar to machine code, contains instructions for the Java virtual Machine, which then in turn tells the CPU what to do. This is how Java can be run on so many platforms. All of the bytecode is the same, regardless of target environment. As long as there is a JVM present to interpret bytecode and convert it into machine instructions, Java programs can be run there.
+  
+### Compile/Build Steps:
+First, the source ‘.java’ file is passed through the compiler, which then encodes the source code into a machine-independent encoding, known as Bytecode. The content of each class contained in the source file is stored in a separate ‘.class’ file. While converting the source code into the bytecode, the compiler follows the following steps:
+
+1. **Parse**: Reads a set of *.java source files and maps the resulting token sequence into AST (Abstract Syntax Tree)-Nodes.
+2. **Enter**: Enters symbols for the definitions into the symbol table.
+3. **Process** annotations: If Requested, processes annotations found in the specified compilation units.
+4. **Attribute**: Attributes the Syntax trees. This step includes name resolution, type checking and constant folding.
+5. **Flow**: Performs dataflow analysis on the trees from the previous step. This includes checks for assignments and reachability.
+6. **Desugar**: Rewrites the AST and translates away some syntactic sugar.
+7. **Generate**: Generates ‘.Class’ files. 
+
+### Execution:
+
+The class files generated by the compiler are independent of the machine or the OS, which allows them to be run on any system. To run, the main class file (the class that contains the method main) is passed to the JVM and then goes through three main stages before the final machine code is executed. These stages are:
+These states do include:
+
+1. ClassLoader
+2. Bytecode Verifier
+3. Just-In-Time Compiler
+
+
+
+#### Stage 1: Class Loader
+
+The main class is loaded into the memory bypassing its ‘.class’ file to the JVM, through invoking the latter. All the other classes referenced in the program are loaded through the class loader.
+A class loader, itself an object, creates a flat namespace of class bodies that are referenced by a string name. The method definition is provided below illustration as follows:
+
+Illustration:
+```java
+// loadClass function prototype
+
+Class r = loadClass(String className, boolean resolveIt);
+
+// className: name of the class to be loaded
+// resolveIt: flag to decide whether any referenced class should be loaded or not.
+```
+
+There are two types of class loaders
+
+ - primordial
+ - non-primordial
+The primordial class loader is embedded into all the JVMs and is the default class loader. A non-primordial class loader is a user-defined class loader, which can be coded in order to customize the class-loading process. Non-primordial class loader, if defined, is preferred over the default one, to load classes. 
+
+#### Stage 2: Bytecode Verifier
+
+After the bytecode of a class is loaded by the class loader, it has to be inspected by the bytecode verifier, whose job is to check that the instructions don’t perform damaging actions. The following are some of the checks carried out: 
+
+ - Variables are initialized before they are used.
+ - Method calls match the types of object references.
+ - Rules for accessing private data and methods are not violated.
+ - Local variable accesses fall within the runtime stack.
+ - The run-time stack does not overflow.
+ - If any of the above checks fail, the verifier doesn’t allow the class to be loaded.
+
+
+#### Stage 3: Just-In-Time Compiler
+
+This is the final stage encountered by the java program, and its job is to convert the loaded bytecode into machine code. When using a JIT compiler, the hardware can execute the native code, as opposed to having the JVM interpret the same sequence of bytecode repeatedly and incurring the penalty of a relatively lengthy translation process. This can lead to performance gains in the execution speed unless methods are executed less frequently.
+
+![](./../images/java-compilation.png)
+
+
 ## Introduction to Git
+
 ## Commits
 ## Committing work
 ## Working directory
