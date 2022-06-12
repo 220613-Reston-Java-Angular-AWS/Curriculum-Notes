@@ -222,6 +222,8 @@ Sophia Gavrila - Senior Trainer at Revature
 
 # Wednesday
 
+Practice Coding Challenge
+
 ## Pillars of OOP
 **Learning Objectives**
 
@@ -711,23 +713,271 @@ This is the final stage encountered by the java program, and its job is to conve
 
 ![](./../images/just-in-time-compiler.png)
 
+**Now were are going create our very first Project using our IDE IntelliJ**
+
 
 ## Introduction to Git
+![Into To Git Video](https://git-scm.com/video/what-is-version-control)
+![Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet/)
 
-## Commits
-## Committing work
-## Working directory
-## Branches
-## Pull requests
+Git is a **distributed version control system**. This means that the entire codebase and history of a project is available on every developer’s computer as a **local repository** , which allows for easy branching and merging. 
 
-*Now were are going create our very first Project using our IDE IntelliJ*
+This repository contains all of the information that the **remote repository** has, based on the last time that you synced those two together.
+
+Even if you don't have access to the **remote repository**, you can still view all of the changes that have been made, and contributers can maintain a copy of this record on their own machines.
+
+### Working directory
+
+* Untracked and modified files will exisit within the **Working Directory**. The files in the **Working Directory** are listed when we run `git status`.
+
+* The **Staging Area** is where we organize what we want to be commited to our repository.  The **Staging Area** allows us to pick and choose which files we want to commit and when.  Commits should be details regarding what changes were made in individual files.
+
+1. To add files to the **Staging Area** run the commmand `git add <file-name>`. To add all of the changes we've just made, run the following command.
+
+```
+$ git add .
+```
+
+When you run `git status` again, you should see the recently staged files in green.
+
+2. To **commit** these changes run:
+```
+$ git commit -m "initial commit"
+```
+
+![](./../images/working-directory.png)
+
+### Commits
+
+Commits are the core building block units of a Git project timeline. Commits can be thought of as snapshots or milestones along the timeline of a Git project. Commits are created with the git commit command to capture the state of a project at that point in time.
+
+### Committing work
+
+By default, git commit will open up the locally configured text editor, and prompt for a commit message to be entered. However, passing the -m option will forgo the text editor prompt in-favor of an inline message. 
+
+```
+git commit -m "Here is where you give a brief description of what you are committing to your repository"
+
+```
+#### Remember the steps you will take whenever commiting changes: As we practice you will develop your own specfic order BUT you always want to have the most recent code in your local repositiry before pushing your code to prevent conflicts. 
+```
+$ git add .
+$ git commit -m "a message about changes"
+$ git pull
+$ git push
+```
+
+The `git pull` command is used to fetch and download content from a remote repository and immediately update the local repository to match that content, **before** you push your changes.
+
+
+### Branches
+
+![Quick Tutorial](https://www.atlassian.com/git/tutorials/using-branches#:~:text=A%20branch%20represents%20an%20independent,staging%20area%2C%20and%20project%20history)
+
+Branching is a feature available in most modern version control systems.  Instead of copying files from directory to directory, Git stores a **branch** as a reference to commit.  The branch itself represents the `HEAD` of a series of commits.
+
+The default branch name in Git is `master`, which commonly represents the official, working version of your project.  As you start making commits, the master branch points to the last commit you made.  Everytime you commit, the master branch pointer moves forward automatically. Think of a branch as a timeline of versions of a project as it progresses.
+
+Branching is a strategy that allows developers to take a snapshot of the master branch and test a new feature without corrupting the project in production. If the tests are successful, that feature can be **merged** back to the master branch and pushed to production.
+
+![](./../images/git-branching.png)
+
+#### Create a login branch 
+**NOTE** this must be done in a directory that is already under git
+
+Imagine that you want to create a login functionality feature on your project.
+
+1. To create a new branch called `login`, within your directory run: 
+```
+$ git branch login
+```
+2. To `checkout` to the newly created branch, run:
+```
+$ git checkout login
+```
+Now you will be able to create and edit files that will only exist on this branch until you merge it with `master`.
+
+
+
+### Pull requests
+
+A pull request – also referred to as a merge request – is an event that takes place in software development when a contributor/developer is ready to begin the process of merging new code changes with the main project repository.
+
+It is best to do this process in Github becuase Github offers interfaces and options that we just cannot have in command line.
+
+
+*Break into groups - We are going to practice branches, committing, pushing and making pull requests*
 
 <br>
 
 # Friday
 
+Practice Coding Challenge
+
 ## Control Flow Statements
+
+### Decision Making 
+
+#### If-Then
+The most basic control flow statement is the if-then statement. This statement evaluates if some predicate is true or false, and if the predicate evaluates to true the code in the block is executed, otherwise it is skipped.
+```
+if(x == 5 /*predicate statement*/ ) {
+    //do something
+}
+```
+
+#### If-Then-Else
+An else clause can be added to the basic if-then to get an if-then-else statement. This statement evaluates if a predicate is true or false just like above. If true, the first block is executed, if false the else block is executed.
+```
+if(x == 5) {
+    //do something
+} else {
+    //do something else
+}
+```
+These stataments can be further expanded by chaining else-if statements. We simply add another if-then after the else and we can chain alternatives as long as we want.
+```
+if(x == 5) {
+    //do something
+} else if(x == 6) {
+    //do something else
+} else if(x >= 7) {
+    //do a different thing
+} else {
+    //finally, if all else fails do this
+}
+```
+Eventually we can optionally end the if-then-else-if chain with a single else that only executes if none of the other predicates were true. In the above example only one of the blocks of code will ever be executed.
+
+#### Switch
+Switch statements are very similar to the above chain of if-then-else-ifs. We consider one variable and enter a block depending on its value.
+```
+switch(x) {
+    case 5:
+        //do something
+        break;
+    case 6:
+        //do something
+        break;
+    case 7:
+        //do something
+        break;
+    default:
+        //finally, if all else fails do this
+        break; //break is not strictly necessary here
+}
+```
+Here we can see we are considering some variable x, and we execute code under one of the `case` statements depending on the value of x. If x is neither 5, 6, nor 7 we execute the code under the `default` statement. Inside each case the `break` keyword is used. This keyword breaks you out of any control flow block and skips the remainder of it. Execution continues after the end of the block. In this case each of the `break` keywords causes execution to skip the remainder of the block and begin again after the closing `}`. We must use `break` in switches unless we want to "fall-through" where we continue to execute the code in the other cases.
+
+![](./../images/operators-control-flow.png)
+
+### Loops
+
+#### While Loop
+The while loop executes a block of code over and over as long as some predicate holds true. Keep in mind that we must include some way for the loop to end, or else it will continue endlessly until the program terminates.
+```
+while(x < 5) {
+    x++;
+}
+```
+In this example as long as x is less than 5 the loop will continue, but eventually x will be greater than 5 as with each loop 5 increases by one. Once x is equal to or greater than 5 the predicate will be false and the loop will exit. Note that the while loop won't execute one last time, even though the check is at the top of the code, once it is false the block of code is exited imedately and execution continues after the `}`.
+
+### Do-While Loop
+Similar to the while loop, the do-while loop has it's predicate check at the end of the block of code. This type of loop will always execute at least once, as the first execution happens before any check is done. Otherwise it behaves similar to the plain while loop. Once the predicate is false looping stops and execution continues after the block.
+```
+do {
+    x++;
+} while (x < 5)
+```
+
+### For Loop
+One of the most common types of loop, the for loop is bounded by beginning and end conditions. Eventually (hopefully) the conditions are met to cease looping and execution continues after the block. The logic that controls looping has three parts, separated by `;`. 
+```
+for(i = 0; i < 10; i++) {
+    //do something 10 times
+}
+```
+In this example i is set to 0, looping continues as long as i is less than 10, with each iteration i is increased by one. Note that there is no logic inside the block to stop iterating, that is all contained within the conditional statement. The first section is initialization, the second is the looping condition, and lastly is advancement.
+
+### For-Each Loop
+The for-each loop, sometimes called the enhanced for-loop loops once through a collection of elements. Any collection that implements the `Iterable` interface can be looped through in this way. A for-each loop executes a block of code once for each element in a collection.
+```
+for(type element : collection) {
+    //do something
+}
+```
+This example just shows the parts of the statement, and is not valid. Here is a working example:
+```
+for (Integer i : integerList) {
+    i *= 2;
+}
+```
+For each Integer object in a collection of Integers, take that Integer and double it. Once every member of the collection has been acted upon, the loop is complete end execution continues after the `}`.
+
+### Jumps
+
+#### Break
+We saw break earlier, commonly used in switch statements to avoid fall-through execution. Break can also be used to break out of any loop or switch statement. Break will cause execution inside the block to stop and execution to continue after the block ends.
+```
+while(true) {
+    x++;
+    if(x > 5) {
+        break;
+    }
+}
+```
+This example is silly, but shows the use of break to conditionally break out of a while loop.
+
+#### Continue
+Continue is similar to break in that it will cause the current execution inside a loop to cease, however instead of breaking out of the loop, it continues with the next iteration.
+```
+for(i = 0; i < 5; i++) {
+    System.out.println("Hello");
+    continue;
+    System.out.println("Goodbye");
+}
+```
+This example will print "Hello" 5 times, and will never print "Goodbye". Note that the use of continue still increments i normally.
+
+
 ## Casting
+[Casting](https://www.w3schools.com/java/java_type_casting.asp) is the process of converting a data type to another data type. This is also called **type casting**. Casting is necessary is some situations like when receiving a data type that needs to have some actions performed on it that its original form cannot handle.
+
+If the original data type has a smaller size value than the needed type, Java will automatically do the conversion. In the example an int (size of 32 bits) is being cast to a double (size of 64 bits). Due to this the conversion is able to be done without the loss of any data.
+
+```java
+public class AutomaticCasting {
+
+  public static void main(String[] args){
+    int n = 10;
+    double d = n; //This is now converted from an int to a double.
+    double e = (double) n; //This is explicit, and otherwise the same as the above syntax.
+  }
+}
+```
+
+However cases where the original data type is larger than the needed type, you will have to explicitly convert them using a parenthesis. However there can be data loss using this method.
+
+```java
+public class ExplicitCasting {
+
+  public static void main(String[] args){
+    double d = 10.60;
+    int n = (int) d; //Casting is happening here
+    // The 0.60 is lost in conversion.
+  }
+}
+```
+
+In some cases you will have to use the data type's own methods to convert. Some of these methods are listed in the table below.
+
+| Original |   Target  |           Method         |
+| ---------| --------- |--------------------------|
+| String   | int       |Integer.parseInt(String); |
+| int      | String    |String.valueOf(int);      |
+
+You are also able to cast subclass objects to their superclasses which is called upcasting and cast superclass objects to their subclasses (This has some limitations and prerequisites).
+
 
 ## Agile vs Waterfall (Review)
 
@@ -781,8 +1031,6 @@ Agile has the following limitations:
 ![](https://user-images.githubusercontent.com/14268523/121416020-5536be00-c936-11eb-8584-5c3f62112840.png)
 
 The above image depicts a plan based development lifecycle vs an agile development cycle.
-
-##Practice Coding Challenge
 
 <br>
 
