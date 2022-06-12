@@ -315,9 +315,10 @@ Polymorphism
    - Encapsulation is the mechanism that binds together code and the data it manipulates and keeps both safe from outside interference and misuse. One way to think about encapsulation is as a protective wrapper that prevents the code and data from being arbitrarily accessed by other code defined outside the wrapper.
    - Real-world examples
       - The capsule, it is wrapped with different medicines. In a capsule, all medicine is encapsulated inside capsule.
-      ![Image of capsule](./images/real-world-example-encapsulation.png)
+      ![](./../images/real-world-example-encapsulation.png)
+    
       - A Java class is an example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
-      ![Image of a Java Class](./images/class-encapsulation.gif)
+      ![](./../images/class-encapsulation.png)
 
 - Inheritance
    - Inheritance is a process of obtaining the data members and methods from one class to another class, plus can have its own is known as inheritance. It is one of the fundamental features of object-oriented programming.
@@ -326,9 +327,9 @@ Polymorphism
       - Sub Class: The class that inherits the other class is known as a subclass(or a derived class, extended class, or child class). The subclass can add its own fields and methods in addition to the superclass fields and methods.
     - Real-world example: 
        - The real-life example of inheritance is child and parents, all the properties of a father are inherited by his son.
-        ![Father and Son](./images/inheritance-real-life-example-of-inheritance.png)
+        ![](./../images/inheritance-real-life-example-of-inheritance.png)
        - In the Java library, you can see extensive use of inheritance. The below figure shows a partial inheritance hierarchy from java.lang library. The Number class abstracts various numerical (reference) types such as Byte, Integer, Float, Double, Short, and BigDecimal.
-       ![Java library inheritance](./images/inheritance-java-core.png)
+       ![](./../images/inheritance-java-core.png)
 
 - Polymorphism
    - The process of representing one form in multiple forms is known as Polymorphism.
@@ -339,7 +340,7 @@ Polymorphism
       - Polymorphism means many forms.
     - A real-world example of polymorphism:
        - Suppose if you are in a classroom at that time you behave like a student, when you are in the market at that time you behave like a customer when you at your home at that time you behave like a son or daughter, Here one person present in different-different behaviors.
-       ![Polymorphic Student](./images/Polymorphism%20Real-World%20Example.jpg)
+       ![](./images/Polymorphism-Real-World-Example.png)
 
 
 * Source: https://www.javaguides.net/2019/08/oops-concepts-in-java-with-realtime-examples.html
