@@ -222,11 +222,154 @@ Sophia Gavrila - Senior Trainer at Revature
 
 # Wednesday
 
-## Class vs Object
 ## Pillars of OOP
+**Learning Objectives**
+
+After completing this module, associates should be able to:
+- List the four pillars of Object Oriented Programming
+- Explain the "Diamond Problem" with respect to inheritance
+- Explain abstraction using real-world examples.
+- Explain the differences between method overloading and method overriding.
+- Discuss the concept of encapsulation.
+
+
+# Description for the OOP Concepts topic
+
+## The Four Pillars of OOP
+There are four principles that are often referenced when talking about object-oriented programming. They are as follows:
+- [Abstraction](#abstraction)
+- [Polymorphism](#polymorphism)
+- [Inheritance](#inheritance)
+- [Encapsulation](#encapsulation)
+
+An easy way to remember these is with the acronym **A PIE**. These concepts provide guidance when designing object-oriented programs. Let's walk through each of these "pillars" of OOP one by one.
+
+### Inheritance
+We start with inheritance as it is easiest to understand conceptually. In OOP languages, classes contain a blueprint for the state and behavior of objects. Most languages have a method whereby classes (and thus, objects) can **inherit** the state and behavior (read: fields and methods) of other classes. The class from which other classes inherit from is called a "base" or "parent" class, and the class which inherit the parent is called a "child" or "sub"-class. 
+
+For example, we could have an `Animal` class as our base class which has a field `numOfLegs` and a method `speak`, and a `Dog` class which extends `Animal`. Thus `Dog` will also have the `numOfLegs` field and `speak` method:
+
+#### Interfaces and the Diamond Problem
+Another way for classes to inherit is through **interfaces**. Interfaces are like a contract which specify behaviors that other classes must provide. Interfaces only supply method signatures which other classes must implement and provide method bodies for. Interfaces can also have variables, which are attached to the interface itself and are constants that cannot be reassigned.
+
+Multiple inheritance- that is, a class inheriting from more than one class, is not allowed in most OOP languages. However, in some OOP languages, classes can extend from other classes at multiple levels, which is known as **multi-level inhertance** - for example, class `C` extends `B` which extends `A`. If multiple inheritance were allowed, imagine what would happen if a class were to extend multiple other classes which both contain the same method. Which method implementation would the subclass inherit? This ambiguity is called the "diamond problem", shown below.
+
+![diamond problem](https://cdn.journaldev.com/wp-content/uploads/2013/07/diamond-problem-multiple-inheritance.png)
+
+
+### Abstraction
+**Abstraction** is a programming principle in which we centralize common characteristics and generalize behavior into conceptual classes. In the example above, the `Animal` class contains characteristics and behaviors common to all animals.
+
+Through abstraction, we hide underlying complexity through a simplified interface. Think of a car - you do not need to know how the car works, just how to use the accelerator, brake, and steering wheel. Thus, a car "abstracts" away the internal details of the engine, motor, driveshaft, and other parts. If our `Animal` class were part of a library for creating animals in Java, the user of the library wouldn't need to know exactly how each animal speaks, because the `speak` method is defined on the `Animal` class. We can also use the generic `Animal` type for reference variables without worrying about which specific animal the object is.
+
+ When creating an instance of a Dog, we will declare the object to be of type `Animal`, not `Dog`. The advantage of writing code this way is that later if we decide we instead need to create a `Cat` here, we can easily change the constructor being invoked. Because the `.speak()` method belongs to the `Animal` class, it is guaranteed to exist for all animals. (Here we are assuming `Cat` would extend `Animal`.)
+
+
+#### Abstract Classes and Interfaces
+Abstract classes are more general classes which cannot be instantiated. They instead act as templates for other classes to extend from. Abstract classes can have both concrete and abstract methods - the `abstract` methods must be implemented by concrete subclasses. 
+
+Interfaces also cannot be instantiated. They instead serve as contracts for methods that classes must implement. In order to inherit from interfaces, a class declares that it implemenets some interface, or multiple interfaces. 
+
+Abstract classes are better suited for defining *common characteristics* of objects and are named as nouns by convention, whereas interfaces are better for defining common *behavior* the implementing class promises to provide.
+
+### Polymorphism
+By definition, **polymorphism** means "taking on many forms". In the realm of programming, it describes how objects can behave differently in different contexts. The most common examples of polymorphism are method overloading and overriding.
+
+#### Method Overloading
+**Method overloading** is when there exist two or more methods in a class with the same method name, but different method signatures by changing the parameter list. 
+
+We can change the number of parameters, the types of the parameters, or the order in which the parameters are passed. Which version of the method is executed is determined by the parameters passed when the method is invoked. Note that varying the return type of the method alone is not permitted in some OOP languages.
+
+Because the argument list is known at compilation, the compiler knows which version of the method will be executed. Therefore, method overloading is a type of **compile-time** - or **static** - polymorphism.
+
+#### Method Overriding
+**Method overriding** is when a method in a child class has the same method signature as a method in the parent class, but with a different implementation. Thus, child classes can change the default behavior given by a parent's method. Overriding methods makes class hierarchies more flexible and dynamic. For example, we could change our `Dog` class we used before and have it override the `speak` method from `Animal`.
+
+When we declare the reference variable, it uses the class `Animal` as its type but refers to an actual *instance* of a `Dog` in memory. So we can call the `speak` method declared in `Animal`, but since the reference variable refers to a `Dog` object, it will use that `Dog`'s implementation of `speak`. This is referred to as **virtual method invocation** and is key to method overriding. The `Animal` class (if it is abstract) does not even need to define any implementation for `speak`, since the method to be executed will be determined at runtime depending on the object referred to in memory. This is the reason why method overriding is classified as **runtime** - or **dynamic** - polymorphism.
+
+One more item to note with method overriding is that static methods cannot be overridden. Instead, if a subclass implements the same static method as its parent, the method is hidden. **Method hiding** replaces the parent method in the calls defined in the child class.
+
+#### Covariant return types
+When overriding a method, we also have the option of changing the return type - _provided that the overridden return type **is a subtype of the original type**_. This is called **covariant return types**. We can also choose to change the access modifier of an overridden method - _provided that the new modifier for the overriding method provides **more, not less, access** than the overridden method_. An example is below:
+
+### Encapsulation
+Finally, **encapsulation** is the OOP principle of containing related state and behavior together inside a class, and also hiding and preventing change to an object's data members. An object encapsulates or controls the access to its internal state. This prevents arbitrary external interference, which could bring the object into an invalid or inconsistent state.
+
+
+# Real Time Examples for the OOP Concepts topic.
+
+The core OOPs concepts:
+
+Abstraction
+Encapsulation
+Inheritance
+Polymorphism
+
+- Abstraction
+   - Abstraction means hiding lower-level details and exposing only the essential and relevant details to the users.
+   - Example 1: Let's consider a Car, which abstracts the internal details and exposes to the driver only those details that are relevant to the interaction of the driver with the Car.
+   - Example 2: Consider an ATM (Automatic Teller Machine); We perform operations on the ATM like cash withdrawal, money transfer, retrieve mini-statement…etc. but we don't know the internal details about ATM.
+
+- Encapsulation
+   - Encapsulation is a process of wrapping data and methods in a single unit is called encapsulation. In OOP, data and methods operating on that data are combined together to form a single unit, which is referred to as a Class. 
+   - Encapsulation is the mechanism that binds together code and the data it manipulates and keeps both safe from outside interference and misuse. One way to think about encapsulation is as a protective wrapper that prevents the code and data from being arbitrarily accessed by other code defined outside the wrapper.
+   - Real-world examples
+      - The capsule, it is wrapped with different medicines. In a capsule, all medicine is encapsulated inside capsule.
+      ![Image of capsule](./images/real-world-example-encapsulation.png)
+      - A Java class is an example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
+      ![Image of a Java Class](./images/class-encapsulation.gif)
+
+- Inheritance
+   - Inheritance is a process of obtaining the data members and methods from one class to another class, plus can have its own is known as inheritance. It is one of the fundamental features of object-oriented programming.
+   - Inheritance is a relationship between a superclass and its subclasses.
+      - Super Class: The class whose features are inherited is known as a superclass (or a base class or a parent class).
+      - Sub Class: The class that inherits the other class is known as a subclass(or a derived class, extended class, or child class). The subclass can add its own fields and methods in addition to the superclass fields and methods.
+    - Real-world example: 
+       - The real-life example of inheritance is child and parents, all the properties of a father are inherited by his son.
+        ![Father and Son](./images/inheritance-real-life-example-of-inheritance.png)
+       - In the Java library, you can see extensive use of inheritance. The below figure shows a partial inheritance hierarchy from java.lang library. The Number class abstracts various numerical (reference) types such as Byte, Integer, Float, Double, Short, and BigDecimal.
+       ![Java library inheritance](./images/inheritance-java-core.png)
+
+- Polymorphism
+   - The process of representing one form in multiple forms is known as Polymorphism.
+   - Different definitions of Polymorphism are:
+      - Polymorphism allows us to perform a single action in different ways.
+      - Polymorphism allows you to define one interface and have multiple implementations
+      - We can create functions or reference variables that behave differently in a different programmatic context
+      - Polymorphism means many forms.
+    - A real-world example of polymorphism:
+       - Suppose if you are in a classroom at that time you behave like a student, when you are in the market at that time you behave like a customer when you at your home at that time you behave like a son or daughter, Here one person present in different-different behaviors.
+       ![Polymorphic Student](./images/Polymorphism%20Real-World%20Example.jpg)
+
+
+* Source: https://www.javaguides.net/2019/08/oops-concepts-in-java-with-realtime-examples.html
+
 ## Introduction to Java
+
+Java is a high-level, class-based, object-oriented, programming language that is designed to have as few implementation dependencies as possible. 
+ - **high level** - No direct memory management, abstracted away from hardware
+ - **class based** - Everything written is inside a class, inheritance based on class
+ - **object oriented** - Bundle data and behavior into a single logical unit, the class. (Encapsulation)
+
+Java is a general-purpose programming language intended to let developers ***write once, run anywhere***. Compiled Java code can run on any **Java Virtual Machine (JVM)** regardless of the hardware and software environment.  
+  
+Java is a C derivative, which means its syntax is similar to that of C/C++. While Java has fewer low-level features such as direct memory access, it has high-level features C and C++ lack, such as reflection.  
+
 ## JDK, JRE, JVM
+Java is write once, run anywhere (WORA) thanks to the JVM. Java code is compiled into **bytecode**, which are instructions the JVM understands. The JVM is specific to the operating system - there is a JVM for Windows, one for Mac, one for Linux, etc. The JVM reads the compiled Java bytecode and translates it to machine code to be executed on the given system.
+  
+In order to run Java code on a machine, the **JRE** or **Java Runtime Environment** is also required. The JRE contains all the runtime libraries that your code will be using. The JRE includes the JVM. When users talk about "installing Java" this usually refers to installing the JRE. In order to run Java applications, all you need is the JRE.
+  
+To develop Java applications you need the **JDK**, or **Java Development Kit**. The JDK provides developer tools like a compiler, debugger, documentation tools (javadoc), and other command-line utilities. The JDK also includes the JRE, and by extension the JVM, so when you write your code you can compile and run it as well. 
+  
+  
+![](./../images/jdk_jre_jvm.png)
+  
+  
+So, to recap - the JDK contains tools for Java development as well as a JRE, which contains the built-in Java libraries as well as a JVM, which actually executes our Java bytecode and runs it on the specific operating system it is installed upon.
+
 ## First Java Program: HelloWorld
+## Class vs Object
 ## Methods and Parameters
 
 <br>
