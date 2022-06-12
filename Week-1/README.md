@@ -340,7 +340,7 @@ Polymorphism
       - Polymorphism means many forms.
     - A real-world example of polymorphism:
        - Suppose if you are in a classroom at that time you behave like a student, when you are in the market at that time you behave like a customer when you at your home at that time you behave like a son or daughter, Here one person present in different-different behaviors.
-       ![](./images/Polymorphism-Real-World-Example.png)
+       ![](./../images/Polymorphism-Real-World-Example.png)
 
 
 * Source: https://www.javaguides.net/2019/08/oops-concepts-in-java-with-realtime-examples.html
@@ -709,7 +709,7 @@ After the bytecode of a class is loaded by the class loader, it has to be inspec
 
 This is the final stage encountered by the java program, and its job is to convert the loaded bytecode into machine code. When using a JIT compiler, the hardware can execute the native code, as opposed to having the JVM interpret the same sequence of bytecode repeatedly and incurring the penalty of a relatively lengthy translation process. This can lead to performance gains in the execution speed unless methods are executed less frequently.
 
-![](./../images/java-compilation.png)
+![](./../images/just-in-time-compiler.png)
 
 
 ## Introduction to Git
