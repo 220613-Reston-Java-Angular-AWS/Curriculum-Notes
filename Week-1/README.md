@@ -371,7 +371,7 @@ So, to recap - the JDK contains tools for Java development as well as a JRE, whi
 
 ## First Java Program: HelloWorld
 
-The history of [Hello World]().
+The history of [Hello World](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-1/history-of-hello-world.md).
 
 Let's walk through a simple HelloWorld program. You must have a JDK intalled in order to do this.
 1. Open up your command-line terminal application
