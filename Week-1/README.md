@@ -347,6 +347,12 @@ Polymorphism
 
 ## Introduction to Java
 
+Who invented Java?
+> Java was invented at Sun Microsystems by a team led by James Gosling. It was first released in 1995.
+
+Who currently maintains Java?
+> Java is currently owned and maintained by the Oracle Corporation, which acquired Java when it acquired Sun Micros
+
 Java is a high-level, class-based, object-oriented, programming language that is designed to have as few implementation dependencies as possible. 
  - **high level** - No direct memory management, abstracted away from hardware
  - **class based** - Everything written is inside a class, inheritance based on class
@@ -412,7 +418,7 @@ java HelloWorld
 ```
 This command loads and executes the `HelloWorld.class` file. Note that we **do not** include the `.class` extension when using the `java` command.
 
-#### Summary of HelloWorld topic
+#### Summary of HelloWorld
 
 - "Hello, World!" programs are used to illustrate how the process of coding works, especially for introductory programmers.
 - Sometimes more experienced programmers use "Hello, World!" programs as a "sanity test" to make sure the components of a language have been correctly installed.
@@ -420,21 +426,186 @@ This command loads and executes the `HelloWorld.class` file. Note that we **do n
 - The "Hello, World!" program has been implemented in nearly every programming language.
 - 
 ## Class vs Object
+
+**Classes** are the *blueprints* for how to create objects that contain  a certain **state** - which is represented by *fields* (variables) - and **behavior** - which is defined via *methods*. Classes are complex data types.
+
+* Example: A Person has a name and a age.
+
+```
+class Person {
+  String name;
+  int age;
+}
+```
+
+**Objects** are instances of class definitions.
+
+* John is a Person instance
+* when we use the `new` keyword, we create an object
+
+```
+Person john = new Person();
+```
+
+
 ## Methods and Parameters
+
+### Methods
+
+* a block of code that I can invoke / call
+* black box
+  * give it *input* and get back *output*
+  * I do not know what happened inside - hypothetically 
+* **Method Signature**
+  * return type
+  * method name
+  * **parameters**
+
+examples
+```
+void someMethod() {
+
+}
+
+someMethod(); //invoke method
+```
+
+```
+int someMethod() {
+  return 5;
+}
+
+int a = someMethod(); //invoke method. a is 5
+```  
+
+```
+int add(int x, int y) {
+  return x + y;
+}
+
+int a = add(3, 4); //invoke method. a is 7
+```
+
+notice the **arguments** do not have to have the same names as the **parameters**
+* where are the **arguments**?
+* where are the **parameters**?
+
+```
+int add(int x, int y) {
+  return x + y;
+}
+
+int first  = 3;
+int second = 4;
+
+int a = add(first, second); //invoke method. a is 7
+```
 
 <br>
 
 # Thursday
 
 ## Constructors
+
+* special method
+* does not have a return type
+  * the return type is *implicitly* an object
+* must have the same name as the class
+  * case matters
+* Constructors are invoked when we use the `new` keyword
+
+example of no arg constructor
+
+```
+public class Person {
+
+  public Person() {
+
+  }
+
+}
+```
+
+more verbose example
+* `this` points to this object
+* it essentially gives you a reference to yourself
+
+```
+public class Person {
+
+  String name;
+  int age;
+
+  public Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }  
+}
+```
+
+we can invoke that constructor as follows
+
+```
+Person john = new Person("John", 28);
+```
+
+we can also overload constructors
+* **method overloading** is when you define two or more methods with the same name in the same class
+  * we cannot be ambiguous, so either the number of parameters or the parameter data types must be different
+* you can overload normal methods too  
+
+```
+public class Person {
+
+  String name;
+  int age;
+
+  public Person(String name) {
+    this.name = name;
+  }
+
+  public Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }  
+}
+```
+
+invoke the first constructor
+
+```
+Person john = new Person("John");
+```
+
+invoke the second constructor
+
+```
+Person john = new Person("John", 28);
+```
+
+How were we able to create instances without defining a constructor?
+* When Java sees there are no constructors in a class, Java will insert a **default constructor**
+* the **default constructor** is a no arg constructor: `public Person(){}`
+
 ## Packages and Imports
+
+#### A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code.
+
+#### *import* is a Java keyword. It declares a Java class that can/will be used in the code below the import statement. Once a Java class is declared, then the class name can be used in the code without specifying the package the class belongs to. Use the '*' character to declare all the classes belonging to the package.
+
+![](./../images/imports-syntax.png)
+
+
 ## Wrapper Classes
+
 ## Introduction to Git
 ## Commits
 ## Committing work
 ## Working directory
 ## Branches
 ## Pull requests
+
+*Now were are going create our very first Project using our IDE IntelliJ*
 
 <br>
 
