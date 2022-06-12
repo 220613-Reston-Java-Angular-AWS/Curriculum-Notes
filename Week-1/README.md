@@ -717,8 +717,9 @@ This is the final stage encountered by the java program, and its job is to conve
 
 
 ## Introduction to Git
-![Into To Git Video](https://git-scm.com/video/what-is-version-control)
-![Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet/)
+[Into To Git Video](https://git-scm.com/video/what-is-version-control)
+
+[Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet/)
 
 Git is a **distributed version control system**. This means that the entire codebase and history of a project is available on every developer’s computer as a **local repository** , which allows for easy branching and merging. 
 
@@ -772,7 +773,7 @@ The `git pull` command is used to fetch and download content from a remote repos
 
 ### Branches
 
-![Quick Tutorial](https://www.atlassian.com/git/tutorials/using-branches#:~:text=A%20branch%20represents%20an%20independent,staging%20area%2C%20and%20project%20history)
+[Quick Tutorial](https://www.atlassian.com/git/tutorials/using-branches#:~:text=A%20branch%20represents%20an%20independent,staging%20area%2C%20and%20project%20history)
 
 Branching is a feature available in most modern version control systems.  Instead of copying files from directory to directory, Git stores a **branch** as a reference to commit.  The branch itself represents the `HEAD` of a series of commits.
 
