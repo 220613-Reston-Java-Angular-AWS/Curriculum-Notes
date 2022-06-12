@@ -1,4 +1,3 @@
-# Description for HelloWorld topic
 
 ### Introduction
 Veteran software developers know the Hello World program as the first step in learning to code. The program, which outputs some variant of “Hello, World!” on a device’s display, can be created in most languages, making it some of the most basic syntax involved in the coding process.
