@@ -215,7 +215,8 @@ If you do this every week, at the end of training you will have a complete set o
 Andrew Crenwelge - Lead Quality Analyst at Revature <br>
 Sophia Gavrila - Senior Trainer at Revature
 
-## Coding Challenges - General Guide
+## Coding Challenges - 
+**I will be giving you Coding Challenges through [LeetCode](https://leetcode.com/), [Hackerrank](https://www.hackerrank.com/), or [CodingGame](https://www.codingame.com/). This will be Mondays, Wednesdays, and Fridays.**
 
 <br>
 
