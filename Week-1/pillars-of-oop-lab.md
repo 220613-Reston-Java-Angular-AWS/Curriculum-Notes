@@ -3,6 +3,7 @@
 ### Setup and Overview
 - Open a Java SDK
 - For each part, you may open a file for each class and type in the code to understand how the pillars of object-oriented programming work in the Java language.
+--> A PIE (Abstraction, Polymorphism, Inheritance, Encapsulation) in OOP (Object-Oriented Programming)
 - The coding examples in this section are not necessarily executable, but they can be compiled to check for syntax errors.
 
 ### Table of Contents
@@ -46,6 +47,8 @@ In Java, classes can only extend from one other class - **there is no multiple i
 
 In Java we can have multiple inheritance and still bypass the diamond problem by using interfaces. A class can implement an arbitrary number of interfaces. There is no ambiguity because interfaces do not have method bodies (with the exception of Java 8 `default` and `static` interface methods) - the implementing class resolves any ambiguity because it must implement the methods defined in the interfaces.
 
+--> Multiple inheritance would create duplicate methods. (Redundancy)
+
 ### Part 2: Abstraction
 **Abstraction** is a programming principle in which we centralize common characteristics and generalize behavior into conceptual classes. In the example above, the `Animal` class contains characteristics and behaviors common to all animals.
 
@@ -60,12 +63,17 @@ In the example above, `a` is of type `Animal`, not `Dog`. The advantage of writi
 
 In Java, we achieve abstraction through abstract classes and interfaces. Abstract classes are classes which cannot be instantiated and are declared with the `abstract` keyword. Generally, it wouldn't make sense to instantiate our `Animal` class - instead, we use it as a general type and instantiate specific animals. So we could make the `Animal` class abstract instead of concrete.
 
+--> Mostly used with interfaces (actions = methods).
+
 #### Abstract Classes and Interfaces
 Abstract classes, as mentioned above, are more general classes which cannot be instantiated. They instead act as templates for other classes to extend from. Abstract classes can have both concrete and abstract methods - the `abstract` methods must be implemented by concrete subclasses.
 
 Interfaces also cannot be instantiated. They instead serve as contracts for methods that classes must implement. In order to inherit from interfaces, a class declares that it `implements` some interface, or multiple interfaces. Methods declared on an interface are implicitly `public` and `abstract`. Interfaces can have variables, but they are implicitly `public`, `static`, and `final`. Since Java 8, interfaces can also provide method implementations if the method is marked `static` or `default`.
 
 Abstract classes are better suited for defining *common characteristics* of objects and are named as nouns by convention, whereas interfaces are better for defining common *behavior* the implementing class promises to provide.
+
+--> For a class to be "abstract, it must be declared as "abstract".
+--> "Implements" references an Animal "speaks", but a Dog "barks". (IS THIS CORRECT?!?)
 
 ### Part 3: Polymorphism
 By definition, **polymorphism** means "taking on many forms". In the realm of programming, it describes how objects can behave differently in different contexts. The most common examples of polymorphism in Java are method overloading and overriding.
@@ -93,6 +101,8 @@ We can change the number of parameters (like above), the types of the parameters
 
 Because the argument list is known at compilation, the compiler knows which version of the method will be executed. Therefore, method overloading is a type of **compile-time** - or **static** - polymorphism.
 
+--> Done in the class java file.
+
 #### Method Overriding
 **Method overriding** is when a method in a child class has the same method signature as a method in the parent class, but with a different implementation. Thus, child classes can change the default behavior given by a parent's method. Overriding methods makes class hierarchies more flexible and dynamic. Let's change our `Dog` class we used before and have it override the `speak` method from `Animal`:
 ```java
@@ -111,6 +121,9 @@ public class Dog extends Animal {
 When we declare the reference variable `d`, it uses the class `Animal` as its type but refers to an actual *instance* of a `Dog` in memory. So we can call the `speak` method declared in `Animal`, but since `d` refers to a `Dog` object, it will use that `Dog`'s implementation of `speak`. This is referred to as **virtual method invocation** and is key to method overriding. The `Animal` class (if it is abstract) does not even need to define any implementation for `speak`, since the method to be executed will be determined at runtime depending on the object referred to in memory. This is the reason why method overriding is classified as **runtime** - or **dynamic** - polymorphism.
 
 One more item to note with method overriding is that `static` methods cannot be overridden. Instead, if a subclass implements the same `static` method as its parent, the method is hidden. **Method hiding** replaces the parent method in the calls defined in the child class.
+
+--> Changes the speak method of parent class. (Animal speaks, Dog barks)
+--> Done in the Main java file.
 
 #### Covariant return types
 When overriding a method, we also have the option of changing the return type - _provided that the overridden return type **is a subtype of the original type**_. This is called **covariant return types**. We can also choose to change the access modifier of an overridden method - _provided that the new modifier for the overriding method provides **more, not less, access** than the overridden method_. An example is below:
@@ -154,6 +167,7 @@ public class Person {
 
 In the `Person` class above, we prevent anything outside the class from changing the `age` of the person. We allow access to the field through the `getAge()` method, and we allow manipulation of the field through the `setAge()` method. Note that inside setter methods we can and should perform validation, like we do above - checking that the input number is a valid age (greater than 0).
 
+--> Can reference Doll/Toy/ActionFigure exercise on Replit. (Need to review.)
 
 # Summary for the OOP Concepts topic
 

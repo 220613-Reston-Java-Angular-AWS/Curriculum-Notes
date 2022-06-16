@@ -323,7 +323,7 @@ Polymorphism
       ![](./../images/class-encapsulation.png)
 
 - Inheritance
-   - Inheritance is a process of obtaining the data members and methods from one class to another class, plus can have its own is known as inheritance. It is one of the fundamental features of object-oriented programming.
+   - Inheritance is a process of obtaining the data members and methods from one class to another class, plus can have its own [[METHODS, etc.]] is known as inheritance. It is one of the fundamental features of object-oriented programming.
    - Inheritance is a relationship between a superclass and its subclasses.
       - Super Class: The class whose features are inherited is known as a superclass (or a base class or a parent class).
       - Sub Class: The class that inherits the other class is known as a subclass(or a derived class, extended class, or child class). The subclass can add its own fields and methods in addition to the superclass fields and methods.
@@ -630,6 +630,8 @@ Wrapper classes are classes that let you treat primitives as Objects. This is ne
 | long      | Long          | 64 bits | numerical, integer value |
 | float     | Float         | 32 bits | floating point value |
 | double    | Double        | 64 bits | floating point value |
+
+--> String is not a class. It does not have a primitive.
 
 Wrapper classes have static helper methods like `.parseX()` and `.valueOf()` for explicit primitive conversion.
 
