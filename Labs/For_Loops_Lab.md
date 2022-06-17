@@ -58,7 +58,7 @@ We'll create a loop that counts from 1 to 10, inclusively, and prints the number
 
 1. Open your IDE (IntelliJ), and select File > New > Project.    
 2. Provide the name, Lab-ForLoops and click OK.    
-    (at this point it should already have tour selections preset)
+    (at this point it should already have your selections preset)
     (add a name and set the folder it will save to)
     (make sure its a Maven project)
     (the create go ahead and press ok)
