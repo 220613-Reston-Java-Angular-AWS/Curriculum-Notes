@@ -715,7 +715,7 @@ This is the final stage encountered by the java program, and its job is to conve
 
 **Now were are going create our very first Project using our IDE IntelliJ**
 
-
+<!-- 
 ## Introduction to Git
 [Into To Git Video](https://git-scm.com/video/what-is-version-control)
 
@@ -725,9 +725,9 @@ Git is a **distributed version control system**. This means that the entire code
 
 This repository contains all of the information that the **remote repository** has, based on the last time that you synced those two together.
 
-Even if you don't have access to the **remote repository**, you can still view all of the changes that have been made, and contributers can maintain a copy of this record on their own machines.
+Even if you don't have access to the **remote repository**, you can still view all of the changes that have been made, and contributers can maintain a copy of this record on their own machines. -->
 
-### Working directory
+<!-- ### Working directory
 
 * Untracked and modified files will exisit within the **Working Directory**. The files in the **Working Directory** are listed when we run `git status`.
 
@@ -746,8 +746,8 @@ When you run `git status` again, you should see the recently staged files in gre
 $ git commit -m "initial commit"
 ```
 
-![](./../images/working-directory.png)
-
+![](./../images/working-directory.png) -->
+<!-- 
 ### Commits
 
 Commits are the core building block units of a Git project timeline. Commits can be thought of as snapshots or milestones along the timeline of a Git project. Commits are created with the git commit command to capture the state of a project at that point in time.
@@ -755,12 +755,12 @@ Commits are the core building block units of a Git project timeline. Commits can
 ### Committing work
 
 By default, git commit will open up the locally configured text editor, and prompt for a commit message to be entered. However, passing the -m option will forgo the text editor prompt in-favor of an inline message. 
-
+ -->
 ```
 git commit -m "Here is where you give a brief description of what you are committing to your repository"
 
 ```
-#### Remember the steps you will take whenever commiting changes: As we practice you will develop your own specfic order BUT you always want to have the most recent code in your local repositiry before pushing your code to prevent conflicts. 
+<!-- #### Remember the steps you will take whenever commiting changes: As we practice you will develop your own specfic order BUT you always want to have the most recent code in your local repositiry before pushing your code to prevent conflicts. 
 ```
 $ git add .
 $ git commit -m "a message about changes"
@@ -768,10 +768,10 @@ $ git pull
 $ git push
 ```
 
-The `git pull` command is used to fetch and download content from a remote repository and immediately update the local repository to match that content, **before** you push your changes.
+The `git pull` command is used to fetch and download content from a remote repository and immediately update the local repository to match that content, **before** you push your changes. -->
 
 
-### Branches
+<!-- ### Branches
 
 [Quick Tutorial](https://www.atlassian.com/git/tutorials/using-branches#:~:text=A%20branch%20represents%20an%20independent,staging%20area%2C%20and%20project%20history)
 
@@ -781,8 +781,8 @@ The default branch name in Git is `master`, which commonly represents the offici
 
 Branching is a strategy that allows developers to take a snapshot of the master branch and test a new feature without corrupting the project in production. If the tests are successful, that feature can be **merged** back to the master branch and pushed to production.
 
-![](./../images/git-branching.png)
-
+![](./../images/git-branching.png) -->
+<!-- 
 #### Create a login branch 
 **NOTE** this must be done in a directory that is already under git
 
@@ -796,9 +796,9 @@ $ git branch login
 ```
 $ git checkout login
 ```
-Now you will be able to create and edit files that will only exist on this branch until you merge it with `master`.
+Now you will be able to create and edit files that will only exist on this branch until you merge it with `master`. -->
 
-
+<!-- 
 
 ### Pull requests
 
@@ -807,7 +807,7 @@ A pull request – also referred to as a merge request – is an event that take
 It is best to do this process in Github becuase Github offers interfaces and options that we just cannot have in command line.
 
 
-*Break into groups - We are going to practice branches, committing, pushing and making pull requests*
+*Break into groups - We are going to practice branches, committing, pushing and making pull requests* -->
 
 <br>
 
