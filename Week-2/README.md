@@ -55,31 +55,31 @@ An example would be if we had a simple class called Employee that encapsulates d
     int fixedRate;  // Fixed monthly rate
     
     
-    ...
+    
     abstract int salary();
-    ...  
+    
 }
 ```
 
 ```java
      class Contractor extends Employee {
-    ...
+   
     // Must override salary if we wish to create an object of this class
     int salary() {
         return totalHours*perHour; 
     }
-    ...
+   
 }
 ```
 
 ```java
         
     class FullTimeEmployee extends Employee {
-    ...
+   
     int salary() {
         return fixedRate; 
     }
-    ...
+
 }
 ```
 
@@ -87,11 +87,11 @@ An example would be if we had a simple class called Employee that encapsulates d
      
     
     class Intern extends Employee {
-    ...
+   
     int salary() {
         return 0; 
     }
-    ...
+  
 }
 ```
 
