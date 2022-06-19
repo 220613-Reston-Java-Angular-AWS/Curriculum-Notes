@@ -99,7 +99,7 @@ An example would be if we had a simple class called Employee that encapsulates d
 
 <br>
 
-## Variable scopes
+## Variable Scopes
 When a variable is declared in a Java program, it is attached to a specific **scope** within the program, which determines where the variable resides. The different **scopes of a variable** in Java are:
 * Instance, or object, scope
 * Class, or static, scope
