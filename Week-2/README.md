@@ -113,3 +113,102 @@ Class scoped variables reside on the class definition itself. This means that wh
 Method scope is the scope of a variable declared within a method block, whether static or instance. Method-scoped variables are only available within the method they are declared; they do not exist after the method finishes execution (the stack frame is popped from the stack and removed from memory after execution).
 
 Block scoped variables only exist within the specific control flow block, of which there are several in Java: `for`, `while`, and `do-while` loops, `if/else-if/else` blocks, `switch` cases, or even just regular blocks of code declared via curly braces (`{}`). After the block ends, variables declared within it are no longer available.
+
+
+## Introduction to Git
+[Into To Git Video](https://git-scm.com/video/what-is-version-control)
+
+[Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet/)
+
+Git is a **distributed version control system**. This means that the entire codebase and history of a project is available on every developer’s computer as a **local repository** , which allows for easy branching and merging. 
+
+This repository contains all of the information that the **remote repository** has, based on the last time that you synced those two together.
+
+Even if you don't have access to the **remote repository**, you can still view all of the changes that have been made, and contributers can maintain a copy of this record on their own machines.
+
+### Working directory
+
+* Untracked and modified files will exisit within the **Working Directory**. The files in the **Working Directory** are listed when we run `git status`.
+
+* The **Staging Area** is where we organize what we want to be commited to our repository.  The **Staging Area** allows us to pick and choose which files we want to commit and when.  Commits should be details regarding what changes were made in individual files.
+
+1. To add files to the **Staging Area** run the commmand `git add <file-name>`. To add all of the changes we've just made, run the following command.
+
+```
+$ git add .
+```
+
+When you run `git status` again, you should see the recently staged files in green.
+
+2. To **commit** these changes run:
+```
+$ git commit -m "initial commit"
+```
+
+![](./../images/working-directory.png)
+
+### Commits
+
+Commits are the core building block units of a Git project timeline. Commits can be thought of as snapshots or milestones along the timeline of a Git project. Commits are created with the git commit command to capture the state of a project at that point in time.
+
+### Committing work
+
+By default, git commit will open up the locally configured text editor, and prompt for a commit message to be entered. However, passing the -m option will forgo the text editor prompt in-favor of an inline message. 
+
+```
+git commit -m "Here is where you give a brief description of what you are committing to your repository"
+
+```
+#### Remember the steps you will take whenever commiting changes: As we practice you will develop your own specfic order BUT you always want to have the most recent code in your local repositiry before pushing your code to prevent conflicts. 
+```
+$ git add .
+$ git commit -m "a message about changes"
+$ git pull
+$ git push
+```
+
+The `git pull` command is used to fetch and download content from a remote repository and immediately update the local repository to match that content, **before** you push your changes.
+
+
+### Branches
+
+[Quick Tutorial](https://www.atlassian.com/git/tutorials/using-branches#:~:text=A%20branch%20represents%20an%20independent,staging%20area%2C%20and%20project%20history)
+
+Branching is a feature available in most modern version control systems.  Instead of copying files from directory to directory, Git stores a **branch** as a reference to commit.  The branch itself represents the `HEAD` of a series of commits.
+
+The default branch name in Git is `master`, which commonly represents the official, working version of your project.  As you start making commits, the master branch points to the last commit you made.  Everytime you commit, the master branch pointer moves forward automatically. Think of a branch as a timeline of versions of a project as it progresses.
+
+Branching is a strategy that allows developers to take a snapshot of the master branch and test a new feature without corrupting the project in production. If the tests are successful, that feature can be **merged** back to the master branch and pushed to production.
+
+![](./../images/git-branching.png)
+
+  **DEMO - We'll create personal projects and push them to github.**
+
+#### Create a login branch 
+**NOTE** this must be done in a directory that is already under git
+
+Imagine that you want to create a login functionality feature on your project.
+
+1. To create a new branch called `login`, within your directory run: 
+```
+$ git branch login
+```
+2. To `checkout` to the newly created branch, run:
+```
+$ git checkout login
+```
+Now you will be able to create and edit files that will only exist on this branch until you merge it with `main`.
+
+
+
+### Pull requests
+
+A pull request – also referred to as a merge request – is an event that takes place in software development when a contributor/developer is ready to begin the process of merging new code changes with the main project repository.
+
+It is best to do this process in Github becuase Github offers interfaces and options that we just cannot have in command line.
+
+
+*Break into groups - We are going to practice branches, committing, pushing and making pull requests*
+
+
+[Git-Flow WorkFlow]() - Here is taking Git Flow to the next step. 
