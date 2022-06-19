@@ -95,3 +95,4 @@ An example would be if we had a simple class called Employee that encapsulates d
 }
 ```
 
+[Here](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/mainBackup/Week-2/Access_and_NonAccess_Modifiers.md) we can find all of the modifiers and their access levels. 
