@@ -1,0 +1,27 @@
+# QC Study Prep
+## Measures of Data
+- bit : most basic unit of information (either "1" or "0").
+- byte : unit of digital information consists of 8 bits (smallest addressable unit of memory).
+- kb : 1,000 bits or 125 bytes
+- mb : 1,000,000 bits or 125 kilobytes
+- gb : 1,000,000,000 bits or 125 megabytes
+- tb : 1,000,000,000,000 bits or 125 gigabytes
+
+## Components of a Computer
+- memory :
+<br>
+==> 2 types of memory :
+<br>
+--> internal : main memory (form of registers); can also be cache
+<br>
+==> RAM / ROM :
+<br>
+--> RAM (Random Access Memory) : used by CPU for temporary data. Anything needed to run, but is not needed to be saved long-term.
+<br>
+--> ROM (Read-Only Memory) : used for permanent storage. Data cannot be changed and is non-volatile. The data will persist (continue to exist) after the computer is turned off.
+<br>
+--> external : peripheral storage devices (i.e. flash drives, external hard drives, memory cards, etc.)
+- processor / CPU :
+- kernel :
+- HDD / SDD :
+- operating system (OS) : program which is an intermediary between the user and the computer hardware. Makes use of the computer easy for the end user and enables efficient resource allocation. (i.e. Windows, Linux, MacOS)
