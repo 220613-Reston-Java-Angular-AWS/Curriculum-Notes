@@ -66,5 +66,16 @@ public class Main {
         //of boolean and Boolean
         System.out.println(humanWithName.housePet +" - "+ humanWithName.homebody);
 
+        int a = 3;
+        System.out.println(a++);
+        System.out.println(a);
+        System.out.println(--a);
+        a *= 2;
+        System.out.println(a);
+
+
+        String word = "Tiffany";
+        System.out.println(String.valueOf(word.charAt(0)) == "T");
+        System.out.println("T");
     }
 }
