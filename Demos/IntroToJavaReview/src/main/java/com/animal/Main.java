@@ -73,5 +73,9 @@ public class Main {
         a *= 2;
         System.out.println(a);
 
+
+        String word = "Tiffany";
+        System.out.println(String.valueOf(word.charAt(0)) == "T");
+        System.out.println("T");
     }
 }
