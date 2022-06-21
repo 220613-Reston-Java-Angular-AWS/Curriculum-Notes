@@ -213,6 +213,8 @@ It is best to do this process in Github becuase Github offers interfaces and opt
 
 [Git-Flow WorkFlow]() - Here is taking Git Flow to the next step. 
 
+<br>
+
 # Tuesday 
 
 ## Object Class
