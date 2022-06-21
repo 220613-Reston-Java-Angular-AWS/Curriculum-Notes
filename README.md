@@ -5,7 +5,7 @@ Here you will find all of the notes from class along with study-guides, project 
 <br>
 
 
-> QC is important! It is meant to simulate the interview process.  Check out [this guide on how to do well](). 
+> QC is important! It is meant to simulate the interview process. 
 
 ### Slides can be found [here](https://docs.google.com/presentation/d/1i5SkYskb_f87kHqP0zk8kwiCJUA1ZSQNi9MGjoGm5NA/edit#slide=id.p)
 
