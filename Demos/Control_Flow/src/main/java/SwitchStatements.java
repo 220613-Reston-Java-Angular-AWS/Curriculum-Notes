@@ -25,6 +25,6 @@ public class SwitchStatements {
                 System.out.println("This grade is too low");
         }
 
-        
+
     }
 }
