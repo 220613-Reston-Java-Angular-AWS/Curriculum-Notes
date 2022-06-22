@@ -529,7 +529,7 @@ The heap, in contrast, is a central location in memory where all objects are sto
 - Eventually, some objects will no longer be needed. The garbage collector finds these unused objects and deletes them to free up memory.
 - While garbage collection in Java is automatic, there are instances where a programmer will want to enforce garbage collection in their programs.
 
-[More details on Garbage Collection]()
+[More details on Garbage Collection](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/mainBackup/Week-2/Garbage_Collection.md)
 
 ## Annotations
 Java [annotations](https://en.wikipedia.org/wiki/Java_annotation) are special constructs you may see throughout Java code, which use the `@` symbol followed by the name of the annotation. These annotations provide metadata about the source code to the compiler and the JVM. They can be placed on classes, methods, interfaces, and other constructs - however some annotations are restricted to only being placed on certain types or class members.
