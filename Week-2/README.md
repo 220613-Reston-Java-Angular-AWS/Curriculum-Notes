@@ -293,7 +293,7 @@ try {
 ### `try/catch/finally` Block Rules
 Catch and finally blocks have several different rules which must be followed:
 * Multiple catch blocks are allowed. More specific exceptions must come before more general exception types.
-* Multi-catch blocks (catching more than one exception in a given block) are allowed, exception types are separated by `||`
+* Multi-catch blocks (catching more than one exception in a given block) are allowed, exception types are separated by `|`
 * The `finally` block is optional
 * A `try/finally` block only IS allowed, but a `try` block by itself is not
 * A `finally` block will always execute, unless of course `System.exit()` is called
