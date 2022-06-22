@@ -293,7 +293,7 @@ try {
 ### `try/catch/finally` Block Rules
 Catch and finally blocks have several different rules which must be followed:
 * Multiple catch blocks are allowed. More specific exceptions must come before more general exception types.
-* Multi-catch blocks (catching more than one exception in a given block) are allowed, exception types are separated by `||`
+* Multi-catch blocks (catching more than one exception in a given block) are allowed, exception types are separated by `|`
 * The `finally` block is optional
 * A `try/finally` block only IS allowed, but a `try` block by itself is not
 * A `finally` block will always execute, unless of course `System.exit()` is called
@@ -335,5 +335,212 @@ public class ExceptionThrower {
   }
 }
 ```
+<br> 
+
+# Wednesday 
+
+## Arrays
+
+An array is a contiguous block of memory storing a group of sequentially stored elements of the same type. Arrays in Java are of a fixed size and cannot be resized after declaration. Arrays are declared with square brackets after the type of the array like so:
+```java
+int[] myInts = new int[]{1, 2, 3, 4};
+String languages[] = {"Java", "JavaScript", "SQL"};
+```
+
+Items in an array are referenced via their index in square bracket notation, which begins with `0` for the first element. Arrays also have a `length` property specifying the length of the array. This is helpful when iterating over arrays with a `for` loop:
+```java
+String[] myArr = {"first", "second", "third"};
+for (int i = 0; i < myArr.length; i++) {
+  System.out.println(myArr[i]);
+}
+```
+
+### Varargs
+Instead of writing our `main` method the standard way, we can use an alternative notation:
+```java
+public static void main(String... args) { }
+```
+
+Here we are using the `varargs` construct `...` which replaces the array notation. `varargs` stands for "variable arguments", and allows us to set an argument to a method whose size is determined at runtime. Java will create an array under the hood to fit the arguments provided. You can only ever have 1 varargs parameter in a method, and it **MUST** be the last parameter defined (otherwise, how would the JVM know the difference between the last value in varargs and the next parameter of the method?). You can omit the vararg value when invoking the method and Java creates an array of size 0.
+
+```java
+public class VarargsExample {
+  public static void someMethod(int a, int... manyInts) {
+    System.out.println("First argument: " + a);
+	System.out.println("Next argument: ");
+	for (int i = 0; i < manyInts.length; i++) {
+	  System.out.println(manyInts[i]);
+	}
+  }
+  
+  public static void main(String[] args) {
+    VarargsExample.someMethod(1, 3, 4, 5, 6);
+	// First argument: 1
+	// Next argument:
+	// 3
+	// 4
+	// 5
+	// 6
+  }
+}
+```
+
+### forEach() Method
+We can use the `.forEach` method of the `Iterable` interface, which accepts a lambda expression as its argument:
+
+```java
+List<String> names = new ArrayList<>();
+names.add("Alice");
+names.add("Bob");
+names.add("Charlie");
+names.forEach(str -> System.out.println(str));
+```
+
+This will print out the names just as if we had used a `for` loop. The lambda syntax could also be done with an explicit type declaration for the parameter, but the compiler can infer the type from the value used. For multiple parameters, parentheses are required around them. Also, curly braces are optional for single statements but required for multiple. Finally, the `return` keyword is also optional for a single expression because the value will be returned by default.
+
+#### `.forEach()` method
+The `forEach()` method actually accepts what is called a functional interface as its parameter (specifically a `Consumer`), which the lambda expression then implements at runtime. The `forEach()` method then loops through `names` and passes each element to the lambda expression to be "consumed".
 
 
+## Strings
+In Java, Strings are **not** primitives - they are immutable, constant objects derived from the [`String`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html) class. To be immutable means that the state or value of the object cannot be altered once created - this is accomplished by having internal, private and final fields and not implementing any "setter" methods which would alter the state of those fields.
+
+Because Strings are immutable, all of the methods in the String class return a **new** String - the original is not modified. For example:
+```java
+String str1 = "my string";
+str1.concat(" is the best!");
+System.out.println(str1);
+```
+will print out `my string`. Why? Because the `.concat()` method **returns** a completely different string which we are not assigning to any variable, and the original object is not changed (it is immutable). Thus, `str1` still refers to the String "my string". In order to make the code print "my string is the best!", we would need to change line 2: `str1 = str1.concat(" is the best!");` which **re-assigns** the reference variable `str1` to the new String returned from the method (the original String hasn't changed, however).
+
+### String Pool
+When Strings are created they are placed in a special location within the heap called the String Pool. When String literals are created, if there is an existing String that matches in the String Pool, the reference variable will point to the existing value. Duplicates will not exist in the String Pool. This is important because Strings take up a lot of memory. Being able to reuse the same value throughout your application is advantageous.
+
+One way to circumvent the above process is to use the `new` keyword along with the String constructor, which will explicitly create a new String object in memory, even if one already exists in the String Pool.
+
+```java
+String a = "foo";
+String b = "foo";
+String c = new String("foo");
+System.out.println(a == b); // true
+System.out.println(a == c); // false
+```
+
+## StringBuffer and StringBuilder
+
+Since Strings are immutable, it becomes inefficient to use them if we are making many new Strings constantly, for example if we are generating new Strings in a `for` or `while` loop. Instead, we can use the `StringBuilder` and `StringBuffer` classes, both of which are **mutable**. [`StringBuilder`](https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html) contains helpful methods like `.append()` and `.insert()` which mutate its internal sequence of characters. [`StringBuffer`](https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuffer.html) is like `StringBuilder` but is synchronized, which is useful for multi-threaded applications.
+
+| Class | Immutable? | Thread-safe? | Speed |
+| ----  | ---------- | ------------ | ----- |
+| String | Y | Y | Slowest |
+| StringBuilder | N | N | Fastest |
+| StringBuffer | N | Y | Fast |
+
+[`StringTokenizer`](https://docs.oracle.com/javase/8/docs/api/java/util/StringTokenizer.html) is a related class which can parse a String and splits it based on a delimiter.
+
+## Reading User Input from the Console
+The `Scanner` class can be used to read user input from the command line:
+
+```java
+Scanner sc = new Scanner(System.in);
+while (true) {
+  String input = sc.nextLine();
+  System.out.println("Your input: " + input);
+}
+```
+
+When the code above is run, the program acts to "echo" back any input given from `stdin`.
+
+## Interfaces
+
+An interface acts as a contract for behaviors that a class can implement.
+
+```java
+public interface InterfaceA {
+ public void methodName(); //You don't implement the method!
+}
+```
+Interfaces have implicit modifiers on methods and variables.
+- Methods are 'public' and 'abstract'
+- Variables are 'public', 'static', and 'final'
+To inherit interfaces, a class must *implement* them and they are REQUIRED to implement all methods, unless the class is abstract.
+
+## Abstract Classes
+
+- An abstract class is a class that is declared `abstract` —it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
+- An abstract class can have 0 or more abstract methods, but if a class has at least one abstract method then the whole class has to be abstract.
+- An abstract class can have implemented methods as well.
+- Use the `extends` keyword to extend an abstract class.
+
+```java
+public abstract class GraphicObject {
+   // declare fields
+   // declare nonabstract methods
+   abstract void draw();
+}
+
+class Circle extends GraphicObject {
+    void draw() {
+        ...
+    }
+    void resize() {
+        ...
+    }
+}
+
+class Rectangle extends GraphicObject {
+    void draw() {
+        ...
+    }
+    void resize() {
+        ...
+    }
+}
+```
+
+### Difference between interface and Abstract classes
+- Conceptually, interfaces define behaviors and abstract classes are for concepts and inheritance.
+- You can implement multiple interfaces, but you can extend only one class.
+
+#### Abstract Classes and Interfaces - Summary
+Abstract classes, as mentioned above, are more general classes which cannot be instantiated. They instead act as templates for other classes to extend from. Abstract classes can have both concrete and abstract methods - the `abstract` methods must be implemented by concrete subclasses.
+
+Interfaces also cannot be instantiated. They instead serve as contracts for methods that classes must implement. In order to inherit from interfaces, a class declares that it `implements` some interface, or multiple interfaces. Methods declared on an interface are implicitly `public` and `abstract`. Interfaces can have variables, but they are implicitly `public`, `static`, and `final`. Since Java 8, interfaces can also provide method implementations if the method is marked `static` or `default`.
+
+Abstract classes are better suited for defining *common characteristics* of objects and are named as nouns by convention, whereas interfaces are better for defining common *behavior* the implementing class promises to provide.
+
+## Stack and Heap
+Inside the JVM, our application memory is divided into the "[stack][1]" and the "[heap][2]". The stack is where method invocations and reference variables are stored in stack frames. For example, when the JVM invokes the `main` method a stack frame is created for it and placed on the stack. Multiple stacks are possible - for example, when a thread is created it is given its own stack.
+
+The heap, in contrast, is a central location in memory where all objects are stored. New objects are created via the `new` keyword and (optionally) assigned to a reference variable, which can then be re-assigned to reference different objects later. Thus, multiple reference variables could point to the same object in memory.
+
+**Note:** Errors at runtime can be thrown if a program runs out of memory addresses for new stack frames (`StackOverflowError`), or if no memory is available in the heap for object creation (`OutOfMemoryError`).
+
+[1]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+[2]: https://en.wikipedia.org/wiki/Heap_(data_structure)
+
+[Here](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/mainBackup/Week-2/Stack_and_Heap.md) we have more info on this topic
+
+## Garbage Collection 
+
+- Garbage collection in Java is the process by which Java programs perform automatic memory management. 
+- Java programs compile to bytecode that can be run on a Java Virtual Machine, or JVM for short. 
+- When Java programs run on the JVM, objects are created on the heap, which is a portion of memory dedicated to the program. 
+- Eventually, some objects will no longer be needed. The garbage collector finds these unused objects and deletes them to free up memory.
+- While garbage collection in Java is automatic, there are instances where a programmer will want to enforce garbage collection in their programs.
+
+[More details on Garbage Collection](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/mainBackup/Week-2/Garbage_Collection.md)
+
+## Annotations
+Java [annotations](https://en.wikipedia.org/wiki/Java_annotation) are special constructs you may see throughout Java code, which use the `@` symbol followed by the name of the annotation. These annotations provide metadata about the source code to the compiler and the JVM. They can be placed on classes, methods, interfaces, and other constructs - however some annotations are restricted to only being placed on certain types or class members.
+
+Annotations can be used to enforce rules in the code, or to abstract some functionality provided by a library or framework. Java frameworks and libraries often process annotations using the Reflection API (covered in another module) to dynamically provide functionality to developers.
+
+Java has a few built-in annotations you should be familiar with:
+* `@Override` - declares the method must override an inherited method (otherwise, a compilation error occurs)
+* `@Deprecated` - marks a method as obsolete (compilation warning if used anywhere)
+* `@SuppressWarnings` - instructs compiler to supress compilation warnings
+* `@FunctionalInterface` - designates an interface to be a functional interface (covered in another module)
+
+[1]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+[2]: https://en.wikipedia.org/wiki/Heap_(data_structure)
