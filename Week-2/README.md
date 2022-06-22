@@ -438,7 +438,7 @@ Since Strings are immutable, it becomes inefficient to use them if we are making
 
 [`StringTokenizer`](https://docs.oracle.com/javase/8/docs/api/java/util/StringTokenizer.html) is a related class which can parse a String and splits it based on a delimiter.
 
-## Reading User Input from Console
+## Reading User Input from the Console
 The `Scanner` class can be used to read user input from the command line:
 
 ```java
@@ -519,7 +519,7 @@ The heap, in contrast, is a central location in memory where all objects are sto
 [1]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
 [2]: https://en.wikipedia.org/wiki/Heap_(data_structure)
 
-[Here]() we have more info on this topic
+[Here](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/mainBackup/Week-2/Stack_and_Heap.md) we have more info on this topic
 
 ## Garbage Collection 
 
