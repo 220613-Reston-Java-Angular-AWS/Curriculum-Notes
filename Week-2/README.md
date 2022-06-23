@@ -544,3 +544,139 @@ Java has a few built-in annotations you should be familiar with:
 
 [1]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
 [2]: https://en.wikipedia.org/wiki/Heap_(data_structure)
+
+<br>
+
+#Thursday
+
+## TDD - Test Driven Development
+When developing software, it is important to ensure that most if not all of the code being written is tested to verify the functionality of the code. One way to ensure this is to follow a process called **test-driven development**, or TDD.
+
+### TDD Process
+The TDD process consists of writing unit tests first, **before** the application code has been written. Then, code can be written to make the test pass and the process can be completed for each piece of functionality required. Thus, the process is:
+1. Write a unit test
+2. Run the test => test will fail
+3. Fix the test by writing application code
+4. Retest until the test passes
+5. Repeat
+
+Following the TDD process can be useful for ensuring that a valid unit tests always exists for any class or method that is written. Later, when refactoring code, the unit tests give us confidence that we can change the source code without breaking existing functionality. If we mess up somewhere, when the unit tests are run we can pinpoint exactly where the problem lies. This makes debugging much easier.
+
+## Unit Testing
+Unit testing is the testing of individual software components in isolation from the rest of the system. This is done by writing unit tests which execute the code we want to inspect. When the code under test deviates from an expected outcome or behavior, the test will fail. If a test passes, it means the application performs as expected (unless there is a problem with the test itself). In Java, the most common unit testing framework is called JUnit.
+
+
+## JUnit Annotations
+JUnit is a Java framework for unit testing. JUnit has several annotations within the `org.junit` package that developers can use to create tests and setup test environments:
+* `@Test` - declares a method as a test method
+* `@BeforeClass` - declares a setup method that runs once, before all other methods in the class
+* `@Before` - declares a setup method that runs before each test method
+* `@After` - declares a tear-down method that runs before each test method
+* `@AfterClass` - declares a tear-down method that runs once, after all other methods in the class
+
+When writing a test method, JUnit helps us check the functionality of the code being tested by providing static `Assert` methods, of which there are many. A few include:
+* `assertTrue()`
+* `assertFalse()`
+* `assertEquals()`
+* `assertNotEquals()`
+* `assertThat()`
+
+## JUnit Assertions
+Assertions verify that the state of the application meets what is expected. For example, to test a simple addition method:
+
+```java
+@Test
+public void additionTest() {
+  Assert.assertEquals(4, Calculator.addNumbers(2,2));
+}
+```
+
+If the `.addNumbers()` method returns anything other than `4`, the test will fail. This will alert us that something is wrong in the logic of the method and we can then debug the issue. When we think we've fixed the problem, just run the test again and check that it passes.
+
+**Note:** to avoid needing to reference `Assert` every time, we can use a `static import org.junit.Assert.*;` statement to import all `static` members of the `Assert` class.
+
+
+
+### Ignoring Tests
+
+To prevent a test from running, use the `@Ignore` annotation. Use this sparingly, however, because ignoring valid tests only means that you are pretending a problem does not exist. If tests are constantly ignored, you will have no guarantee that the application functionality has not regressed.
+
+
+### Testing Best Practices
+When it comes to testing code, a few best practices to follow include:
+* [Utilize dependency injection](https://en.wikipedia.org/wiki/Dependency_injection)
+* [Write testable code](https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters)
+* Use a mocking library like [Mockito](https://site.mockito.org/) for dependencies
+* Measure your code coverage with a tool like [Jacoco](https://www.eclemma.org/jacoco/trunk/doc/maven.html)
+* Externalize test data when possible (i.e. read in the test data from an external file or generate it dynamically)
+* Generally, you want to use **only 1 assert statement per test** - this ensures you can pinpoint the defect when debugging
+* Write deterministic tests (they shouldn't fail sometimes and pass other times - otherwise known as "flaky" tests)
+
+### Summary for the Intro to TDD And Unit Testing
+
+- When developing software, it is important to ensure that most if not all of the code being written is tested to verify the functionality of the code. One way to ensure this is to follow a process called **test-driven development**, or TDD.
+- The TDD process consists of writing unit tests first, **before** the application code has been written. Then, code can be written to make the test pass and the process can be completed for each piece of functionality required. 
+- Unit testing is the testing of individual software components in isolation from the rest of the system. This is done by writing unit tests which execute the code we want to inspect.
+
+
+## Collections Framework
+The Collections framework in Java is a set of classes and interfaces that implement commonly used data structures. A collection is a single object which acts as a container for other objects. The Collections API is organized in a class hierarchy shown in simplified version below:
+
+![Collection API class hierarchy](https://javaconceptoftheday.com/wp-content/uploads/2014/11/CollectionHierarchy.png)
+
+The important interfaces in the Collections API are:
+* `Iterable` - guarantees the collection can be iterated over
+* `List` - an ordered collection
+* `Set` - a collection does not contain duplicates
+* `Queue` - a collection that operates on a first-in-first-out (FIFO) basis
+* `Map` - contains key/value pairs. Does not extend `Iterable`.
+
+### Collections Class
+The [Collections](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html) class - not to be confused with the Collection interface - defines many `static` helper methods which operate on any given collection. Use this class for help with sorting, searching, reversing, or performing other operations on collections.
+
+### Types of Collections
+
+#### List Interface
+A `List` is a collection that is ordered and preserves the order in which elements are inserted into the list. Contrary to sets, duplicate entries are allowed. Also, elements are accessed by their index, which begins with 0 for the first element in the list.
+
+##### Vector
+`Vector` is an older class which implements `List` - it is essentially a thread-safe implementation of an `ArrayList`.
+
+##### Stack
+`Stack` is an older implementation of the stack data structure (last-in-first-out, or LIFO). Generally you should use an `ArrayDeque` for implementing a stack.
+
+#### Set Interface
+`Set` is an interface which defines a data structure which:
+* is NOT index driven
+* only allows unique elements
+* generally DOES NOT preserve the order in which elements were inserted
+
+#### Queue Interface
+A `Queue` is a data structure used when elements should be added and removed in a specific order. Unless specified, elements are ordered FIFO (first-in-first-out). Some useful methods declared are:
+* `offer()`
+* `peek()`
+* `poll()`
+
+#### Map Interface
+Map does not implement the Collection interface, however it is considered to be part of the Collections framework. It is used to identify a value by a key, and each entry in a map is a key-value pair. Because it does not implement `Iterable`, Maps cannot be iterated over directly. Instead, one must either:
+* use the `entrySet()` method to iterate over the set of `Map.Entry`
+* use the `keySet()` method to iterate over the set of keys
+* use the `values()` method to return a `Collection` of values which can then be iterated over
+
+##### HashMap
+`HashMap` is a Map which:
+* Stores elements in key-value pairs
+* Insertion/Retrieval of element by key is fast
+* Tradeoff is that it does not maintain the order of insertion
+* Permits one null key and null values
+
+##### TreeMap
+`TreeMap` is a Map whose:
+* Keys are stored in a Sorted Tree structure
+* Main benefit is that keys are always in a sorted order
+* Insertion/Retrieval are slow
+* Cannot contain null keys as null cannot be compared for sorting
+
+##### HashTable
+`HashTable` is an older, thread-safe implementation of a `HashMap`. It does not allow null keys or null values.
+
