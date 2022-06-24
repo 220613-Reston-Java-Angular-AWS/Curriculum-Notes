@@ -200,10 +200,10 @@ public class Test {
 
 Run the program and you'll see that your final output should look liek the like the following.
 
-class A staticCount: 2494
-1
-2495
-1
+class A staticCount: 2494 /n
+1 /n
+2495 /n
+1 /n
 2496
 object a instanceCount: 15
 object a2 instanceCount: 1
