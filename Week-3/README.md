@@ -79,7 +79,7 @@ The following overview will cover:
 Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the AWS Cloud. It provides cost-efficient, resizable capacity for an industry-standard relational database and manages common database administration tasks.
 <br />
 <br />
-<img src="./images/rds1.gif" alt="Image from Gyazo" style="text-align:center;" width="300"/>
+![](./../images/amazon-RDS.png)
 <br />
 
 * RDS **automates** expensive and time consuming tasks such as managing backups, software patching, automatic failure detection, and recovery.  
@@ -93,7 +93,7 @@ Amazon Relational Database Service (Amazon RDS) is a web service that makes it e
 * RDS is **free to try** and you will be charged based on how much computational power you use per month (pay-as-you-go).  
 
 * RDS provides you with six familiar database engines to choose from, including Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database, and SQL Server. 
-    <img src="./images/rds2.png" width=900px alt="AWS Services Chart"/>  
+   ![](./../images/database-vendors.png)
 
 
 ### Why Use RDS?
@@ -109,7 +109,7 @@ It's important to distinguish AWS RDS from *other database solutions offered thr
 
 See the image below to see how AWS RDS differs from other databases available in AWS.
 
-<img src="./images/aws-dbs.png" width=700px alt="AWS Services Chart"/>  
+![](./../images/rds-vs-otherDBs.png)
 <br />
 <br />
 
@@ -124,7 +124,7 @@ See the image below to see how AWS RDS differs from other databases available in
     * **Fault-tolerance** defines the ability for a system to remain in operation even if some of the components used to build the system fail.
 <br />
 
-<img src="./images/az.png" width=500px alt="Availability Zones"/>  
+ ![](./../images/time-zones.png)
 
 ### Security
 * A **security group** controls the access to a DB instance. It does so by allowing access to IP address ranges or Amazon EC2 instances that you specify.
