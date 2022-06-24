@@ -200,14 +200,22 @@ public class Test {
 
 Run the program and you'll see that your final output should look liek the like the following.
 
-class A staticCount: 2494 \n
-1 \n
-2495 /n
-1 /n
+class A staticCount: 2494
+<br>
+1
+<br>
+2495
+<br>
+1
+<br>
 2496
+<br>
 object a instanceCount: 15
+<br>
 object a2 instanceCount: 1
+<br>
 class A staticCount: 2496
+<br>
 
 
 We updated the variable, `staticCount` initially and you can see that each instance created adds 1 to the value. In this case, we demonstrated how a static variable is associated directly with the class and shared amongst all instances of a class. 
