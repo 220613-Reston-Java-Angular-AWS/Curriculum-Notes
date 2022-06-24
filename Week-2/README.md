@@ -547,7 +547,7 @@ Java has a few built-in annotations you should be familiar with:
 
 <br>
 
-#Thursday
+# Thursday
 
 ## TDD - Test Driven Development
 When developing software, it is important to ensure that most if not all of the code being written is tested to verify the functionality of the code. One way to ensure this is to follow a process called **test-driven development**, or TDD.
@@ -680,3 +680,157 @@ Map does not implement the Collection interface, however it is considered to be 
 ##### HashTable
 `HashTable` is an older, thread-safe implementation of a `HashMap`. It does not allow null keys or null values.
 
+<br>
+
+# Friday - Diving Deeper Into Collections 
+
+### (Lists, Sets, Queues, Maps cont.)
+
+## ArrayList
+An `ArrayList` is a concrete class which implements `List`. It is a data structure which contains an array within it, but can resize dynamically. Once it reaches maximum capacity, an `ArrayList` will increase its size by 50% by copying its elements to a new (internal) array. Traversal is fast (constant time) because elements can be randomly accessed via index, just like an array. Insertion or removal of elements is slow, however (linear time, since there is a risk of having to resize the underlying array).
+
+## LinkedList
+A `LinkedList` implements both the `List` and `Queue` interfaces, so it has all methods in both interfaces. The data structure is composed of nodes internally, each with a reference to the previous node and the next node - i.e. a doubly-linked list. Because of this structure, insertion or removal of elements is fast (no risk to resize, just change the nearest references), but traversal is slow for an arbitrary index.
+
+## HashSet
+A `HashSet` implements `Set` and is backed by a `HashMap`. It:
+* Guarantees no ordering when iterating
+* Allows one `null` value
+* Allows fast insertion and traversal
+* Does not maintain order in which you insert elements
+
+## TreeSet
+A `TreeSet` is a `Set` whose elements maintain sorted order when inserted. Internally, it is backed by a Sorted Tree. Insertion and removal of elements is slow, because the elements must maintain sorted order. It cannot contain any `null` values, since `null` cannot be compared to any object.
+
+## ArrayDeque
+
+Pronounced as 'array-deck', this concrete class can be implemented for either the queue or stack data structure. It is an implementation of a pure double-ended queue (elements can be added or removed from either end of the queue). An `ArrayDeque` stores elements in a resizable array internally, and it has a few extra useful methods defined:
+* `pop()`
+* `push()`
+* `peekFirst()`
+* `peekLast()`
+* `pollFirst()`
+* `pollLast()`
+* `offerFirst()`
+* `offerLast()`
+
+| Operation | Throws Exception | Returns null |
+| --------- | ---------------- | ------------ |
+| Insert    | `boolean add(E e)`|`boolean offer(E e)`|
+| Remove    | `E remove()` | `E poll()` |
+| Examine   | `E element()`| `E peek()`|
+
+
+## PriorityQueue
+
+We know that `Queue` serves the requests based on FIFO(First in First out) but sometimes the elements of the queue are needed to be processed according to the priority, that’s when the `PriorityQueue` comes into a picture.
+ 
+A `PriorityQueue` serves the requests based on the priority heap. The elements of the priority queue are ordered according to their natural ordering, or by a `Comparator` provided at queue construction time, depending on which constructor is used. A priority queue does not permit `null` elements. A priority queue relying on natural ordering also does not permit insertion of non-comparable objects (doing so may result in `ClassCastException`).
+
+### Methods of PriorityQueue Class
+
+* `boolean	add(E e)` - Inserts the specified element into this priority queue.
+* `void	clear()`- Removes all of the elements from this priority queue.
+* `Comparator<? super E>	comparator()` - Returns the comparator used to order the elements in this queue, or null if this queue is sorted according to the natural ordering of its elements.
+* `boolean	contains(Object o)` -Returns true if this queue contains the specified element.
+* `Iterator<E>	iterator()` -Returns an iterator over the elements in this queue.
+* `boolean	offer(E e)` -Inserts the specified element into this priority queue.
+* `E	peek()` -Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
+* `E	poll()` -Retrieves and removes the head of this queue, or returns null if this queue is empty.
+* `boolean	remove(Object o)` -Removes a single instance of the specified element from this queue, if it is present.
+* `int	size()` -Returns the number of elements in this collection.
+* `Object[]	toArray()` -Returns an array containing all of the elements in this queue.
+* `<T> T[]	toArray(T[] a)` -Returns an array containing all of the elements in this queue; the runtime type of the returned array is that of the specified array.
+
+
+## Iterable and Iterator Interface
+The `Iterable` interface defines a data structure which can be directly traversed using the `.iterator()` method, which returns an `Iterator`. This can be useful for fine-grained control over iteration. The `Iterator` interface contains methods for traversal, including:
+* `hasNext()`
+* `next()`
+* `remove()`
+
+For example:
+
+```java
+Set<String> names = new ArrayList<>();
+// add names...
+Iterator<String> it = names.iterator();
+while (it.hasNext()) {
+  String name = it.next();
+  doSomething(name);
+}
+```
+
+### Enhanced For Loop
+Any object which implements the `Iterable` interface can also be iterated over using a special kind of `for`-loop: the "enhanced" for loop. The syntax is as follows:
+```java
+Set<String> names = new ArrayList<>();
+// add names...
+for (String name : names) {
+  System.out.println(name);
+}
+```
+The downside of the enhanced for loop is that the index of iteration is not tracked, so fine-grain control over execution is not possible. However, this simplified syntax is beneficial for many simple iterations.
+
+## Comparable Interface
+
+[`Comparable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html) is an interface which defines the natural ordering for a class. A class must implement `Comparable` if it is to be sorted by the `compareTo()` method.
+```java
+public interface Comparable<T> {
+	public int compareTo(T o);
+}
+```
+
+The `compareTo()` method returns an `int` which is:
+* Zero, if the two objects are equal
+* Negative, if this object is smaller than that
+* Positive, if this object is greater than that
+
+## Comparator Interface
+
+[`Comparator`](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html) is an interface which allows you to define a total ordering on some collection of objects. A class that is to be sorted by `compare()` does not have to implement `Comparator`.
+```java
+public interface Comparator<T> {
+	public int compare(T firstObject, T secondObject);
+}
+```
+
+## Generics
+Generics are constructs introduced in Java 5 which enforce compile time safety by allowing you to use parameterized types. They are covered here because the are frequently and heavily used with collections. Generics can be declared on a class (generic types), method parameters (generic methods), or return types.
+
+Before Java 5, you had to write something like this and hope other developers understood to only put Strings inside: 
+```
+List names = new ArrayList();
+names.add("Alice"); // good use
+name.add(new Object()); // uh oh - we want to prevent this from happening
+```
+
+With generics, you can restrict a class to only accept objects of a given type and the compiler will prevent you from using any other type:
+```
+List<String> names = new ArrayList<>(); // using a List of Strings only
+names.add("Alice"); // nice!
+names.add(new Object()); // now we get a compilation error to stop this - generics save the day!
+```
+
+### Generic Classes
+To make a class (or interface) generic, use the angle brackets when declaring it, and use an arbitrary "generic type" which is determined by the invoking code. The generic type can then be reused throughout the class to enforce type safety.
+
+```java
+public class MyGenericClass<T> {
+  private T instance;
+  
+  // simple generic setter method
+  public void setObject(T object) {
+    this.instance = object;
+  }
+}
+```
+
+### Naming Convention for Generics
+Technically, type parameters can be named anything you want. The convention is to use single, uppercase letters to make it obvious that they are not real class names.
+* E => Element
+* K => Map Key
+* V => Map Value
+* N => Number
+* T => Generic data type
+* S, U, V, and so on => For multiple generic data types
