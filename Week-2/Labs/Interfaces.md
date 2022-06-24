@@ -126,7 +126,7 @@ public class Whale extends Mammal implements Swimmer{
 }
 ```
 
-Notice that Eclipse will underline our Whale class in red. Hover your mouse over it to see the compiler message:
+Notice that IntelliJ will underline our Whale class in red. Hover your mouse over it to see the compiler message:
 
 
 
@@ -178,7 +178,6 @@ Run the program.
 
 You'll observe the following output:
 
-![image of running the class](images/image-5.png)
 
 Everything works great! And "Swim swim swim" prints successfully to the console.
 
@@ -198,9 +197,8 @@ public interface Swimmer {
     void dive(); 
 }
 ```
-After saving this you will notice an error appear on the implementing Whale class. 
+You will notice an error appear on the implementing Whale class. 
 
-![image of error in Whale class](images/image-7.png)
 
 Of course, now Whale is inheriting an abstract method once again. 
 
@@ -242,6 +240,7 @@ public class TestSwimmer {
 }
 ```
 swim swim swim
+<br>
 Diving
 
 Excellent.
