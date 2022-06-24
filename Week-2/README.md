@@ -208,7 +208,7 @@ A pull request – also referred to as a merge request – is an event that take
 It is best to do this process in Github becuase Github offers interfaces and options that we just cannot have in command line.
 
 
-*Break into groups - We are going to practice branches, committing, pushing and making pull requests*
+*Break into groups - We are going to practice branches, committing, pushing and making pull requests.*
 
 
 [Git-Flow WorkFlow]() - Here is taking Git Flow to the next step. 
@@ -219,7 +219,7 @@ It is best to do this process in Github becuase Github offers interfaces and opt
 
 ## Object Class
 
-#### The Object class is a special class in Java. It is the root class that ALL other classes inherit from, either firectly or indirectly. Therefore all classes have atleast the methods defined on the Object class.
+#### The Object class is a special class in Java. It is the root class that ALL other classes inherit from, either directly or indirectly. Therefore all classes have at least the methods defined on the Object class.
 
 - Object clone()
 - boolean equals(Object o)
