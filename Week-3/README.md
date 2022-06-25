@@ -161,3 +161,107 @@ DB services (like RDS) are *managed* services, meaning that you have limited con
 ### References
 * [Databases on AWS](https://aws.amazon.com/products/databases/?nc=sn&loc=0)
 * [RDS Instance Types](https://aws.amazon.com/rds/instance-types/)
+
+<br>
+
+## Intro to DBMS
+DBMS stands for DataBase Management System. A database is a collection of data, and the management system is a set of programs to store and access that data in a quick and effective manner. Database systems are developed to handle large amounts of data. There are many features to modern database management systems and we will only be touching on a little of the subject matter. When we talk about persisting data in a database, what we technically mean is allowing a DBMS to persist that data in an instance of a database. 
+
+ ![](./../images/dbms.png)
+
+Relational databases are often contrasted with another category of databases - non-relational databases. We won't go into the details of non-relational databases here, but you should be aware that there are major differences. Nonrelational databases do not store data within tables that relate to each other, and thus do not use SQL to interact with the databse.
+
+RDBMS systems are one of the key components of any enterprise application or system. Why is this the case? Think about it - data by itself doesn’t mean a lot or even have intrinsic value. A lot of data thrown in a bucket would it mean be meaningless unless some kind of processing and analysis was done on it. Related data is what provides meaning and organizes the structure of data. For example, “an employee is in one or more departments”. We might have one table to store employees and another to store departments, and then define some relationship between them.
+
+Normally, relational databases are used in an OLTP (OnLine Transaction Processing) environment, which means that the idea of having related data is preferable in a very transactional system, and that are normally row-based.
+
+For non-transactional environments, the counter part is OLAP (OnLine Analytic Processing) systems, which are normally columnar-based, which is faster for reading but slower for manipulation.
+
+[More info on DBMS](https://www.techtarget.com/searchdatamanagement/definition/database-management-system#:~:text=A%20database%20management%20system%20(DBMS,delete%20data%20in%20a%20database.)
+
+<br>
+<br>
+
+# Tuesday
+
+## SQL
+SQL, or Structured Query Language, is a scripting language used to manipulate relational databases, commonly referred to as SQL databases. In the strictest sense SQL instructs a relational database management system in a similar way to how Java instructs the compiler and JS instructs the interpreter.
+  
+*SQL is often referred to as "sequel". Be cool, say sequel.*
+  
+## SQL Flavors
+SQL is a standard described originally by Sun Microsystems, which is now owned by Oracle. The main SQL standard is implemented slightly differently by a number of different groups including Oracle, and Microsoft to name a few. These flavors of SQL are each a superset of the SQL standard with added features and slight syntactical differences. Once we know one it isn't difficult to transition to another. The flavor we will be working with in this training is PostreSQL.
+
+### SQL Sublanguages
+The types of SQL commands used to query and manipulate data within a database can be categorized into 5 sub-languages (or dialects). We will be primarily interested in the first 3 seen below, DDL, DML, and DQL. 
+
+1. **DDL Data Definition Language:** Statements used to create tables and databases as well as defined properties.
+    * `CREATE`, `ALTER`, `DROP`, `TRUNCATE`
+2. **DML (Data Manipulation Language):** Statements used to insert or remove data from tables.
+    * `INSERT`, `UPDATE`, `DELETE`
+3. **DQL (Data Query Language):** Statements used to query data from a table.
+    * `SELECT`
+4. **DCL (Data Control Language):** Statements used to control who can access data.
+    * `GRANT`, `REVOKE`
+5. **TCL (Transaction Control Language):** Statements used to commit and restore data through transaction.  Transactions group a set of tasks into a single execution unit.
+    * `COMMIT`, `ROLLBACK`, `SAVEPOINT`
+
+### Data Types
+
+When defining the properties of an entity in the database (i.e. the columns), you must specify the data type to store. Common SQL datatypes include:
+
+#### Numeric
+- INT
+- TINYINT
+- BIGINT
+- DECIMAL
+- NUMERIC
+- FLOAT
+- REAL
+
+#### Date/Time
+- DATE
+- TIMESTAMP
+- DATETIME
+- TIME
+- YEAR
+
+#### Character/String
+- CHAR
+- NCHAR
+- VARCHAR
+- NVARCHAR
+- NTEXT
+
+#### Binary
+- BINARY
+- VARBINARY
+- IMAGE
+
+#### Miscellaneous
+- CLOB
+- BLOB
+- XML
+- JSON
+
+Each database vendor may support their own data types, or not support some of the ones listed above. Refer to the specific vendor documentation for more information.
+
+### Conventions
+
+SQL is a case-insensitive language, but the convention is to use UPPERCASE to refer to SQL keywords and lowercase for non-SQL specific entities (like table or column names). This helps distinguish between SQL keywords and other words. Also, for readability purposes we should split long commands or queries into multiple lines.
+
+For example, this:
+
+```sql
+SELECT * FROM table1
+LEFT JOIN table2 ON table1.a = table2.b
+WHERE table1.x < 5
+AND table2.y > 8
+ORDER BY table1.a DESC
+```
+
+is much more readable than:
+
+```sql
+SELECT * FROM table1 LEFT JOIN table2 ON table1.a = table2.b WHERE table1.x < 5 AND table2.y > 8 ORDER BY table1.a DESC
+```
