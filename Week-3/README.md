@@ -433,7 +433,7 @@ Durability means that once a transaction is complete, it guarantees that all of 
 * Phantom Read: reading data that is being added or modified by a running transaction
 
 
-## TCL
+### TCL 
 Transaction Control Language statements are utilized to manage transactions within a relational database.
 
 * COMMIT, any DML operations that were executed before the statements will be persisted permanently.
