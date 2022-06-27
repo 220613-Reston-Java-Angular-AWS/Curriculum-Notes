@@ -2,7 +2,9 @@
 
 ## Vocabulary
 
-- `Static` means that the method (field) IS shared amongst all instances of the class.
+- `static` : method (field) IS shared amongst all instances of the class.
+- `final` : applicable to class, method, or variable. It means that the structure CANNOT be changed, but what that means depends on the construct.
+<br>
 
 ### Variable Scopes
 
