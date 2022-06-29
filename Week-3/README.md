@@ -183,8 +183,10 @@ For non-transactional environments, the counter part is OLAP (OnLine Analytic Pr
 <br>
 
 # Tuesday
+##### [PosgresSQL Documentation](https://www.w3resource.com/PostgreSQL/tutorial.php)
 
-## SQL
+
+## SQL - [SQL Documentation](https://www.w3resource.com/sql/tutorials.php)
 SQL, or Structured Query Language, is a scripting language used to manipulate relational databases, commonly referred to as SQL databases. In the strictest sense SQL instructs a relational database management system in a similar way to how Java instructs the compiler and JS instructs the interpreter.
   
 *SQL is often referred to as "sequel". Be cool, say sequel.*
@@ -450,3 +452,129 @@ ROLLBACK TO A
 # if nothing went wrong
 COMMIT
 ```
+
+<br>
+
+# Wednesday 
+
+## Indexes
+
+To explain the concept of [**indexes**](https://en.wikipedia.org/wiki/Database_index), think of the purpose of indexes in a book - you use them to speed up the process of locating some specific piece of information. You wouldn't want to skim an entire book to find where one word was mentioned; similarly, indexes allow databases to speed up the process of retrieving data.
+
+When an index is created on a database column, a separate data structure is created in the database (typically some sort of balanced tree), which stores references that point to the actual records in the table. This data structure can be searched much more quickly than searching through the entire table itself. Significant performance benefits can be achieved by implementing indexes on commonly queried columns. For this reason, primary keys are automatically indexed by the RDBMS system.
+
+### Types of Indexes
+
+Indexes can be categorized into two types: clustered and non-clustered. Clustered indexes alter the order in which the records are physically stored on disk. Thus only one clustered index can be created on a given table. Non-clustered indexes specify a logical ordering of rows but do not affect the physical ordering, so there may be more than one non-clustered index in a table.
+
+Additionally, there are further types of indexes:
+
+* Bitmap
+* Dense
+* Sparse
+* Reverse
+* Primary
+* Secondary
+
+In-depth knowledge of indexes is not necessary for our training purposes, however.
+
+### Creating Indexes
+
+The syntax to create an index on a table's column is:
+
+```
+CREATE INDEX index_name ON table_name (col1, col2, ...)
+```
+
+### Deleting Indexes
+
+```
+ALTER TABLE table_name DROP INDEX index_name
+```
+
+#### Best Practices
+
+You should consider adding an index to a column **when you anticipate or already know that the column will often be used** when searching the table for records. Often you will not know which columns should be indexed until you have gathered some data about queries run on the system in production.
+
+## Views
+
+[Views](https://en.wikipedia.org/wiki/View_(SQL)) are virtual tables - they are constructed from DQL queries and provide a window or "view" into the table. Views can be used to provide access to some portion of the data in a table but not all, which might be useful if the data is sensitive and needs to be kept private. Views are also used to abstract or hide complexity in the database - a view could be constructed with joins over multiple tables so that end users can query from denormalized tables easily. Users can query views just as if they were normal tables. Changes to the underlying table will be reflected in the view whenever it is queried next.
+
+### Materialized Views
+
+Materialized views were introduced by Oracle and give a static snapshot of the data at a given point in time.
+
+### Creating Views
+
+Create a view with the following syntax:
+
+```
+CREATE VIEW [viewname] AS [any DQL statement]
+```
+
+For example,
+
+```
+CREATE VIEW myview AS SELECT col1, col2 FROM mytable WHERE mycolumn > 12
+```
+
+Now, we can query from the view just as we would from a table:
+
+```
+SELECT * FROM myview WHERE mycolumn > 20
+```
+
+[More info](https://www.w3resource.com/PostgreSQL/postgresql-views.php)
+
+## Joins 
+[More info on Joins](https://www.w3resource.com/PostgreSQL/postgresql-join.php)
+
+
+Used to combine two or more tables, joins are a database technique used in SELECT statements. Joins are normally performed comparing primary keys to foreign keys, however, they can be performed with any type of column, as long as the types match. Joins are a way of *denormalizing* a set of tables in order to aggregate or process some query.
+
+They can be performed in many ways:
+* INNER JOIN.
+  * The most commonly used type of join, returns rows only if the columns specified in the join clause match.
+* OUTER JOIN.
+  * The OUTER keyword can be used with LEFT, RIGHT or FULL keywords to obtain rows which some of the join columns are NULL.
+  * However, in Oracle, this word is optional. LEFT, RIGHT or FULL will be automatically OUTER.
+* LEFT [OUTER] JOIN.
+  * Returns the matching rows plus the ones that where null in the first table.
+* RIGHT [OUTER] JOIN.
+  * Returns the matching rows plus the ones that where null on the second table.
+* FULL [OUTER] JOIN.
+  * Returns all rows from both tables specified including the ones which had null values on either side.
+* CROSS JOIN.
+  * Returns the cartesian product two or more tables.
+* SELF JOIN.
+  * An INNER JOIN performed matching two columns existing in the same table.
+  * They represent hierarchies.
+* NATURAL JOIN
+  * Used as a shortcut so that the join predicate is not needed to be specified
+  * The tables are joined on matching column names
+
+As you can see, all JOINS are INNER unless otherwise specified with keywords.
+
+To write a join:
+```sql
+SELECT A.FIRSTNAME, C.NAME FROM STUDENT S INNER JOIN COURSE C  ON S.COURSEID = C.ID;
+SELECT A.FIRSTNAME, C.NAME FROM STUDENT S, COURSE C  WHERE S.COURSEID = C.ID;
+SELECT A.FIRSTNAME, C.NAME FROM STUDENT S, COURSE C  WHERE S.COURSEID = C.ID(+);
+```
+
+To optimize joins, put the tables to join from more data to less data, and then perform the joins in order.
+
+## Set Operators
+
+Set operators are different from joins. Instead of combining columns of two tables, set operators combine the rows of different result sets. Essentially, set operators perform some kind of (set) operation on two different queries.
+
+Some set operators are:
+
+* UNION [ALL]
+  * UNION does not keep duplicates, but UNION ALL will
+* INTERSECT
+  * Only returns records in common between the queries
+* MINUS
+  * Removes from the first result set any rows that appear in the second result set and returns what remains
+* EXCEPT
+  * Same as MINUS, but for SQLServer instead of Oracle
