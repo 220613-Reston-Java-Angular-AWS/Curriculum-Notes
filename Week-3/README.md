@@ -183,8 +183,10 @@ For non-transactional environments, the counter part is OLAP (OnLine Analytic Pr
 <br>
 
 # Tuesday
+##### [PosgresSQL Documentation](https://www.w3resource.com/PostgreSQL/tutorial.php)
 
-## SQL
+
+## SQL - [SQL Documentation](https://www.w3resource.com/sql/tutorials.php)
 SQL, or Structured Query Language, is a scripting language used to manipulate relational databases, commonly referred to as SQL databases. In the strictest sense SQL instructs a relational database management system in a similar way to how Java instructs the compiler and JS instructs the interpreter.
   
 *SQL is often referred to as "sequel". Be cool, say sequel.*
@@ -450,3 +452,326 @@ ROLLBACK TO A
 # if nothing went wrong
 COMMIT
 ```
+
+<br>
+
+# Wednesday 
+
+## Indexes
+
+To explain the concept of [**indexes**](https://en.wikipedia.org/wiki/Database_index), think of the purpose of indexes in a book - you use them to speed up the process of locating some specific piece of information. You wouldn't want to skim an entire book to find where one word was mentioned; similarly, indexes allow databases to speed up the process of retrieving data.
+
+When an index is created on a database column, a separate data structure is created in the database (typically some sort of balanced tree), which stores references that point to the actual records in the table. This data structure can be searched much more quickly than searching through the entire table itself. Significant performance benefits can be achieved by implementing indexes on commonly queried columns. For this reason, primary keys are automatically indexed by the RDBMS system.
+
+### Types of Indexes
+
+Indexes can be categorized into two types: clustered and non-clustered. Clustered indexes alter the order in which the records are physically stored on disk. Thus only one clustered index can be created on a given table. Non-clustered indexes specify a logical ordering of rows but do not affect the physical ordering, so there may be more than one non-clustered index in a table.
+
+Additionally, there are further types of indexes:
+
+* Bitmap
+* Dense
+* Sparse
+* Reverse
+* Primary
+* Secondary
+
+In-depth knowledge of indexes is not necessary for our training purposes, however.
+
+### Creating Indexes
+
+The syntax to create an index on a table's column is:
+
+```
+CREATE INDEX index_name ON table_name (col1, col2, ...)
+```
+
+### Deleting Indexes
+
+```
+ALTER TABLE table_name DROP INDEX index_name
+```
+
+#### Best Practices
+
+You should consider adding an index to a column **when you anticipate or already know that the column will often be used** when searching the table for records. Often you will not know which columns should be indexed until you have gathered some data about queries run on the system in production.
+
+## Views
+
+[Views](https://en.wikipedia.org/wiki/View_(SQL)) are virtual tables - they are constructed from DQL queries and provide a window or "view" into the table. Views can be used to provide access to some portion of the data in a table but not all, which might be useful if the data is sensitive and needs to be kept private. Views are also used to abstract or hide complexity in the database - a view could be constructed with joins over multiple tables so that end users can query from denormalized tables easily. Users can query views just as if they were normal tables. Changes to the underlying table will be reflected in the view whenever it is queried next.
+
+### Materialized Views
+
+Materialized views were introduced by Oracle and give a static snapshot of the data at a given point in time.
+
+### Creating Views
+
+Create a view with the following syntax:
+
+```
+CREATE VIEW [viewname] AS [any DQL statement]
+```
+
+For example,
+
+```
+CREATE VIEW myview AS SELECT col1, col2 FROM mytable WHERE mycolumn > 12
+```
+
+Now, we can query from the view just as we would from a table:
+
+```
+SELECT * FROM myview WHERE mycolumn > 20
+```
+
+[More info](https://www.w3resource.com/PostgreSQL/postgresql-views.php)
+
+## Joins 
+[More info on Joins](https://www.w3resource.com/PostgreSQL/postgresql-join.php)
+
+
+Used to combine two or more tables, joins are a database technique used in SELECT statements. Joins are normally performed comparing primary keys to foreign keys, however, they can be performed with any type of column, as long as the types match. Joins are a way of *denormalizing* a set of tables in order to aggregate or process some query.
+
+They can be performed in many ways:
+* INNER JOIN.
+  * The most commonly used type of join, returns rows only if the columns specified in the join clause match.
+* OUTER JOIN.
+  * The OUTER keyword can be used with LEFT, RIGHT or FULL keywords to obtain rows which some of the join columns are NULL.
+  * However, in Oracle, this word is optional. LEFT, RIGHT or FULL will be automatically OUTER.
+* LEFT [OUTER] JOIN.
+  * Returns the matching rows plus the ones that where null in the first table.
+* RIGHT [OUTER] JOIN.
+  * Returns the matching rows plus the ones that where null on the second table.
+* FULL [OUTER] JOIN.
+  * Returns all rows from both tables specified including the ones which had null values on either side.
+* CROSS JOIN.
+  * Returns the cartesian product two or more tables.
+* SELF JOIN.
+  * An INNER JOIN performed matching two columns existing in the same table.
+  * They represent hierarchies.
+* NATURAL JOIN
+  * Used as a shortcut so that the join predicate is not needed to be specified
+  * The tables are joined on matching column names
+
+As you can see, all JOINS are INNER unless otherwise specified with keywords.
+
+To write a join:
+```sql
+SELECT A.FIRSTNAME, C.NAME FROM STUDENT S INNER JOIN COURSE C  ON S.COURSEID = C.ID;
+SELECT A.FIRSTNAME, C.NAME FROM STUDENT S, COURSE C  WHERE S.COURSEID = C.ID;
+SELECT A.FIRSTNAME, C.NAME FROM STUDENT S, COURSE C  WHERE S.COURSEID = C.ID(+);
+```
+
+To optimize joins, put the tables to join from more data to less data, and then perform the joins in order.
+
+## Set Operators
+
+Set operators are different from joins. Instead of combining columns of two tables, set operators combine the rows of different result sets. Essentially, set operators perform some kind of (set) operation on two different queries.
+
+Some set operators are:
+
+* UNION [ALL]
+  * UNION does not keep duplicates, but UNION ALL will
+* INTERSECT
+  * Only returns records in common between the queries
+* MINUS
+  * Removes from the first result set any rows that appear in the second result set and returns what remains
+* EXCEPT
+  * Same as MINUS, but for SQLServer instead of Oracle
+  
+<br>
+
+# Thursday
+
+## Introduction to Maven
+
+[Maven](https://maven.apache.org/index.html) is a tool that can be used for building and managing any Java-based project.
+
+Maven helps in the following ways:
+* Simplifies the build process
+* Adding jars and dependencies
+* Documenting project information with change logs and reports
+* Integration with source control systems (Git)
+
+Features of Maven that we will go over:
+* Project Object Model (POM)
+* Maven lifecycles
+* Maven repositories
+* Maven project coordinates
+
+## POM - Project Object Model 
+
+[Maven](https://maven.apache.org/) is a dependency manager and build automation tool for Java programs. Maven project configuration and dependencies are handled via the Project Object Model, defined in the `pom.xml` file. This file contains information about the project used to build the project, including project dependencies and plugins.
+
+Some other important tags within the `pom.xml` file include:
+* `<project>` - this is the root tag of the file
+* `<modelVersion>` - defining which version of the page object model to be used
+* `<name>` - name of the project
+* `<properties>` - project-specific settings
+* `<dependencies>` - this is where you put your Java dependencies you want to use. Each one needs a `<dependency>`, which has:
+  * `<groupId>` , `<artifactId>`, `<version>` - [project coordinates](./Project-Coordinates.md)
+* `<plugins>` - for 3rd party plugins that work with Maven
+
+
+Here's an example:
+
+```
+<project>
+  <modelVersion>4.0.0</modelVersion>
+ 
+  <groupId>com.revature.app</groupId>
+  <artifactId>my-app</artifactId>
+  <version>1</version>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-artifact</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-core</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+  </dependencies>
+
+</project>
+```
+
+## Maven Build Lifecycle
+
+When Maven builds your project, it goes through several steps called **phases**. The default maven build lifecycle goes through the following phases:
+1. Validate => project is correct and all necessary information is available 
+2. Compile => compiles project source code 
+3. Test => tests all compiled code 
+4. Package => packages all compiled code to WAR/JAR file 
+5. Integration => performs all integration tests on WAR/JAR
+6. Verify => runs checks on the results of integration tests 
+7. Install => installs WAR/JAR to local repository 
+8. Deploy => copies final WAR/JAR to the remote repository 
+
+Each phase in turn is composed of plugin goals that are bound to zero or more build phases. A "goal" represents a specific task which contributes to the building or managing of the project.
+
+For more information, see the [Maven documentation](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html).
+
+## Using the `mvn` command
+
+To use the Maven CLI (command-line interface), first test that you have Maven installed:
+```
+mvn --version
+```
+
+Now, once you are in your project directory, you can run any phase in the default build lifecycle. Maven will look for the `pom.xml` file and use that to run the phase.
+
+```
+cd /path/to/myproject/
+mvn package
+```
+
+To execute a specific Maven goal, use the `plugin:goal` syntax:
+
+```
+mvn dependency:copy-dependencies
+```
+
+Multiple phases or goals can be run sequentially. Again, see the Maven documentation for more information.
+
+
+
+## Maven Repositories
+
+When Maven "builds" a Java project, it must first search for any dependencies declared in the `pom.xml` file. Maven dependencies are stored both locally and in a central repository. The local repository is in the `$HOME/.m2/repository` folder (can be changed in `$MAVEN_HOME/conf/settings.xml`), while the central repository is accessible at https://mvnrepository.com. If Maven cannot find a given dependency locally, it searches the central repository for the artifact and then downloads it to the local repository.
+
+A Maven "build" means to take the project source code, along with any dependencies like libraries or frameworks, compile it, and bundle it all together into an artifact - this could be a `.war` file, a `.jar` file, or an `.ear` file. WAR stands for "web archive", JAR stands for "Java archive", and EAR stands for "Enterprise Application archive". This artifact can then be either directly run or deployed onto a web container (in the case of a web application).
+
+## Maven Project Coordinates
+
+Maven Project coordinates identify uniquely a project, a dependency, or a plugins defined in the `pom.xml` file - these are:
+* `group-id` - The group, company, team, organization, project, or other group. for example: "com.revature"
+* `artifact-id` - A unique identifier under `groupId` that represents a single project. for example: "myproject"
+* `version` - A specific release of a project. Projects that have been released have a fixed version identifier that refers to a specific version of the project. Projects undergoing active development can use a special identifier that marks a version as a `SNAPSHOT`. for example: "0.0.1-SNAPSHOT"
+* `packaging`- The type of project, defaulting to `jar`, describing the packaged output produced by a project. A project with packaging `jar` produces a JAR archive; a project with packaging `war` produces a web application.
+
+## JDBC Classes and Interfaces
+
+JDBC stands for Java Database Connectivity. It is a relatively low-level API used to write Java code that interacts with relational databases via SQL.
+
+The [JDBC classes and interfaces](https://docs.oracle.com/javase/8/docs/api/index.html?java/sql/package-summary.html) are located in the `java.sql` and `javax.sql` packages. There are several key classes and interfaces that are commonly encountered when writing JDBC code:
+
+* `DriverManager` class - to make a connection with a database driver
+* `DataSource` interface - for retrieving connections, an alternative to `DriverManager`
+* `Connection` interface - represents a physical connection with a database
+* `SQLException` class - a general exception thrown when something goes wrong when accessing the database
+* `Statement` interface - used for executing static SQL statements
+* `PreparedStatement` interface - represents pre-compiled SQL statements
+* `CallableStatement` interface - used to execute stored procedures
+* `ResultSet` interface - represents data returned from the database
+
+### Creating a Database Connection
+
+In order to interact with a database, we need to do several things:
+1. Register the JDBC driver
+2. Open a connection using:
+  - Database URL
+  - Username
+  - Password
+3. Execute some SQL statement using either:
+  - `Statement`
+  - `PreparedStatement`
+  - `CallableStatement`
+4. Retrieve the results that are returned in a `ResultSet` object
+
+## Database JDBC Drivers
+
+Because JDBC is a Java language API, it is database agnostic. It uses database drivers which implement the interfaces defined in the JDBC API for the given database. For example, to connect with an Oracle database, you would use an [OJDBC driver](https://www.oracle.com/technetwork/database/features/jdbc/default-2280470.html). Other database vendors have different drivers which implement the JDBC API.
+
+Many JDBC drivers are available through Maven's central repository and can be added as a dependency in the `pom.xml` file. Oracle is a special exception due to license restrictions. You must accept the licese agreement, download, and install it to your local Maven repository ([tutorial here](https://www.mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/) before you can add it to the `pom.xml` file.
+
+We however will be using Postgres
+In your application code if you choose notnto add the dependency in the pom.xml file , you can register the driver using:
+```
+Class.forName("org.postgresql.Driver");
+
+}
+```
+
+This step is only necessary for drivers prior to JDBC 4.0 (released with Java SE 6). After JDBC 4.0, drivers will be autoloaded if they are included in the classpath.
+
+## Connection Interface
+
+`java.sql.Connection` interface represents a session between java application and database. All SQL statements are executed and results are returned with in the context of a Connection object.
+
+We can use the `DriverManager` class to get a `Connection` to the database, given that we have the JDBC URL, username, and password. Generally these parameters should be stored in an external configuration file that can be loaded dynamically and changed without affecting the application code.
+
+```java
+try (Connection conn = DriverManager.getConnection(DB_URL,USERNAME,PASSWORD)) {
+  // more code goes here
+} catch (SQLException e) {}
+```
+
+Alternatively, the `DataSource` interface could be used to make connections and is covered extensively in this [Oracle tutorial](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html).
+
+It's always a good idea to close your resources - here we've used the `try-with-resources` syntax to automatically close the `Connection` being created after the block ends.
+
+#### Autocommit mode
+By default, when a connection is created it is in auto-commit mode, so every SQL statement acts as a transaction and is committed immediately after execution. In order to manually group statements into a transaction, simply call:
+
+
+```java
+Connection conn = DriverManager.getConnection(DB_URL,USERNAME,PASSWORD);
+conn.setAutoCommit(false);
+// execute some SQL statements...
+conn.commit();
+```
+
+#### JDBC String
+
+The database URL is an address pointing to the database to be used, also known as the JDBC String. The format of this URL varies between database vendors, as shown in the table below:
+
+| RDBMS | JDBC driver | URL format |
+| ----- | ----------- | ---------- |
+| MySQL | `com.mysql.jdbc.Driver` | jdbc:mysql://hostname/databaseName |
+| Oracle | `oracle.jdbc.driver.OracleDriver` | jdbc:oracle:thin:@hostname:portNumber:databaseName |
+| SQLServer | `com.microsoft.sqlserver.jdbc.SQLServerDriver` | jdbc:sqlserver://serverName:portNumber;property=value |
+| PostgreSQL | `org.postgresql.Driver` | jdbc:postgresql://hostname:port/databaseName |
