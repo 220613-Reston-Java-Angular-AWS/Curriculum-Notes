@@ -578,3 +578,200 @@ Some set operators are:
   * Removes from the first result set any rows that appear in the second result set and returns what remains
 * EXCEPT
   * Same as MINUS, but for SQLServer instead of Oracle
+  
+<br>
+
+# Thursday
+
+## Introduction to Maven
+
+[Maven](https://maven.apache.org/index.html) is a tool that can be used for building and managing any Java-based project.
+
+Maven helps in the following ways:
+* Simplifies the build process
+* Adding jars and dependencies
+* Documenting project information with change logs and reports
+* Integration with source control systems (Git)
+
+Features of Maven that we will go over:
+* Project Object Model (POM)
+* Maven lifecycles
+* Maven repositories
+* Maven project coordinates
+
+## POM - Project Object Model 
+
+[Maven](https://maven.apache.org/) is a dependency manager and build automation tool for Java programs. Maven project configuration and dependencies are handled via the Project Object Model, defined in the `pom.xml` file. This file contains information about the project used to build the project, including project dependencies and plugins.
+
+Some other important tags within the `pom.xml` file include:
+* `<project>` - this is the root tag of the file
+* `<modelVersion>` - defining which version of the page object model to be used
+* `<name>` - name of the project
+* `<properties>` - project-specific settings
+* `<dependencies>` - this is where you put your Java dependencies you want to use. Each one needs a `<dependency>`, which has:
+  * `<groupId>` , `<artifactId>`, `<version>` - [project coordinates](./Project-Coordinates.md)
+* `<plugins>` - for 3rd party plugins that work with Maven
+
+
+Here's an example:
+
+```
+<project>
+  <modelVersion>4.0.0</modelVersion>
+ 
+  <groupId>com.revature.app</groupId>
+  <artifactId>my-app</artifactId>
+  <version>1</version>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-artifact</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-core</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+  </dependencies>
+
+</project>
+```
+
+## Maven Build Lifecycle
+
+When Maven builds your project, it goes through several steps called **phases**. The default maven build lifecycle goes through the following phases:
+1. Validate => project is correct and all necessary information is available 
+2. Compile => compiles project source code 
+3. Test => tests all compiled code 
+4. Package => packages all compiled code to WAR/JAR file 
+5. Integration => performs all integration tests on WAR/JAR
+6. Verify => runs checks on the results of integration tests 
+7. Install => installs WAR/JAR to local repository 
+8. Deploy => copies final WAR/JAR to the remote repository 
+
+Each phase in turn is composed of plugin goals that are bound to zero or more build phases. A "goal" represents a specific task which contributes to the building or managing of the project.
+
+For more information, see the [Maven documentation](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html).
+
+## Using the `mvn` command
+
+To use the Maven CLI (command-line interface), first test that you have Maven installed:
+```
+mvn --version
+```
+
+Now, once you are in your project directory, you can run any phase in the default build lifecycle. Maven will look for the `pom.xml` file and use that to run the phase.
+
+```
+cd /path/to/myproject/
+mvn package
+```
+
+To execute a specific Maven goal, use the `plugin:goal` syntax:
+
+```
+mvn dependency:copy-dependencies
+```
+
+Multiple phases or goals can be run sequentially. Again, see the Maven documentation for more information.
+
+
+
+## Maven Repositories
+
+When Maven "builds" a Java project, it must first search for any dependencies declared in the `pom.xml` file. Maven dependencies are stored both locally and in a central repository. The local repository is in the `$HOME/.m2/repository` folder (can be changed in `$MAVEN_HOME/conf/settings.xml`), while the central repository is accessible at https://mvnrepository.com. If Maven cannot find a given dependency locally, it searches the central repository for the artifact and then downloads it to the local repository.
+
+A Maven "build" means to take the project source code, along with any dependencies like libraries or frameworks, compile it, and bundle it all together into an artifact - this could be a `.war` file, a `.jar` file, or an `.ear` file. WAR stands for "web archive", JAR stands for "Java archive", and EAR stands for "Enterprise Application archive". This artifact can then be either directly run or deployed onto a web container (in the case of a web application).
+
+## Maven Project Coordinates
+
+Maven Project coordinates identify uniquely a project, a dependency, or a plugins defined in the `pom.xml` file - these are:
+* `group-id` - The group, company, team, organization, project, or other group. for example: "com.revature"
+* `artifact-id` - A unique identifier under `groupId` that represents a single project. for example: "myproject"
+* `version` - A specific release of a project. Projects that have been released have a fixed version identifier that refers to a specific version of the project. Projects undergoing active development can use a special identifier that marks a version as a `SNAPSHOT`. for example: "0.0.1-SNAPSHOT"
+* `packaging`- The type of project, defaulting to `jar`, describing the packaged output produced by a project. A project with packaging `jar` produces a JAR archive; a project with packaging `war` produces a web application.
+
+## JDBC Classes and Interfaces
+
+JDBC stands for Java Database Connectivity. It is a relatively low-level API used to write Java code that interacts with relational databases via SQL.
+
+The [JDBC classes and interfaces](https://docs.oracle.com/javase/8/docs/api/index.html?java/sql/package-summary.html) are located in the `java.sql` and `javax.sql` packages. There are several key classes and interfaces that are commonly encountered when writing JDBC code:
+
+* `DriverManager` class - to make a connection with a database driver
+* `DataSource` interface - for retrieving connections, an alternative to `DriverManager`
+* `Connection` interface - represents a physical connection with a database
+* `SQLException` class - a general exception thrown when something goes wrong when accessing the database
+* `Statement` interface - used for executing static SQL statements
+* `PreparedStatement` interface - represents pre-compiled SQL statements
+* `CallableStatement` interface - used to execute stored procedures
+* `ResultSet` interface - represents data returned from the database
+
+### Creating a Database Connection
+
+In order to interact with a database, we need to do several things:
+1. Register the JDBC driver
+2. Open a connection using:
+  - Database URL
+  - Username
+  - Password
+3. Execute some SQL statement using either:
+  - `Statement`
+  - `PreparedStatement`
+  - `CallableStatement`
+4. Retrieve the results that are returned in a `ResultSet` object
+
+## Database JDBC Drivers
+
+Because JDBC is a Java language API, it is database agnostic. It uses database drivers which implement the interfaces defined in the JDBC API for the given database. For example, to connect with an Oracle database, you would use an [OJDBC driver](https://www.oracle.com/technetwork/database/features/jdbc/default-2280470.html). Other database vendors have different drivers which implement the JDBC API.
+
+Many JDBC drivers are available through Maven's central repository and can be added as a dependency in the `pom.xml` file. Oracle is a special exception due to license restrictions. You must accept the licese agreement, download, and install it to your local Maven repository ([tutorial here](https://www.mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/) before you can add it to the `pom.xml` file.
+
+We however will be using Postgres
+In your application code if you choose notnto add the dependency in the pom.xml file , you can register the driver using:
+```
+Class.forName("org.postgresql.Driver");
+
+}
+```
+
+This step is only necessary for drivers prior to JDBC 4.0 (released with Java SE 6). After JDBC 4.0, drivers will be autoloaded if they are included in the classpath.
+
+## Connection Interface
+
+`java.sql.Connection` interface represents a session between java application and database. All SQL statements are executed and results are returned with in the context of a Connection object.
+
+We can use the `DriverManager` class to get a `Connection` to the database, given that we have the JDBC URL, username, and password. Generally these parameters should be stored in an external configuration file that can be loaded dynamically and changed without affecting the application code.
+
+```java
+try (Connection conn = DriverManager.getConnection(DB_URL,USERNAME,PASSWORD)) {
+  // more code goes here
+} catch (SQLException e) {}
+```
+
+Alternatively, the `DataSource` interface could be used to make connections and is covered extensively in this [Oracle tutorial](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html).
+
+It's always a good idea to close your resources - here we've used the `try-with-resources` syntax to automatically close the `Connection` being created after the block ends.
+
+#### Autocommit mode
+By default, when a connection is created it is in auto-commit mode, so every SQL statement acts as a transaction and is committed immediately after execution. In order to manually group statements into a transaction, simply call:
+
+
+```java
+Connection conn = DriverManager.getConnection(DB_URL,USERNAME,PASSWORD);
+conn.setAutoCommit(false);
+// execute some SQL statements...
+conn.commit();
+```
+
+#### JDBC String
+
+The database URL is an address pointing to the database to be used, also known as the JDBC String. The format of this URL varies between database vendors, as shown in the table below:
+
+| RDBMS | JDBC driver | URL format |
+| ----- | ----------- | ---------- |
+| MySQL | `com.mysql.jdbc.Driver` | jdbc:mysql://hostname/databaseName |
+| Oracle | `oracle.jdbc.driver.OracleDriver` | jdbc:oracle:thin:@hostname:portNumber:databaseName |
+| SQLServer | `com.microsoft.sqlserver.jdbc.SQLServerDriver` | jdbc:sqlserver://serverName:portNumber;property=value |
+| PostgreSQL | `org.postgresql.Driver` | jdbc:postgresql://hostname:port/databaseName |
