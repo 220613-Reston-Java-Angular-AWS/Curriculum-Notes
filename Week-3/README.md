@@ -863,6 +863,8 @@ The `Statement` and `PreparedStatement` also have additional methods for sending
 * `.execute()` - for any kind of SQL statement, returns a `boolean`
 * `.executeUpdate()` - for DML statements, returns an `int` which is the number of rows affected
 
+[Difference between execute, executeQuery and executeUpdate in JDBC](https://www.javapedia.net/JDBC/1793)
+
 ### Retreiving Results
 Results from an SQL query are returned as a `ResultSet`, which can be iterated over to extract the data:
 
