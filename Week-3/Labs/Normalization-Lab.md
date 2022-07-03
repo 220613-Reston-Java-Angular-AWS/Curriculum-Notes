@@ -29,7 +29,7 @@ To get to first normal form we must have a primary key and no composite columns.
 
 So, we would need to create one and we could simply name it ID. This way we have a value in each row that uniquely identifies that record. We would change the structure of the table to the following:
 
-![](./../images/image-2.png)
+![](./../../images/image-2.png)
 
 Second Normal Form
 ------------------
@@ -42,25 +42,25 @@ So, we would redesign our database to have 4 tables now:
 
 ### Students:
 
-![](./../images/image-3.png)
+![](./../../images/image-3.png)
 
 Teachers:
 
-![](./../images/image-4.png)
+![](./../../images/image-4.png)
 
 Subjects:
 
-![](./../images/image-5.png)
+![](./../../images/image-5.png)
 
 The above 3 are easy to visualize as they fully describe a single entity (a student, a teacher or a subject)
 
 Test Grades
 
-![](./../images/image-6.png)
+![](./../../images/image-6.png)
 
 Student\_Teacher
 
-![](./../images/image-7.png)
+![](./../../images/image-7.png)
 
 The last 2 tables are association tables which describes the relationship between the other tables. It's typically easy to tell if a table is an association table because column names will have IDs for other tables (ex. StudentID, TeacherID, etc.)
 
