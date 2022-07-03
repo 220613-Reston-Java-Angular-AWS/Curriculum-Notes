@@ -24,7 +24,7 @@ Students
 Accounts
 --------
 
-![](images/image-22.png)
+![](./../../images/image-22.png)
 
 In their current structure, the two tables are standalone representations of each entity and don't represent any relationship between one another.
 
@@ -38,14 +38,14 @@ This is an important concept as we'll later talk about primary keys which are co
 Students
 --------
 
-![](images/image-33.png)
+![](./../../images/image-33.png)
 
 We'll do the same to Accounts.
 
 Accounts
 --------
 
-![](images/image-44.png)
+![](./../../images/image-44.png)
 
 Now that we have a way to identify individual records in each table, we need to provide a way to create the association or relationship. Since we're dealing with relational databases, the best way to do that is to create another column to essentially copy over data from one table into another.
 
@@ -54,7 +54,7 @@ We'll update Accounts to have a studentID column that can point to data in the S
 Accounts
 --------
 
-![](images/image-55.png)
+![](./../../images/image-55.png)
 
 Looking at the above table you can clearly see which student is associated with which account because there is a column with the studentId stored in it.
 
@@ -77,7 +77,7 @@ Example:
 Accounts
 --------
 
-![](images/image-66.png)
+![](./../../images/image-66.png)
 
 In the example above, Accounts do not define their own id, but borrows one from the Students table that points back to the individual who owns the account.
 
