@@ -19,7 +19,7 @@ Let's say we wanted to create tables to represent a link between Students and th
 Students
 --------
 
-![](images/image-11.png)
+![](./../../images/image-11.png)
 
 Accounts
 --------
