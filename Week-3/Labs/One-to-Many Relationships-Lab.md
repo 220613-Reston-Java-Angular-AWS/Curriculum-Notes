@@ -19,11 +19,11 @@ Let's say we wanted to create tables to represent a link between Students and th
 Students Table
 --------------
 
-![](images/image-111.png)
+![](./../../images/image-111.png)
 
 Pets Table
 
-![](images/image-222.png)
+![](./../../images/image-222.png)
 
 In their current structure, the two tables are standalone representations of each entity and don't represent any relationship between one another.
 
@@ -34,14 +34,14 @@ The below tables now have identifiers for each record. For example, Brittany Jon
 Students Table
 --------------
 
-![](images/image-333.png)
+![](./../../images/image-333.png)
 
 We'll do the same to the Pets table.
 
 Pets Table
 ----------
 
-![](images/image-444.png)
+![](./../../images/image-444.png)
 
 Now that we have a way to identify individual records in each table we need to provide a way to create the association or relationship. Since we're dealing with relational databases, the best way to do that is to create another column to essentially copy over data from one table into another.
 
@@ -50,7 +50,7 @@ We'll update Pets to have a studentID column that can point to data in the Stude
 Pets Table
 ----------
 
-![](images/image-555.png)
+![](./../../images/image-555.png)
 
 Looking at the above table you can clearly see which student is associated with which pet because there is a column with the studentId stored in it. You'll notice that a studentID is repeated across some records to indicate that the specified student has multiple pets. Also, notice that a student may also not have a pet. Student with id 5 is not listed in the pets column.
 
@@ -75,7 +75,7 @@ Example:
 Pets Table
 ----------
 
-![](images/image-666.png)
+![](./../../images/image-666.png)
 
 In the example above, Pets do not define their own id, but borrows one from the Students table that points back to the individual who owns the account.
 
