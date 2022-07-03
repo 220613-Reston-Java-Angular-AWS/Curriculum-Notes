@@ -21,7 +21,7 @@ In this exercise we will walk you through taking one large table and normalizing
 
 Original Table (Student Grades)
 
-![](./../images/image-1.png)
+![](./../../images/image-1.png)
 
 Looking at this data, we can see that we're tracking student grades per class per test.
 
