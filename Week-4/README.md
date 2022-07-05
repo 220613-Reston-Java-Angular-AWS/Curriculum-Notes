@@ -18,7 +18,7 @@ HTML5 also introduced features to allow us to embed audio and video files on the
 
 Take a look at the structure of the HTML5 file given below:
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -210,7 +210,7 @@ A text field is a one-line input field that allows the user to input a line of t
 The below example will display a text field with the label _Email Id:_
 
 **Example**
-```
+```html
 <form> 
     <label for="email-input">Email Id:</label><br> 
     <input type="text" name="email-input" /> 
@@ -223,7 +223,7 @@ The below example will display a text field with the label _Email Id:_
 Password fields are a type of text field in which the text entered is masked using asterisk or dots. This prevents others form viewing the screen to see what is typed in. Also, its created by specifying the type attribute value as "password".
 
 **Example**
-```
+```html
     <form> 
         <label for="user-password">Password:</label><br/> 
         <input type="password" name="user-password"/> 
@@ -238,7 +238,7 @@ Although a password field is masked, it is NOT encrypted. You will have to use o
 Radio Buttons are used to let the user select exactly one value from a list of predefined options. It is created by specifying the type attribute value as "radio".
 
 **Example**
-```
+```html
     <form> 
         SELECT GENDER 
         <br/> 
@@ -258,7 +258,7 @@ In the example above, both buttons have a `name` attribute value as **gender**.
 Checkboxes are used to let the user select one or more values from a pre-defined set of options. The type attribute value for checkboxes input control is "checkbox".
 
 **Example**
-```
+```html
     <form> 
         <b>SELECT SUBJECTS</b> 
         <br> 
@@ -281,7 +281,7 @@ File select boxes are used to allow the user to select a local file on their com
 
 
 **Example**
-```
+```html
     <form> 
         <label for="fileselect">Upload:</label> 
         <input type="file" /> 
@@ -298,7 +298,7 @@ You can control the size of a text area by adding attributes "rows" and "cols" t
 
 
 **Example**
-```
+```html
     <form> 
         <label for="Description">Description:</label> 
         <textarea rows="5" cols="50" name="Description"
@@ -313,7 +313,7 @@ Select boxes are created by using two elements: `<select>` and `<option>`. The `
 
 
 **Example**
-```
+```html
    <form> 
         <label for="country">Country:</label> 
         <select name="country" id="country"> 
@@ -334,7 +334,7 @@ The **submit** button allows the user to send the form data to the web server. Y
 The **reset** button is used to reset the form data and will display any default values. You can define a reset button by specifying the type attribute as "reset".
 
 **Example**
-```
+```html
     <form action="test.php" method="post" id="users"> 
         <label for="username">Username:</label> 
         <input type="text" name="username" id="Username" /> 
@@ -359,7 +359,7 @@ We will cover:
 
 Take a look at the following example and find the different attributes:
 
-```
+```html
 <!DOCTYPE html> 
 <html> 
 <body> 
@@ -441,7 +441,7 @@ The min and max attributes work with the following input types: number, range, d
 > **Tip**: Use the max and min attributes together to create a range of legal values. (For example: Set a maximum date or a minimum date)
 
 *Example*
-```
+```html
 <form>
   <label for="datemax">Enter a date before 1980-01-01:</label>
   <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
