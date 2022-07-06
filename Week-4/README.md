@@ -1,5 +1,7 @@
 # Monday - HAPPY 4th of JULY !
 
+<br>
+
 # Tuesday - Intro to 'Front End'
 
 ## HTML (Hypertext Markup Language)
@@ -455,6 +457,10 @@ The min and max attributes work with the following input types: number, range, d
 ```
 ## The Styling of Our HTML Is Done With [CSS](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-4/Overview_of_CSS.md)
 
+<br>
+<br>
+
+
 # Wednesday 
 
 ## Intro to Web Services
@@ -517,12 +523,13 @@ Other considerations:
  - [What is Rest?](https://restfulapi.net/)
  - [Rest Resource Naming Guide](https://restfulapi.net/resource-naming/)
 
-# Intro to HTTP
+## Intro to HTTP
 
 HTTP, or HyperText Transfer Protocol, is the protocol we use to browse the web. HTTP is a client-server protocol where the client must initiate communication. Every HTTP communication is made up of a client request, and a server response. HTTP is stateless, which means the server should be able to handle each request separately and only with the information provided in the request. The server should not have to maintain any state in order for any individual request to be processed.  
   
-## HTTP Messages
-### HTTP Request
+### HTTP Messages
+  
+#### HTTP Request
 Each HTTP request is composed of:
  - HTTP Verb - the HTTP method to execute
  - URI - indicates the endpoint used to access the resource
@@ -533,7 +540,7 @@ Each HTTP request is composed of:
 ![](./../images/http-request-image.png)
   
   
-### HTTP Response  
+####  HTTP Response  
 Each HTTP response is composed of:
  - HTTP Response Code - code indicating the status of the request
  - HTTP Version - in order to be certain of communication protocol
@@ -554,7 +561,7 @@ Each HTTP request includes a verb, which describes the type of request and how i
   
   
   
-### GET
+### **GET**
 Used to retrieve data.
  - Idempotent
  - Safe
@@ -576,7 +583,7 @@ Basically identical to GET, except the response should not include a body. Info 
   
   
   
-### POST
+### **POST**
 Sends data to he server. Commonly used for creation of and updating resources. Response body generally contains the updated resource representation.
  - Not idempotent
  - Not safe
@@ -587,7 +594,7 @@ Sends data to he server. Commonly used for creation of and updating resources. R
   
   
   
-### PUT
+### **PUT**
 Sends data to server. Commonly used to replace current resource representation with the content contained in this request.
  - Idempotent
  - Not safe
@@ -598,7 +605,7 @@ Sends data to server. Commonly used to replace current resource representation w
   
   
   
-### PATCH
+### **PATCH**
 Sends data to the server. Similar to PUT but may not contain complete resource representation. May only include information needed to update some part of the current resource state.
  - Idempotent
  - Not safe
@@ -609,7 +616,7 @@ Sends data to the server. Similar to PUT but may not contain complete resource r
   
   
   
-### DELETE
+### **DELETE**
 Used to delete a resource. 
  - Idempotent
  - Not safe
