@@ -679,4 +679,3 @@ As part of every response, the server gives a status code that describes the sta
  - 502 - Bad Gateway
  - 503 - Service Unavailable
 
-
