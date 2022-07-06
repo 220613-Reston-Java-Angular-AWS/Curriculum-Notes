@@ -7,7 +7,7 @@ Name it `html-bio-with-css.html`
 
 * 2. Now follow the instructions to style your bio page so that it looks like the following image:
 <br >
-![](./../../images/demo2.png)  
+[](./../../images/demo2.png)  
 
 
 * Within the same folder where `html-bio-with-css.html` is located, make a folder called `css`.
