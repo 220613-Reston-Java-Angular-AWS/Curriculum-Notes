@@ -538,7 +538,7 @@ Each HTTP response is composed of:
  - Response Header - Metadata (info) about the response represented as key-value pairs
  - Response Body - message content (resource representation in REST)
 
-<div align="center"> <img src="./../../images/http-response-image.png"> </div>
+![](./../images/http-response-image.png)
   
   
 ## HTTP Verbs
