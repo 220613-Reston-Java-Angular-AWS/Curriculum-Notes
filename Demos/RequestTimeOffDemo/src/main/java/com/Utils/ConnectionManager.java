@@ -8,8 +8,8 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class ConnectionManager {
-    public ConnectionManager connectionManager;
-    public Connection connection;
+    public static ConnectionManager connectionManager;
+    public static Connection connection;
 
 
     private ConnectionManager(){
@@ -24,7 +24,7 @@ public class ConnectionManager {
         return connectionManager;
     }
 
-    public Connection getConnection(){
+    public static Connection getConnection(){
         if (connection == null){
             connection = connect();
         }
@@ -32,7 +32,7 @@ public class ConnectionManager {
         return connection;
     }
 
-    private Connection connect(){
+    private static Connection connect(){
 
         try {
 
@@ -54,18 +54,14 @@ public class ConnectionManager {
             String connectionURL = sb.toString();
             String user = String.valueOf(props.getProperty("user"));
             String password = String.valueOf(props.getProperty("password"));
-
+            System.out.println(connectionURL);
             connection = DriverManager.getConnection(connectionURL,user,password);
 
+            System.out.println(connection.getClientInfo().toString() + " - this is to confirm the connection");
 
         }catch(IOException | SQLException e){
             System.out.println("Error in the ConnectionManager class:  " + e.getMessage());
         }
-
-
-
-
-
 
         return connection;
     }
