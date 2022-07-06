@@ -507,6 +507,7 @@ Other considerations:
  - Avoid using verbs at all except in the case where the resource is an executable function
   
   #### [Dive Deeper into REST](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-4/REST.md)
+  #### [Learn More About the *Richardson Maturity Model*](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-4/Richardson_Maturity_Model.md)
 
 <BR><BR>See Also:
  - [Advantages of Web Services -IBM](https://www.ibm.com/docs/en/ztpf/1.1.0.15?topic=services-advantages-web)
