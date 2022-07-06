@@ -528,7 +528,7 @@ Each HTTP request is composed of:
  - Request Header - Metadata (info) about the request represented as key-value pairs
  - Request Body - message content (resource representation in REST)
 
-![](./../../images/http-request-image.png)
+![](./../images/http-request-image.png)
   
   
 ### HTTP Response  
