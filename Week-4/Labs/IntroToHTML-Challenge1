@@ -3,11 +3,11 @@
 * 1. Create a basic HTML page with your own information that looks similar to the design shown on screen.
 Name it `html-bio-with-css.html`
 
-  ![Make it look like this](./../../images/demo1.png)
+[Make it look like this](./../../images/demo1.png)
 
 * 2. Now follow the instructions to style your bio page so that it looks like the following image:
 <br >
-![](./../../images/demo2.png)  
+[](./../../images/demo2.png)  
 
 
 * Within the same folder where `html-bio-with-css.html` is located, make a folder called `css`.
