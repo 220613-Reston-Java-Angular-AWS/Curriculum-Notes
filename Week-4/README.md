@@ -684,5 +684,256 @@ As part of every response, the server gives a status code that describes the sta
 ### 500 - Server Error
  - 500 - Internal Server Error
  - 502 - Bad Gateway
- - 503 - Service Unavailable
+ - 503 - Service Unavailable 
+ 
+<br>
 
+# Thursday 
+## Client / Server Architecture
+
+A client-server architecture is a networking model in which the server provides services to clients to perform user-based tasks. A client and a server are two pieces of software that might be on the same computer, or two different computers that might be separated by miles but connected by the Internet.
+
+**Server** - A server is software designed to process requests and deliver responses to another computer over the internet.
+
+**Client** - A client is a program that runs on a local machine requesting service from the server.
+
+<div align="center"> <img src="./../images/client-server-wbg.png"> </div>
+
+A Client and a Server establish a connection according to a set of rules called a protocol. There are quite a few protocols for different purposes, but one of the most popular is the **HTTP protocol**. Once the connection is established, the Client sends **HTTP Requests** to the server in the form of XML or JSON, which both entities (Client and Server) understand. After parsing the request, the Server responds with appropriate data by sending back an **HTTP Response**.
+
+
+### Types of Client-Server Architecture
+
+**2 tier architecture** - The user interface stored at the client machine and the database stored on the server. If Business Logic & Data Logic collected at a client-side, then it is known as a *fat client thin server architecture*. If Business Logic & Data Logic handled on the server, then it is known as a *thin client fat server architecture*. 2 tier architecture has some limitations in performance, security, and portability.
+
+**3 tier architecture** - Three-tier architecture has a middleware between the user interface and database. The 3 tiers are named the presentation tier, application tier, and data tier. The presentation tier is the front end layer and consists of the user interface. The application tier contains the functional business logic which drives an application’s core capabilities. The data tier consists of a database system and the data access layer.
+
+**n-tier architecture** - In n-tier architecture, there are multiple Business Logic & Data Logic layers. It increases the flexibility and reusability of applications but can be difficult to implement.
+
+## Servlets
+
+### Servlet API
+
+The [Servlet API](https://docs.oracle.com/javaee/6/api/javax/servlet/package-tree.html) provides interfaces and classes that are required to build servlets. These interfaces and classes represented in  two packages:
+
+1. **`java.servlet`** package -  used by the servlet or web container.
+2. **`javax.servlet.http`** package - used for handling http requests.
+
+### Servlet Class Hierarchy:
+
+The Servlet interface is the root interface of the servlet class hierarchy. The GenericServlet class implements Servlet, ServletConfig, and Serializable interfaces. The HttpServlet class extends the GenericServlet class and implements the Serializable interface. It provides HTTP methods such as doGet, doPost, doHead, doTrace, etc.
+
+Java Servlet Class Hiearchy:
+```
+
+   Servlet    ServletConfig       Serializable                    {Built-in Interfaces}
+     |             |                   |
+     -----------------------------------
+                    |
+                    V
+              GenericServlet                                       {Built-in Class}
+                    |
+                    V
+               HttpServlet                                         {Built-in Class}
+                    |
+                    V
+             UserDefinedServlet                                     {User defined servlet Class}        
+
+```
+
+The user defined servlet class is created by implementing the *Servlet* interface, usually by extending the *GenericServlet* class or (more commonly) the *HttpServlet* class.
+
+In order to initialize a Servlet, a server application loads the user-defined servlet class and creates an instance. Then it calls the Servlet’s `init (ServletConfig config)` method. Since the `init()` method is run once, it stores the initial parameters or configuration information in the *ServletConfig*  object. This information can be retrieved later by calling the Servlet’s `getServletConfig()` method. This is implemented in the *GenericServlet* class definition. The *ServletConfig* object contains Servlet parameters and a reference to the Servlet’s *ServletContext*. The **ServletContext** is an interface which helps to communicate with other servlets. Then, the `service (ServletRequest request, ServletResponse response)` method is called for every request to the Servlet. When the Servlet needs to be unloaded the `destroy()` method is called. 
+ 
+
+
+
+A website can consist of both static and dynamic webpages. A static webpage is a pre-built HTML page with the content explicitly written into the code, and stored in the webserver. Static web pages display the same content each time we visit. A dynamic webpage loads dynamic content *such as stock prices, weather information, news, and sports updates* at different points of time.  In Java, there exists a way to generate static webpages with dynamic data, and that's with **Java Servlets**.
+
+A **Servlet** is a Java class that takes incoming requests, processes them, and generates a response to send back to the user. For example, an `HttpServlet` takes an HTTP request, processes its headers and content, and uses that information to write HTML, CSS, and JavaScript code into an HTTP response that can be sent back to the user's browser. The **Servlet container** is the component of an **application server** that interacts with Java servlets and is responsible for managing the execution of servlets and JSP pages for Java applications.
+
+```
+User  -->  HTTP Request  -->   Application Server  -->  Servlet Container  
+                                                               |
+                                                               V   
+User  <--  HTTP Response  <--  Application Server    <--   Servlet(s)  
+``` 
+
+### How do servlets work?
+
+When a client sends a request to the application server, the application server receives and passes the request to the appropriate servlet. The servlet processes the request, generates the response, and sends the response back to the application server.  The application server sends the response back to the client. Most servlets are HTTPServlets, which receive HTTP requests and generate HTTP Responses out of HTML, CSS, and JavaScript code. 
+
+![](./../images/client-server.png)
+
+
+#### Life Cycle of a Servlet
+
+
+A **servlet container** manages the life cycle of a servlet. [Servlet](https://docs.oracle.com/javaee/1.4/api/javax/servlet/Servlet.html) is an interface defined in **`javax.servlet`** package. A servlet container uses the Servlet interface to understand a specific Servlet object and manage it.
+
+There are three life cycle methods of a Servlet :
+* `init()`
+* `service()`
+* `destroy()`
+
+
+The steps involved in the servlet life cycle are listed below:
+
+**Step-1 : Loading of Servlet**  
+
+When the application server (e.g. Apache Tomcat) starts up, the servlet container deploys and loads all the servlet classes.
+
+**Step-2 : Creating an instance of Servlet** 
+
+Once all the Servlet classes are loaded, the servlet container creates only one instance for each servlet class. All requests to the servlet are executed on that same servlet instance. Some application servers can create multiple instances of a servlet to handle a high volume of incoming requests, but that is not the default behavior.
+
+**Step-3 : Invoke `init()` method once**
+
+Once all the servlet classes are instantiated, the init() method is invoked for each instantiated servlet. The `init()` method is used to initialize the servlet. The `init()` method is called only once. 
+
+
+**The `init()` method signature:** 
+```java
+public void init() throws ServletException {
+}
+```
+
+**Step-4 : Invoke `service()` method repeatedly for each client request** 
+
+The servlet container calls the service method each time a request for the servlet is received. The service() method determines the type of Http request (GET, POST, PUT, DELETE, etc.) also calls `doGet()`, `doPost()`, `doPut()`, `doDelete()`, etc. methods as appropriate. 
+
+**The `service()` method signature:** 
+```java
+public void service(ServletRequest req, ServletResponse resp) throws ServletException, IOException { 
+}
+```
+
+**Step-5 : Invoke destroy() method once**
+
+The `destroy()` method is called only once at the end of the a servlets life. The servlet container calls this method before removing the servlet instance from the service.
+
+**The `destroy()` method signature:** 
+```java
+public void destroy() {
+}
+```
+
+
+**Life Cycle of a Servlet:**
+
+
+![](./../images/servlets.png)
+
+### References
+
+* [Java Servlet Technology Overview](https://www.oracle.com/java/technologies/servlet-technology.html)
+* [Introduction to Servlets](https://www.edureka.co/blog/java-servlets) - [Video Tutorial](https://youtu.be/ewiOaDitBBw)
+* [Servlet Documentation - Oracle](https://javaee.github.io/servlet-spec/downloads/servlet-3.1/Final/servlet-3_1-final.pdf)
+                                                         
+                                                         
+## Servlet Config
+
+### Deployment descriptor
+
+Java web applications use a **deployment descriptor file** to define the URLs that map to servlets, and to determine which URLs require authentication and additional information.
+
+A deployment descriptor file specifies the classes, resources, and configuration of the application and how the web server uses them to serve HTTP requests. 
+
+The deployment descriptor is a file named **web.xml**. It resides within the apps WAR beneath the WEB-INF/ directory.The root element of the web.xml file is `<web-app>`.
+
+The **web.xml** file defines mappings between URL paths and the servlets that will handle requests with those paths. The application server uses this configuration to find the servlet that handles a given request, and calls the servlet method that corresponds to the HTTP request method used. 
+
+To map a URL to a servlet, you declare the servlet with the `<servlet>` element, then define a mapping from a URL path to a servlet declaration with the `<servlet-mapping>` element.
+
+To configure a servlet in the Deployment Descriptor (web.xml) file,
+1. Configure the servlet using the `<servlet>` element. 
+2. Map the servlet to a URL or URL pattern using the `<servlet-mapping>` element.
+
+
+The `<servlet>` element is used to declare the servlet name, the fully-qualified class name of the servlet, and any initialization parameters. The name for every servlet must be unique across the deployment descriptor.
+
+The `<servlet-mapping>` element is used to specify a URL pattern, and the name of the servlet which handles requests whose URL matches the given pattern. The URL pattern uses an asterisk (*) at the beginning or end of the pattern to indicate zero or more of any character. 
+
+
+**Example:** A simple *web.xml* file which has `<servlet>` and `<servlet-mapping>` for *servlet1*. 
+```xml
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>com.revature.MyFirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+</web-app>
+```
+
+
+### ServletConfig 
+  
+ServletConfig is an object created by the Servlet Container, used to pass initial parameters or configuration information to a particular servlet during initialization.  The `<servlet>` XML element in the deployment descriptor (web.xml) has a subelement called `<init-param> ` used to pass parameters to a servlet from the web.xml file. The ServletConfig object is returned by the `getServletConfig()` method of HttpServlet, and so the XML properties added to ServletConfig are only shared with the single servlet indicated.
+
+
+### ServletContext
+  
+ServletContext is the object created by the Servlet Container to share initial parameters or configuration information to *all* servlets and other components. The `<context-param>` element used to declare the parameters of ServletContext. It present outside the `<servlet>` element and inside the `<web-app>` element. This object is returned by the `getServletContext()` method of HttpServlet.
+
+The `<param-name>` and `<param-value>` used to declare the parameter name and its value. 
+
+
+**ServletConfig vs ServletContext**
+
+![](./../images/servlet-context-and-servlet-config.png)
+
+
+
+### Example
+
+Here '**message**' parameter can be accessed only by *servlet1*. The '**username**' and '**password**' parameters can be accessed by both *servlet1* and *servlet2*.
+
+```xml
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+	<servlet>
+		<servlet-name>servlet1</servlet-name>
+		<servlet-class>com.revature.MyFirstServlet</servlet-class>
+		<init-param>
+			<param-name>message</param-name>
+			<param-value>Hello World</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+			<servlet-name>servlet1</servlet-name>
+			<url-pattern>/FirstServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+			<servlet-name>servlet2</servlet-name>
+			<servlet-class>com.revature.MySecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+			<servlet-name>servlet2</servlet-name>
+			<url-pattern>/secondServlet</url-pattern>
+	</servlet-mapping>
+
+	<context-param>  
+		<param-name>username</param-name>  
+		<param-value>system</param-value>  
+	</context-param>  
+	  
+	<context-param>  
+		<param-name>password</param-name>  
+		<param-value>pass123</param-value>  
+	</context-param>  
+
+</web-app>
+```
