@@ -763,7 +763,7 @@ User  <--  HTTP Response  <--  Application Server    <--   Servlet(s)
 
 When a client sends a request to the application server, the application server receives and passes the request to the appropriate servlet. The servlet processes the request, generates the response, and sends the response back to the application server.  The application server sends the response back to the client. Most servlets are HTTPServlets, which receive HTTP requests and generate HTTP Responses out of HTML, CSS, and JavaScript code. 
 
-![](./../../images/client-server.png)
+![](./../images/client-server.png)
 
 
 #### Life Cycle of a Servlet
@@ -822,7 +822,7 @@ public void destroy() {
 **Life Cycle of a Servlet:**
 
 
-![](./../../images/servlets.png)
+![](./../images/servlets.png)
 
 ### References
 
