@@ -447,7 +447,7 @@ Once you've entered this information, hit "OK". You should then hit "OK" again o
 
 In order to verify that your environment variable was properly set, please open your terminal (e.g. type "Command Prompt" into the Windows search bar) and type the following:
 
-![](./../images/cataline-home.png)
+![](./../images/calaline-home.png)
 
 At this point, the value of the CATALINA_HOME environment variable should be displayed.
 
