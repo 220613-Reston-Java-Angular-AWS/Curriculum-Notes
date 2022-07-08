@@ -989,8 +989,6 @@ rd.include(request,response);
 
 
 
-
-
 ## Writing plain text to the response Object
 
 The Servlet API provides *HttpServletResponse* interface which extends the *ServletResponse* interface to assist in sending a response to the client.
