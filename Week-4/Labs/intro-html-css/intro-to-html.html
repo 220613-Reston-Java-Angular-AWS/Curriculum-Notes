@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- The DOCTYPE declaration indicates that we are using HTML5 -->
+<html>
+    <!-- The head tag allows us to declare meta info about our HTML document
+    Here is where we will see inclusions of a CSS or JS file -->
+    <head>
+        <meta charset="UTF-8">
+        <!-- Character encoding allows us to properly validate an HTML document 
+            and convert binary numbers/bytes into characters -->
+        <title>Intro to HTML</title>
+        <!--<style>
+            specificity = concept of how important is that styling based on its attribute
+            id has higher importance than classes; therefore any id styling take precedence 
+            #my-style{
+                color: red;
+            }
+            .temp-class{
+                color:blueviolet;
+            }
+        </style>-->
+        <link rel="stylesheet" href="../CSS/styles.css">
+    </head>
+    <body>
+        <!-- Header tags are the first of many HTML tags used to display content -->
+        <h1>My First Heading</h1>
+        <h2>My Second Heading</h2>
+        <h3>My Third Heading</h3>
+
+        <p>This is a paragragh, usually used to display lots of text.
+            Some more random stuff.
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!-- strong tag is an example of an inline element -->
+            <i>I have added some blank lines above. Let's see what happens.</i>
+            text1
+            text1
+            text1
+            text1
+            text1
+        </p>
+        <!-- p tag is an example of a block element -->
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <p>Azhya was here</p>
+        <!-- section tag is an example of a sematic tag -->
+        <section>
+            <!-- There are are two types of lists: ordered and unordered -->
+            <ol type="A">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ol>
+
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </section>
+        <section id="main-table" class="table-sec">
+            <table>
+                <caption>My Awesome Table</caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Hobby</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Bob</td>
+                        <td>Fishing</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane</td>
+                        <td>Shopping</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>George</td>
+                        <td>Sleeping</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Footer 1</td>
+                        <td>Footer 2</td>
+                        <td>Footer 3</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <nav>
+            <!-- Inline styles override internal styles -->
+            <h2 id="my-style" class="temp-class">Navigate to these links</h2>
+            <a href="https://google.com" target="_blank">Google</a>
+            <a href="https://youtube.com">YouTube</a>
+            <a href="https://bing.com">Bing</a>
+        </nav>
+    </body>
+</html>
