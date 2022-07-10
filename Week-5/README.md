@@ -196,7 +196,11 @@ HTML (root)
    * ### [Bubbling/Capturing](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Event-Bubbling%26Capturing.md)
    * ### [Event Object](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Event-Object.md)
    
- 
+ ### Extra Reading & Assignments
+* [DOM basics](https://javascript.info/document)
+* [Events](https://javascript.info/events)
+* [UI Events](https://javascript.info/event-details)
+* 
 <br> 
 
-# Wednesday
+<!-- # Wednesday -->
