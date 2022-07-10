@@ -184,3 +184,15 @@ HTML (root)
           |----- #text - "DOM Structure"
             
 ```
+
+** Click the links below to be taken to the notes for each topic in our Repo**
+
+  * [DOM Structure](./dom-structure.md)
+  * [Querying the DOM](./query-dom.md)
+  * [Traversing the DOM](./traverse-dom.md)
+  * [DOM Manipulation](./manipulate-dom.md)
+  * [Events and Listeners](./events-listeners.md)
+  * [Bubbling/Capturing](./bubbling-capturing.md)
+  * [Event Object](./event-object.md)
+   
+ 
