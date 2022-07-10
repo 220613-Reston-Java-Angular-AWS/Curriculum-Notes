@@ -1,5 +1,6 @@
-# Monday - Happy Monday!!! Hoping Your Weekend Was RESTful! 
-<br>
+### Happy Monday!!! Hoping Your Weekend Was RESTful! 
+
+# Monday 
 
 ## Intro to JavaScript
 
