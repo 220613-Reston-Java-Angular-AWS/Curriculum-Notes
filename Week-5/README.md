@@ -1,4 +1,11 @@
-### Happy Monday! Hoping Your Weekend Was RESTful! 
+## Happy Monday! Hoping Your Weekend Was RESTful! 
+
+### Pre-Lecture Readings
+* [JavaScript Introduction](https://javascript.info/getting-started)
+* [JavaScript Fundamentals](https://javascript.info/first-steps)
+* [JavaScript Objects](https://javascript.info/object)
+* [JavaScript Data types](https://javascript.info/data-types)
+* [Debugging in Chrome](https://javascript.info/debugging-chrome)
 
 # Monday 
 
@@ -121,3 +128,14 @@ When comparing to other languages, it's interesting to note that JavaScript was 
    * ### [Arrays](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Arrays.md)
    * ### [Timing Events](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Timing_Events.md)
    * ### [Errors](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Errors.md)
+   
+   
+### References
+* [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+* [Javascript.info](https://javascript.info)
+* [Dev Docs](https://devdocs.io/javascript)
+* [Eloquent JavaScript](https://eloquentjavascript.net/index.html)
+
+<br>
+
+# Tuesday 
