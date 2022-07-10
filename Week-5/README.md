@@ -1,4 +1,4 @@
-### Happy Monday!!! Hoping Your Weekend Was RESTful! 
+### Happy Monday! Hoping Your Weekend Was RESTful! 
 
 # Monday 
 
