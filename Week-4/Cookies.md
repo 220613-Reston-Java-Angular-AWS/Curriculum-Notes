@@ -6,7 +6,7 @@ The Servlet container checks the request header for cookies, most commonly to ge
 
 We can classify the cookies into two types based on their expiry time:
 
-![cookies](./images/cookies-1.png)
+![cookies](./../images/cookies-1.png)
 
 * **Non-persistent cookie** - Cookie becomes expired when the user closes the browser.
 
