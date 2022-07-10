@@ -1122,3 +1122,31 @@ public class ErrorHandlerServlet extends HttpServlet {
 ### References
 
 * [Further Reading on Servlet Exception Handling](https://www.tutorialspoint.com/servlets/servlets-exception-handling.htm#:~:text=If%20the%20web%20application%20throws,explain%20you%20the%20basic%20concept.) 
+
+## Session Management in servlets
+
+The HTTP protocol is a **stateless protocol**, which means no client information stored in the server. The server considers every request form the same client as a new, independent request. 
+However, this means that a server cannot keep a user "logged in" naturally. 
+
+Instead, the client will have to re-identify itself with each request it sends. One workaround is to have the server create a **session** for each client request, which the client can re-associate itself with in each request by sending the **session ID**.
+
+
+![sessionmgmt](./images/session-mgmt.png)
+
+
+**For example**, When a user logs in to a website, a token proving a successful login will be associated with their session, and the session ID will be returned to the client. Whatever web page user visits after logging in, their browser will send that session ID with each request, and the server can check that session to validate that the user was successfully authenticated.
+
+Session tracking is a mechanism that **servlets use to maintain state** about a series of requests from the same user across a period of time.
+
+A session stores the **unique identification information about the client** that we can get for all requests that client makes. There are four different techniques used by the Servlet application for session management. 
+
+**CLICK THE LINKS TO ACCESS THESE NOTES IN OUR REPO**
+  * [Cookies](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-4/Cookies.md)
+  * [Hidden form fields](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-4/Hidden-Form-Fields.md)
+  * [URL Rewriting](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-4/URL-Rewriting.md)
+  * [The HttpSession API](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-4/HttpSessionAPI.md)
+  
+  
+### References
+
+* [Session Management Further Reading](https://www.geeksforgeeks.org/session-management-in-http/)
