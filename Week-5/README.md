@@ -188,11 +188,11 @@ HTML (root)
 ** Click the links below to be taken to the notes for each topic in our Repo**
 
 
-  ** ### [Querying the DOM](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Querying_the_DOM.md)
-  ** ### [Traversing the DOM](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Traversing-the-DOM.md)
-  ** ### [DOM Manipulation](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/DOM-Manipulation.md)
-  ** ### [Events and Listeners](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/JavaScript-Events%26Listeners.md)
-  ** ### [Bubbling/Capturing](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Event-Bubbling%26Capturing.md)
-  ** ### [Event Object](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Event-Object.md)
+  * ### [Querying the DOM](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Querying_the_DOM.md)
+  * ### [Traversing the DOM](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Traversing-the-DOM.md)
+  * ### [DOM Manipulation](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/DOM-Manipulation.md)
+  * ### [Events and Listeners](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/JavaScript-Events%26Listeners.md)
+  * ### [Bubbling/Capturing](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Event-Bubbling%26Capturing.md)
+  * ### [Event Object](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Event-Object.md)
    
  
