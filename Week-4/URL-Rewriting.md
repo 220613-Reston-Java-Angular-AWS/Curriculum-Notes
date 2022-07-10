@@ -10,7 +10,7 @@ We will create an **HTML page** to capture a username value from the client, a *
 
 #### Program Flow
 
-![programflow](./images/url-rewriting-1.png)
+![programflow](./../images/url-rewriting-1.png)
 
 
 ### Create <code>index.html</code> Form
