@@ -1141,10 +1141,10 @@ Session tracking is a mechanism that **servlets use to maintain state** about a 
 A session stores the **unique identification information about the client** that we can get for all requests that client makes. There are four different techniques used by the Servlet application for session management. 
 
 **CLICK THE LINKS TO ACCESS THESE NOTES IN OUR REPO**
-  * [Cookies]()
-  * [Hidden form fields]()
-  * [URL Rewriting]()
-  * [The HttpSession API]()
+  * [Cookies](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-4/Cookies.md)
+  * [Hidden form fields](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-4/Hidden-Form-Fields.md)
+  * [URL Rewriting](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-4/URL-Rewriting.md)
+  * [The HttpSession API](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-4/HttpSessionAPI.md)
   
   
 ### References
