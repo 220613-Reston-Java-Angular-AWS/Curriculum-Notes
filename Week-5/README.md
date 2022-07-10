@@ -107,3 +107,14 @@ When comparing to other languages, it's interesting to note that JavaScript was 
   1. An "overridden" method is merely shadowed on the prototype and is therefore still accessible.
   2. JavaScript has no concept of overloading.
   3. Encapsulation is possible in JavaScript but there are no access modifiers and is not as simple as in other languages.
+
+ ### [Datatypes]()
+ ### [JavaScript Functions]()
+ ### [Type Coersion]()
+ ### [Variable Scopes]()
+ ### [strict mode]()
+ ### ["this" keyword]()
+ ### [OOP in JavaScript]()
+ ### [Arrays]()
+ ### [Timing Events]()
+ ### [Errors]()
