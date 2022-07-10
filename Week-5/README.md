@@ -110,13 +110,14 @@ When comparing to other languages, it's interesting to note that JavaScript was 
 
 **Click any of the links to be taken to the notes for this topic in our Repo. All are important to understand the fundementals of Java Script**
 
-   * ### [Datatypes]()
-   * ### [JavaScript Functions / Closures]()
-   * ### [Type Coersion]()
-   * ### [Variable Scopes]()
-   * ### [strict mode]()
-   * ### ["this" keyword]()
-   * ### [OOP in JavaScript]()
-   * ### [Arrays]()
-   * ### [Timing Events]()
+   * ### [Datatypes](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Data-types.md)
+   * ### [JavaScript Functions / Closures](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/JavaScript-Functions.md)
+   * ### [Type Coersion](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Type-Coercion.md)
+   * ### [Variable Scopes](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Variable_Scope.md)
+   * ### [strict mode](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/strict-mode.md)
+   * ### ["this" keyword](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/this-keyword.md)
+   * ### [OOP in JavaScript](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/OOP-in-JavaScript.md)
+   * ### [JSON]()
+   * ### [Arrays](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Arrays.md)
+   * ### [Timing Events](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Timing_Events.md)
    * ### [Errors]()
