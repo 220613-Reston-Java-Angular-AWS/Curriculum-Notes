@@ -130,6 +130,7 @@ When comparing to other languages, it's interesting to note that JavaScript was 
    * ### [Errors](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Errors.md)
    
    
+   
 ### References
 * [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 * [Javascript.info](https://javascript.info)
@@ -195,6 +196,7 @@ HTML (root)
    * ### [Events and Listeners](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/JavaScript-Events%26Listeners.md)
    * ### [Bubbling/Capturing](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Event-Bubbling%26Capturing.md)
    * ### [Event Object](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Event-Object.md)
+   * ### [AJAX](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/AJAX.md)
    
  ### Extra Reading
 * [DOM basics](https://javascript.info/document)
