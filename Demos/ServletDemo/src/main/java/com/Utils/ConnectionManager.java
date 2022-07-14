@@ -32,8 +32,8 @@ public class ConnectionManager {
 
         try {
             Properties props = new Properties();
-            FileReader fileReader = new FileReader("/Users/TiffanyObi/Documents/ServletDemo" +
-                    "/src/main/resources/jdbc.properties");
+            FileReader fileReader = new FileReader("/Users/tiffanyobi/Documents/Java-Angular-AWS-2022" +
+                    "/Curriculum-Notes/Demos/ServletDemo/src/main/resources/jdbc.properties");
 
             props.load(fileReader);
 
