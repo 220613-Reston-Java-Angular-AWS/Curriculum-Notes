@@ -355,7 +355,7 @@ let response = fetch(url, {
 
 **Click the Links for the rest of the notes for today in our repo**
 
-   * ### [await, async , & promises]()
+   * ### [await, async , & promises](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/async-await-keywords-promises.md)
    * ### [Rest with JSON](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Rest-with-JSON.md)
    * ### [Default Parameters](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/ES6-Default-Parameters.md)
    * ### [Spread/Rest Operator](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Spread-and-Rest-Operator.md)
