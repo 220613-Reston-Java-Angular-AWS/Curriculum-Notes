@@ -376,4 +376,14 @@ let response = fetch(url, {
 
 # Friday - 
 
+## Diving Deeper Into ES 6 Features
 
+   * ### []()
+   * ### []()
+   * ### []()
+   * ### []()
+   * ### []()
+   * ### []()
+   * ### []()
+   * ### []()
+   
