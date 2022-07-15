@@ -378,12 +378,13 @@ let response = fetch(url, {
 
 ## Diving Deeper Into ES 6 Features
 
-   * ### []()
-   * ### []()
-   * ### []()
-   * ### []()
-   * ### []()
-   * ### []()
-   * ### []()
-   * ### []()
+   * ### [Template Literal - aka `${}`](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/ES6-Template-Literals.md)
+   * ### [Javascript Classes](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/ES6-JS-Classes)
+   * ### [Enhanced Object Literals](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Enhanced-Object-Literals.md)
+   * ### [Javascript Modules](
+https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/JavaScript-Modules.md)
+   * ### [let-const-Keywords](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/let-and-const-keywords.md)
+   * ### [Destruction Assignment](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/Destruction-assignment.md)
+   * ### [async-await-promise-Keywords](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-5/async-await-keywords-promises.md)
+  
    
