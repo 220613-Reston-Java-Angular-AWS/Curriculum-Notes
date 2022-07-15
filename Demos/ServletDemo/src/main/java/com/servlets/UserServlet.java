@@ -157,8 +157,14 @@ public class UserServlet extends HttpServlet {
             //created a session between our client and server
             HttpSession session = req.getSession();
             session.setAttribute("user", user);
+            //not that if you are 'logging a user out and you've set the session
+            // use 'req.getSession().removeAttribute("user");' to remove them from the current session
 
-            // print the logged in user to the screen
+
+
+
+
+            // print the logged in user to the screen (shows if there is no html present)
             PrintWriter out = resp.getWriter();
             resp.setContentType("application/json");
 
