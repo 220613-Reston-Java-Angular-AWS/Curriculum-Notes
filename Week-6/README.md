@@ -152,10 +152,12 @@ The new features of interfaces in Java 8 bring them closer to the functionality 
 
 However, when two interfaces with `default` methods of the same method signature are implemented, the "diamond problem" - or multiple inheritance problem - can occur. The compiler will complain about duplicate default method inheritance, which can be resolved by overriding the default method with a custom implementation in the class.
 
-   * ### []()
-   * ### []()
+	**Click the links below to access notes in our repo** 
+
+   * ### [Lambdas](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Lambda-Expressions.md)
+   * ### [Functional Interfaces](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Functional-Interfaces.md)
    * ### [java.util.Time Package](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html)
-   * ### []()
+   * ### [Stream API](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Stream-API.md)
 
 
 
@@ -168,8 +170,8 @@ Logging records events that occur during software execution. As users execute pr
 
 Also, a logging framework like Log4j is critical because it allows us to use various logging levels and configure a threshold to determine which messages will be recorded in the application log files.
 
-   * ### []()
-   * ### []()
+   * ### [Logging Levels](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Loggin-Levels.md)
+   * ### [Setting Logging Thresholds](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Setting-Logging-Threshold.md)
 
 <br>
 
