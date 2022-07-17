@@ -8,5 +8,8 @@ At any given time, a thread can be in one of these states:
 5. **Timed_Waiting**: waiting for some other thread to perform a specific action for a specified time period
 6. **Terminated**: has completed its execution
 
+
+**Click on the picture to see it clearer*
+
 ![Thread lifecycle](https://www.javatpoint.com/images/thread-life-cycle.png)
 
