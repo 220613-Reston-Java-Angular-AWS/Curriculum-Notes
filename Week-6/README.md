@@ -152,8 +152,10 @@ The new features of interfaces in Java 8 bring them closer to the functionality 
 
 However, when two interfaces with `default` methods of the same method signature are implemented, the "diamond problem" - or multiple inheritance problem - can occur. The compiler will complain about duplicate default method inheritance, which can be resolved by overriding the default method with a custom implementation in the class.
 
-
+   * ### []()
+   * ### []()
    * ### [java.util.Time Package](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html)
+   * ### []()
 
 
 
@@ -165,6 +167,9 @@ Log4j is a reliable, fast, and flexible logging framework for Java supported by 
 Logging records events that occur during software execution. As users execute programs on the client side, the system accumulates log entries for support teams. In general, it allows for developers to access information about applications to which we do not have direct access. Without logs, we would have no idea of knowing what went wrong when an application crashes, or track and monitor application performance.
 
 Also, a logging framework like Log4j is critical because it allows us to use various logging levels and configure a threshold to determine which messages will be recorded in the application log files.
+
+   * ### []()
+   * ### []()
 
 <br>
 
