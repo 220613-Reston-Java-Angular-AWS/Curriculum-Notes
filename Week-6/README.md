@@ -206,9 +206,9 @@ In Java, multithreading is achieved via the [`Thread`](https://docs.oracle.com/j
 #### A Note on Best Practices
 In general, it is best to avoid implementing multithreading yourself if possible. The benefit of multithreaded applications is better performance due to non-blocking execution. However, you should always measure or attempt to estimate the performance benefit you will get by using threads versus the tradeoff in complexity and subtle bugs that might be generated. Usually there are frameworks, tools, or libraries that have implemented the problem you are trying to solve, and you can leverage those instead of trying to build your own solution. For example, web servers like Apache Tomcat have multithreading built-in and provide APIs for dealing with network requests without having to worry about threads.
 
-   * ### []()
-   * ### []()
-   * ### []()
+   * ### [Thread Class](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Thread-Class.md)
+   * ### [Runnable Interfaces](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Runnable-Interface.md)
+   * ### [States of a Thread](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/States-of-a-Thread.md)
 
 ## Producer-Consumer Problem
 
