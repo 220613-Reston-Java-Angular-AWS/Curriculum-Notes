@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <style>
+            *{
+                font-family: 'Rubik', sans-serif;
+            }
+            .parent {
+                animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+                animation-duration: 2s; /* don't forget to set a duration! */
+            }
+        </style>
+        <title>Datatypes in JS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    </head>
+
+
+
+
+<body class="parent d-flex justify-content-start mx-auto my-auto text-center text-white bg-dark animate__fadeInDown">
+    <main class="row justify-content-center mx-auto my-auto vh-100">
+        <h1>Datatypes:</h1>
+        <ul class="my-datatype-list list-group ps-1">
+            <li class="list-group-item datatype-item">number = numerical values. Ex. <span id="num-ex">()</span></li>
+            <li class="list-group-item datatype-item">string = text values. Ex. <span id="str-ex">()</span></li>
+            <li class="list-group-item datatype-item">boolean = true or false. Ex. <span id="bool-ex">()</span></li>
+            <li class="list-group-item datatype-item">null = nothing but not "" or 0. Ex. <span id="null-ex">()</span></li>
+            <li class="list-group-item datatype-item">undefined = any value declared but not initialized. Ex. <span id="und-ex">()</span></li>
+            <li class="list-group-item datatype-item">object = value of any type that can be placed in key-value pairs. Ex. <span id="obj-ex">()</span></li>
+            <li class="list-group-item datatype-item">symbol = primitive types for unique identifers; introduced in ES6 (ECMA 6). Ex. <span id="sym-ex">()</span></li>
+        </ul>
+    </main>
+
+    <script src="./datatypes.js"></script>
+  </body>
+
+</html>
