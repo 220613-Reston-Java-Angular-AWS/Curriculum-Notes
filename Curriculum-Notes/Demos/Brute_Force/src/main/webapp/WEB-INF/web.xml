@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--web.xml is your deployment descriptor
+        this is how tomcat gathers information about your project, such as welcome files,
+            available servlets, how to handle errors and exceptions, and other various
+            configurations you may want tomcat to know about.
+
+    It belongs in src/main/webapp/WEB-INF/ directory
+-->
+<web-app
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+        version="2.5">
+
+    <!--    this listener is connected to our DependencyLoaderListener class -->
+    <!--    this class is responsible to "listening out" for the servlets we have in our project-->
+    <listener>
+
+        <listener-class>com.servlets.DependencyLoaderListener</listener-class>
+
+    </listener>
+
+
+    <!-- here we can map the servlets weve created by extending HttpServlet to the servlet -->
+    <!--    value this file is expecting-->
+
+
+
+    <!-- here we have our user servlet  -->
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>com.servlets.UserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/user</url-pattern>
+        <url-pattern>/tickets</url-pattern>
+    </servlet-mapping>
+
+</web-app>
