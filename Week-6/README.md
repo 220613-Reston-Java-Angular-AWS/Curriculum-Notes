@@ -392,8 +392,7 @@ The following figure shows the working of the hibernate classes and interfaces :
 * [Architecture](https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#architecture)
 * [Further Reading on Hibernate Interfaces](https://www.geeksforgeeks.org/hibernate-architecture/)
 
-<hr
-	**Click the links below to access notes in our repo** 
+		**Click the links below to access notes in our repo** 
 	
 
    * ### [Interfaces of Hibernate](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Hibernate-Core-Interfaces.md)
