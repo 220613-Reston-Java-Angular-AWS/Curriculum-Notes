@@ -2,7 +2,7 @@
 The Hibernate core interfaces are used in just about every Hibernate application. Using these interfaces, you can store and retrieve persistent objects and control transactions.
 
 
-![hibernateinterfaces](./images/hibernate-interfaces.png)
+![hibernateinterfaces](./../images/hibernate-interfaces.png)
 
 
 ## Configuration
