@@ -356,6 +356,36 @@ Some of the **advantages** of Hibernate are:
 * Hibernate framework provides an **abstraction** -  Many common tasks are implemented for us internally, like establishing a connection with the database, writing a query to perform CRUD operations, etc. 
 
 * Hibernate supports **dual-level Caching** mechanism. Through the caching concept, Hibernate retains the objects in the cache to reduce repeated hits to the database. This feature makes Hibernate highly scalable and optimizes the application’s performance.
+* 
+
+### Hibernate architecture 
+
+Hibernate is a collection of various constituent components that work together to communicate with the database to ensure data integrity and consistency.
+
+The following diagram illustrates the main building blocks of **Hibernate architecture**:
+
+![](./../images/hib-arch.png)
+
+To persist data in the database, the application communicates with the Hibernate layer that contains the following core classes and interfaces of the Hibernate API:
+
+* Configuration Class
+* SessionFactory Interface
+* Session Interface
+* Transaction Interface
+* Query Interfaces
+
+**Persistent objects:** These are instances of POJO classes, that each represent a row in a table in the database. These objects get translated to a row in the related table in the database by the Hibernate. They are configured in mapping files (`YourClass.hbm.xml`) or annotated with `@Entity` annotation.
+
+
+The following figure shows the working of the hibernate classes and interfaces :
+
+![](./images/workflow.PNG)
+
+
+## References
+
+* [Architecture](https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#architecture)
+* [Further Reading on Hibernate Interfaces](https://www.geeksforgeeks.org/hibernate-architecture/)
 
 ### References
 
