@@ -356,7 +356,7 @@ Some of the **advantages** of Hibernate are:
 * Hibernate framework provides an **abstraction** -  Many common tasks are implemented for us internally, like establishing a connection with the database, writing a query to perform CRUD operations, etc. 
 
 * Hibernate supports **dual-level Caching** mechanism. Through the caching concept, Hibernate retains the objects in the cache to reduce repeated hits to the database. This feature makes Hibernate highly scalable and optimizes the application’s performance.
-* 
+
 
 ### Hibernate architecture 
 
@@ -379,7 +379,7 @@ To persist data in the database, the application communicates with the Hibernate
 
 The following figure shows the working of the hibernate classes and interfaces :
 
-![](./images/workflow.PNG)
+![](./../images/workflow.png)
 
 
 ## References
