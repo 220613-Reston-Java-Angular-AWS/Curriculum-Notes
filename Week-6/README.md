@@ -394,11 +394,12 @@ The following figure shows the working of the hibernate classes and interfaces :
 
 	**Click the links to access more notes in our repo**
 	
-   * [Interfaces of Hibernate](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Hibernate-Core-Interfaces.md)
-   * [XML overview](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/XML-overview.md)
-   * [`hibernate.cfg.xml`](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Hibernate-Configuration.md)
-   * [Annotations for model classes](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Annotation-for-model-classes.md)
-   * [Hibernate Query Languages](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Hibernate-Query-Languages.md)
+	
+   * ### [Interfaces of Hibernate](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Hibernate-Core-Interfaces.md)
+   * ### [XML overview](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/XML-overview.md)
+   * ### [`hibernate.cfg.xml`](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Hibernate-Configuration.md)
+   * ### [Annotations for model classes](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Annotation-for-model-classes.md)
+   * ### [Hibernate Query Languages](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Hibernate-Query-Languages.md)
 
 
 
