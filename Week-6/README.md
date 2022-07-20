@@ -357,6 +357,11 @@ Some of the **advantages** of Hibernate are:
 
 * Hibernate supports **dual-level Caching** mechanism. Through the caching concept, Hibernate retains the objects in the cache to reduce repeated hits to the database. This feature makes Hibernate highly scalable and optimizes the application’s performance.
 
+### References
+
+* [Hibernate](https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html)
+* [Difference Between Hibernate and JPA](https://www.educba.com/hibernate-vs-jpa/)
+
 
 ### Hibernate architecture 
 
@@ -387,9 +392,5 @@ The following figure shows the working of the hibernate classes and interfaces :
 * [Architecture](https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#architecture)
 * [Further Reading on Hibernate Interfaces](https://www.geeksforgeeks.org/hibernate-architecture/)
 
-### References
-
-* [Hibernate](https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html)
-* [Difference Between Hibernate and JPA](https://www.educba.com/hibernate-vs-jpa/)
 
 
