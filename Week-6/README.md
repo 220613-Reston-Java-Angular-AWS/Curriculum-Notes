@@ -405,6 +405,8 @@ The following figure shows the working of the hibernate classes and interfaces :
 
 <br>
 <hr>
+<br>
+
 # Thursday 
 
 ## Mini Project Horoscope App
