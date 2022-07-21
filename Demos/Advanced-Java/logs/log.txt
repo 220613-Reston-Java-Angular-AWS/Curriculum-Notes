@@ -1,0 +1,3 @@
+2022-07-18 13:35:06 INFO  IntroToLogging:33 - Hello World , I'm Info
+2022-07-18 13:35:06 WARN  IntroToLogging:34 - Hello Info, I'm Warning
+2022-07-18 13:35:06 ERROR IntroToLogging:35 - Hello Warning, I'm Error
