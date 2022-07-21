@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!-- DTD stands for Document Type Definition -->
+
+<hibernate-configuration>
+    <session-factory>
+<!--      Making sure that the dialect point to Postgres  -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
+        
+<!--        This is pointing to the PostgresSQL driver dependency in our pom.xml-->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        
+<!--        Set up your JDBC connection credentials-->
+        <property name="hibernate.connection.url">jdbc:postgresql://tiffany-obi-db.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">postgres</property>
+
+<!--        Connection Pool - Default is 20-->
+        <property name="hibernate.connection.pool_size">10</property>
+
+<!--        technically the most important-->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+<!--        CREATE : drops all existing tables and objects with the names provided
+            in annotation , then Hibernate recreates the schema for us
+            (CREATE is not the best for production but its useful for development)
+            Keep in mind- the very first time you run a project you will have to use create
+
+            UPDATE : hibernate will not delete anything, but only add to a schema if there
+            are objects that havent been included yet
+
+
+            VALIDATE : best for production - Checks to make sure that everything is as expected
+
+
+
+            NONE : hibernate will not do anything (no removals of additions)
+            -->
+
+<!--        Prints out the SQL statements that hibernate is executing against-->
+        <property name="hibernate.show_sql"> true</property>
+
+
+<!-- THIS IS WHERE WE ADD OUR CLASS MAPPINGS -->
+        <mapping class="com.models.Crime"/>
+        <mapping class="com.models.SuperVillain"/>
+        <mapping class="com.models.SuperPrison"/>
+
+        
+        
+        
+        
+    </session-factory>
+</hibernate-configuration>
