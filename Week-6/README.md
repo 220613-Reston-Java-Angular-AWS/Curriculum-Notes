@@ -433,11 +433,14 @@ This project must make the following webpages:
 
 ## Techs
 ```html
-	Frontend:
+FRONTEND:
+
 HTML
 CSS (optional)
 JS (Restriction: AJAX or FETCH API must be used to receive data from external API or backend server)
-	Backend:
+
+BACKEND:
+
 Java
 PostgreSQL
 JDBC
