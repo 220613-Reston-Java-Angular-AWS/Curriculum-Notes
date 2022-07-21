@@ -417,23 +417,26 @@ Note that where the api says 'pisces' you can interpolate any of the zodiac sign
 Before you begin. That way you can see what you have available to you. 
 
 ## MVP
-> This project must make the following webpages:
+This project must make the following webpages:
+
+``` html
     1. Welcome/Index page:
         - register a user account which includes a hardcoded zodiac sign
         - sign in user
     2. Homepage:
         - Get Today's horoscope for user
         - Show the current users information - i.e "name etc"
-	
+```
+
 ## Stretch Goals
 - Based on the users birthdate, get zodiac sign and add it to user profile
 
 ## Techs
-	> Frontend:
+	Frontend:
 HTML
 CSS (optional)
 JS (Restriction: AJAX or FETCH API must be used to receive data from external API or backend server)
-	> Backend:
+	Backend:
 Java
 PostgreSQL
 JDBC
