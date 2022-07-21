@@ -403,4 +403,45 @@ The following figure shows the working of the hibernate classes and interfaces :
    * ### [Hibernate Query Languages](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Hibernate-Query-Languages.md)
 
 
+<br>
+<hr>
+# Thursday 
 
+## Mini Project Horoscope App
+
+### Overview
+Create a simple Web App The uses the following api `http://sandipbgt.com/theastrologer/api/horoscope/pisces/today`
+Note that where the api says 'pisces' you can interpolate any of the zodiac signs. Use Postman to test the api 
+Before you begin. That way you can see what you have available to you. 
+
+## MVP
+> This project must make the following webpages:
+    1. Welcome/Index page:
+        - register a user account which includes a hardcoded zodiac sign
+        - sign in user
+    2. Homepage:
+        - Get Today's horoscope for user
+        - Show the current users information - i.e "name etc"
+	
+## Stretch Goals
+- Based on the users birthdate, get zodiac sign and add it to user profile
+
+## Techs
+	> Frontend:
+HTML
+CSS (optional)
+JS (Restriction: AJAX or FETCH API must be used to receive data from external API or backend server)
+	> Backend:
+Java
+PostgreSQL
+JDBC
+Maven
+Git
+
+## Init Instructions - **dont focus on this. focus on creating the project ; then worry about this** 
+- Create a new private repository in your github for your mini-project (naming convention can be: `mini_project_[your name]`; with `your_name` being replaced by your first name) or if your have another convention thats fine.
+    - Make sure to add your trainer as contributor to the repo since this repo will be private
+    
+## Presentation
+- Finalized version of application must be pushed to your repository by the presentation date (**July 22nd, 2022**) @ 10 am !!
+- 5-7 minute live demonstration of the web application - be able to answer questions that I will have!
