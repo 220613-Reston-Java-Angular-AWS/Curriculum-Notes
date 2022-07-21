@@ -426,6 +426,7 @@ This project must make the following webpages:
     2. Homepage:
         - Get Today's horoscope for user
         - Show the current users information - i.e "name etc"
+	-Update the db with the users 'Mood' that is included in the API results (aka the JSON)
 ```
 
 ## Stretch Goals
