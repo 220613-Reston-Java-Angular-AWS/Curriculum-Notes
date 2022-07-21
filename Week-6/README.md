@@ -432,6 +432,7 @@ This project must make the following webpages:
 - Based on the users birthdate, get zodiac sign and add it to user profile
 
 ## Techs
+```html
 	Frontend:
 HTML
 CSS (optional)
@@ -442,6 +443,7 @@ PostgreSQL
 JDBC
 Maven
 Git
+```
 
 ## Init Instructions - **dont focus on this. focus on creating the project ; then worry about this** 
 - Create a new private repository in your github for your mini-project (naming convention can be: `mini_project_[your name]`; with `your_name` being replaced by your first name) or if your have another convention thats fine.
