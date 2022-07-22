@@ -530,8 +530,9 @@ An object of a persistent class (a class mapped to a relational database table) 
 ![](./../images/object-states.png)
 
 
-   * ### [Caching]()
-   * ### [Named Queries]()
+   * ### [Caching](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Caching-in-Hibernate.md)
+   * ### [Named Queries](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-6/Named-Queries.md
+)
 
 ## References
 
