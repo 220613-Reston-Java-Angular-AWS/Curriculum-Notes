@@ -271,3 +271,270 @@ The term "deadlock" describes a situation where 2 or more threads are blocked tr
 
 ## Livelock
 A Livelock is a situation where a request for an exclusive lock is denied repeatedly, as many overlapping shared locks keep on interfering each other. The processes keep on changing their status, which further prevents them from completing the task
+
+<br>
+
+# Wednesday 
+
+## Object Relational Mapping (ORM) 
+
+Most object-oriented applications use a relational database to store and manage the application data. The relational database represents data in a table, whereas the data in object-oriented applications encapsulated in an object.
+
+We can access a class by using its objects. However, to access the tabular data, we need to use a query language. Using tabular data in an object-oriented application requires a conversion between the two types of data.
+
+As a result, it is not possible to store the objects directly in a relational database. These differences between object-oriented and relational database paradigms are called **impedance mismatch**.
+
+[Impedance Mismatch](https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch) can exist at the following points:
+
+* **Granularity** - refers to the mismatch in the number of classes that are mapped with a certain number of tables in the database.
+ 
+* **Inheritance** - Java classes in the application are commonly related to each other through an inheritance hierarchy. However, the tables within the database can't be represented through an inheritance hierarchy.
+ 
+* **Identity** - The relational database distinguishes an object instance on the basis of their primary key. However, an object model distinguishes an object on the basis of object identity and object equality.
+
+* **Association** - In the object model, two classes are linked by association. However, in relational databases, the linking of tables is achieved with the help of foreign keys.
+ 
+* **Navigation** - The ways of accessing objects in Java and in RDBMS are fundamentally different.
+
+To solve the impedance mismatch, we use an **ORM** tool that converts the **data between relational databases and object oriented programming languages**.
+
+[ORM](https://en.wikipedia.org/wiki/Object-relational_mapping) stands for **O**bject-**R**elational **M**apping, uses objects to connect the Object-Oriented programming language and the database systems, which facilitates the SQL to work along with the object-oriented programming concepts. 
+
+![](./../images/orm_image.png)
+
+
+### Benefits of ORM
+
+* ORM maps an object to the table.
+* We can hide the details of SQL queries from OO logic. This propagates the idea of data abstraction.
+* It provides methods for automatic versioning and timestamping.
+* It provides caching support for better performance.
+* Best suited for large projects
+* Injected transaction management
+* Configurable logging
+* Faster development of applications
+
+There are lots of ORM tools available such as Hibernate, JPA, Active JPA, iBATIS, IBM Pure Query, etc.
+
+### References
+
+* [What is Object/Relational Mapping?](https://hibernate.org/orm/what-is-an-orm/)
+
+
+
+## JPA
+
+The [Java Persistence API](https://en.wikipedia.org/wiki/Java_Persistence_API)(JPA) is a standard API for accessing, persisting and managing data between Java objects/classes and a relational database. 
+
+It is defined in the **javax.persistence** package. It uses **Java Persistence Query Language** (JPQL), which is an object-oriented query language to perform database operations. It uses the **EntityManager** interface to create, read, and delete operations for instances of mapped entity classes.
+
+
+## Hibernate
+
+[Hibernate](https://en.wikipedia.org/wiki/Hibernate_(framework)) is an object-relational mapping tool for Java programming language. It is an open-source persistent framework introduced by **Gavin King** in 2001.  It is a flexible and powerful ORM solution to map Java classes to database tables. Hibernate is an **implementation of JPA**, so it follows the common standards provided by the JPA. Historically Hibernate provided its own extensions to JPA interfaces and syntax, but has started to return to a more JPA-friendly syntax. Because of this, you will find significant differences between older versions of Hibernate and newer versions, starting around Hibernate 5.2.
+
+It is defined in the **org.hibernate** package. It uses **Hibernate Query Language** (HQL), which is very similar to JPQL. Hibernate's **Session** interface is an extension to JPA's **EntityManager** interface, and so can create, read, and delete operations for instances of mapped entity classes. 
+
+
+Since we have used **JDBC** (Java Database Connectivity) for a long time, we know that JDBC provides a Java API for accessing relational databases from Java programs, to execute SQL statements. 
+
+**Drawbacks  in the JDBC approach:**
+* If we use JDBC in large applications, it results in significant complexity.
+* If we need to change our database (for example, MySQL to Oracle, we might have to rewrite many SQL queries to satisfy differences in SQL syntax between the two databases 
+* We need to convert database ResultSet objects to Java Objects manually, and vice-versa. If the schema changes, we need to change the DDL, the POJO classes, *and* the conversions between the two
+* The developer requires database-specific knowledge to write queries.
+* The states of Java Objects are fetched and managed by developers. In other words, changes to data by the application need to be saved to the database manually
+
+Hibernate is used to overcome these drawbacks of JDBC.
+
+Some of the **advantages** of Hibernate are:
+
+* Hibernate’s **transparent persistence** ensures the automatic connection between the application’s objects with the database tables. It reduces the lines of connection code. 
+
+* Hibernate is **database independent**. It can be used to connect with any database like Oracle, MySQL, Sybase, etc. Changing the SQL sent to a database is as simple as changing the *database dialect* in the configuration file.
+
+* Hibernate framework provides an **abstraction** -  Many common tasks are implemented for us internally, like establishing a connection with the database, writing a query to perform CRUD operations, etc. 
+
+* Hibernate supports **dual-level Caching** mechanism. Through the caching concept, Hibernate retains the objects in the cache to reduce repeated hits to the database. This feature makes Hibernate highly scalable and optimizes the application’s performance.
+
+### References
+
+* [Hibernate](https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html)
+* [Difference Between Hibernate and JPA](https://www.educba.com/hibernate-vs-jpa/)
+
+
+### Hibernate architecture 
+
+Hibernate is a collection of various constituent components that work together to communicate with the database to ensure data integrity and consistency.
+
+The following diagram illustrates the main building blocks of **Hibernate architecture**:
+
+![](./../images/hib-arch.png)
+
+To persist data in the database, the application communicates with the Hibernate layer that contains the following core classes and interfaces of the Hibernate API:
+
+* Configuration Class
+* SessionFactory Interface
+* Session Interface
+* Transaction Interface
+* Query Interfaces
+
+**Persistent objects:** These are instances of POJO classes, that each represent a row in a table in the database. These objects get translated to a row in the related table in the database by the Hibernate. They are configured in mapping files (`YourClass.hbm.xml`) or annotated with `@Entity` annotation.
+
+
+The following figure shows the working of the hibernate classes and interfaces :
+
+![](./../images/workflow.png)
+
+
+## References
+
+* [Architecture](https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#architecture)
+* [Further Reading on Hibernate Interfaces](https://www.geeksforgeeks.org/hibernate-architecture/)
+
+
+		**Click the links below to access the notes in our repo** 
+	
+
+   * ### [Interfaces of Hibernate](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Hibernate-Core-Interfaces.md)
+   * ### [XML overview](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/XML-overview.md)
+   * ### [`hibernate.cfg.xml`](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Hibernate-Configuration.md)
+   * ### [Annotations for model classes](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Annotation-for-model-classes.md)
+   * ### [Hibernate Query Languages](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Hibernate-Query-Languages.md)
+
+
+<br>
+<hr>
+<br>
+
+# Thursday 
+
+## Mini Project Horoscope App
+
+### Overview
+Create a simple Web App The uses the following api `http://sandipbgt.com/theastrologer/api/horoscope/pisces/today`
+Note that where the api says 'pisces' you can interpolate any of the zodiac signs. Use Postman to test the api 
+Before you begin. That way you can see what you have available to you. 
+
+## MVP
+This project must make the following webpages:
+
+``` html
+    1. Welcome/Index page:
+        - sign in user
+    2. Register page:
+	- register a user account which includes a hardcoded zodiac sign
+    2. Homepage:
+        - Get Today's horoscope for user
+        - Show the current users information - i.e "name etc"
+	-Update the db with the users 'Mood' that is included in the API results (aka the JSON)
+```
+
+## Stretch Goals
+- Based on the users birthdate, get zodiac sign and add it to user profile
+
+## Techs
+```html
+FRONTEND:
+
+HTML
+CSS (optional)
+JS (Restriction: AJAX or FETCH API must be used to receive data from external API or backend server)
+
+BACKEND:
+
+Java
+PostgreSQL
+JDBC
+Maven
+Git
+```
+
+## Init Instructions - **dont focus on this. focus on creating the project ; then worry about this** 
+- Create a new private repository in your github for your mini-project (naming convention can be: `mini_project_[your name]`; with `your_name` being replaced by your first name) or if your have another convention thats fine.
+    - Make sure to add your trainer as contributor to the repo since this repo will be private
+    
+## Presentation
+- Finalized version of application must be pushed to your repository by the presentation date (**July 22nd, 2022**) @ 10 am !!
+- 5-7 minute live demonstration of the web application - be able to answer questions that I will have!
+<br>
+
+# Friday 
+
+## Hibernate cont.
+
+
+## ACID Properties
+
+A Transaction represents a single unit of work performed in sequence against the database. In other words, a transaction is a collection of read/write operations which succeeds only if all contained operations succeed. A transaction has 4 properties termed as [ACID](https://en.wikipedia.org/wiki/ACID) Properties:
+
+* **A**tomicity
+* **C**onsistency
+* **I**solation
+* **D**urability
+
+### Atomicity
+
+Atomicity means that either all of the transactions will execute successfully or none of them will.
+
+### Consistency
+
+Consistency means that constraints are enforced for every committed transaction. That indicates that all Keys, Data types, Checks, and Triggers are successful and no constraint violation is triggered.
+
+### Isolation
+
+If two transactions are executing concurrently and working on the same data, then one transaction should not disturb the other transaction. Isolation guarantees that concurrently running transactions should not affect each other.
+
+### Durability 
+
+Durability means that once a transaction is complete, it guarantees that all of the changes are recorded in the database. If our system is suddenly affected by a system crash or a power outage, then all unfinished committed transactions may be replayed.
+
+
+
+## Object States in Hibernate 
+
+The three Object States in Hibernate are:
+
+* **Transient State**
+* **Persistent State**
+* **Detached State**
+
+An object of a persistent class (a class mapped to a relational database table) can be in one of three different states. These states are defined in relation to a **persistence context** (Session object). 
+
+### Transisent
+
+* When an object is created using the `new` operator and not yet associated with a Hibernate Session, then the object state is transient.
+* It doesn't represent a row in the database. 
+* Transient instances are garbage collected if the application does not hold a reference anymore.
+
+
+### Persistent
+
+* The object state is persistent when it is associated with the hibernate session.
+* The Persistent object represents a row in the database and has an identifier value. 
+* Transient instances can be made persistent by associating them with a Session.
+* The `save()`, `persist()` and `saveOrUpdate()` methods are used to associate a transient object with a session and make them persistent. 
+* Hibernate detects the changes made to persistent objects and synchronizes the state with the database. 
+* Whenever we get the data from the database using `get()` or `load()` methods, the data will be in the persistent state.
+
+### Detached
+
+* When a persistent object has its session closed, then it becomes detached. 
+* Any changes made to detached objects will not be saved automatically to the database. 
+* When a detached instance reattached with a new Session at a later point in time, it makes the object persistent again.
+* The Session class' `close()`, `evict(Object)`, and `clear()` methods are used to move a persistent object to the detached state.
+* The Session class' `update(Object)` and `merge(Object)` methods can used to reattach detached objects to a session. 
+
+**Object states:**
+
+![](./../images/object-states.png)
+
+
+   * ### [Caching](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-6/Caching-in-Hibernate.md)
+   * ### [Named Queries](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-6/Named-Queries.md)
+
+## References
+
+* [Hibernate object states](https://docs.jboss.org/hibernate/core/3.3/reference/en/html/objectstate.html#objectstate-overview)
+* [Modifying persistent state](https://docs.jboss.org/hibernate/orm/6.0/userguide/html_single/Hibernate_User_Guide.html#pc-managed-state)
+
