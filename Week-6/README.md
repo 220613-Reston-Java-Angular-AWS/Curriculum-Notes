@@ -421,11 +421,13 @@ This project must make the following webpages:
 
 ``` html
     1. Welcome/Index page:
-        - register a user account which includes a hardcoded zodiac sign
         - sign in user
+    2. Register page:
+	- register a user account which includes a hardcoded zodiac sign
     2. Homepage:
         - Get Today's horoscope for user
         - Show the current users information - i.e "name etc"
+	-Update the db with the users 'Mood' that is included in the API results (aka the JSON)
 ```
 
 ## Stretch Goals
