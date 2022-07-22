@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="621901a5-f406-41c4-98c1-b574f7a7fddc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/ajax/ajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/ajax/ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/async-await-promise/async-await.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/async-await-promise/callbackHell.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/async-await-promise/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/async-await-promise/promise.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/datatypes/datatypes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/datatypes/datatypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/fetch/fetch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/fetch/fetch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/functions-closures/functions-closures.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/functions-closures/functions-closures.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/js-classes/js-classes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/js-classes/js-classes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/prototype/prototype.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/prototype/prototype.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/this-keyword/this.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/this-keyword/this.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/timing-events/bubbling-capturing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/timing-events/timing-events.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/timing-events/timing-events.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/variable-scopes/variablescopes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript-Demos/variable-scopes/variablescopes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/Persistance/TicketDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/models/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/models/Ticket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/javascript/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/javascript/new-ticket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/javascript/tickets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/javascript/welcome.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/new-ticket.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/tickets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-5/Destruction-assignment.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-5/ES6-JS-Classes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-5/ES6-Template-Literals.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-5/Enhanced-Object-Literals.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-5/JS-Symbol-Datatype.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-5/JavaScript-Modules.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-5/QC-Study-Guide/JavaScript-Study-Guide.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-5/QC-Study-Guide/JavaScript.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-5/QC-Study-Guide/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-5/async-await-keywords-promises.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-5/let-and-const-keywords.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-6/Functional-Interfaces.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-6/Lambda-Expressions.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-6/Loggin-Levels.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-6/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-6/Runnable-Interface.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-6/Setting-Logging-Threshold.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-6/States-of-a-Thread.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-6/Stream-API.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week-6/Thread-Class.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RequestTimeOffDemo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RequestTimeOffDemo/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RequestTimeOffDemo/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RequestTimeOffDemo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RequestTimeOffDemo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RequestTimeOffDemo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RequestTimeOffDemo/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RequestTimeOffDemo/src/main/java/com/Utils/ConnectionManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RequestTimeOffDemo/src/main/java/com/Utils/CustomCRUDInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletDemo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletDemo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletDemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletDemo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/Persistance/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/Persistance/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/Utils/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/Utils/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/servlets/SignUpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/servlets/SignUpServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/servlets/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletDemo/src/main/java/com/servlets/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/signUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletDemo/src/main/webapp/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Persistance/UserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Utils/ConnectionManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Utils/CurrentUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Utils/CustomCRUDInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlets/DependencyLoaderListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlets/PingServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlets/SignUpServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlets/UserServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/signUp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week-5/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week-5/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BunQpijrbV1ceSZAPXUp0yu6IN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/livil/Desktop/Revature&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="621901a5-f406-41c4-98c1-b574f7a7fddc" name="Changes" comment="" />
+      <created>1657764823561</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657764823561</updated>
+    </task>
+    <servers />
+  </component>
+</project>

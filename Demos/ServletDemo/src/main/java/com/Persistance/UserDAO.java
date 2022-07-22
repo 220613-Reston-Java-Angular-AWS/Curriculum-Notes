@@ -1,7 +1,6 @@
 package com.Persistance;
 
 import com.Utils.ConnectionManager;
-import com.Utils.CurrentUser;
 import com.Utils.CustomCRUDInterface;
 import com.models.User;
 import java.sql.Connection;
@@ -85,7 +84,7 @@ public class UserDAO implements CustomCRUDInterface<User> {
 
 
 
-    public CurrentUser loginUser(String email, String password){
+    public User loginUser(String email, String password){
 
         try {
 
@@ -96,7 +95,7 @@ public class UserDAO implements CustomCRUDInterface<User> {
             ResultSet rs = pstmt.executeQuery();
 
             if(rs.next() && rs.getString("last_name").equals(password)){
-              return new CurrentUser(rs.getInt("user_id"),
+              return new User(rs.getInt("user_id"),
                       rs.getString("first_name"),
                       rs.getString("last_name"),
                       rs.getString("email"));

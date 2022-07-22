@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>View User</title>
+   
+
 </head>
+
+
 <body>
 
-<!--<div>-->
-<!--    -->
-<!--&lt;!&ndash;    here is the logic from us using our number input to receive a userid-->
+<div>
+   
+<!-- &lt;!&ndash;    here is the logic from us using our number input to receive a userid-->
 <!--and send it to the database using our user servlets doGet method&ndash;&gt;-->
 
 <!--&lt;!&ndash;  <h2> Search Your Info</h2>&ndash;&gt;-->
@@ -23,25 +27,26 @@
 <!--&lt;!&ndash;        <br>&ndash;&gt;-->
 <!--&lt;!&ndash;        <input type="submit" value="Click Here To Search">&ndash;&gt;-->
 
-<!--&lt;!&ndash;    </form>&ndash;&gt;-->
+<!--&lt;!&ndash;    </form>&ndash;&gt; -->
 
 
 
-<!--</div>-->
+</div>
 
 <div>
     <h2> User Login</h2>
     <br>
     <h4> If you already have an account, Sign In!</h4>
-    <form method="get" action="user">
+    <form id="formID">
         <label> Enter Your Email Address</label><br>
-        <input type="text" name="email-sign-in"><br>
+        <input type="text" id="email-sign-in"><br>
         <label> Enter Your Last Name (Password)</label><br>
-        <input type="password" name="password-sign-in">
+        <input type="password" id="password-sign-in">
 
         <br>
         <br>
-        <input type="submit" value="Sign In Now!">
+
+        <button id="login">Sign In Now</button>
     </form>
     <br>
     <br>
@@ -57,6 +62,6 @@
 
 
 
-
+<script src="./javascript/index.js"></script>
 </body>
 </html>
