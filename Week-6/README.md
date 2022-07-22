@@ -530,8 +530,8 @@ An object of a persistent class (a class mapped to a relational database table) 
 ![](./../images/object-states.png)
 
 
-   * [Caching]()
-   * [Named Queries]()
+   * ### [Caching]()
+   * ### [Named Queries]()
 
 ## References
 
