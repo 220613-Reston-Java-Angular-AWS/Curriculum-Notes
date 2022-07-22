@@ -457,3 +457,84 @@ Git
 ## Presentation
 - Finalized version of application must be pushed to your repository by the presentation date (**July 22nd, 2022**) @ 10 am !!
 - 5-7 minute live demonstration of the web application - be able to answer questions that I will have!
+<br>
+
+# Friday 
+
+## Hibernate cont.
+
+
+## ACID Properties
+
+A Transaction represents a single unit of work performed in sequence against the database. In other words, a transaction is a collection of read/write operations which succeeds only if all contained operations succeed. A transaction has 4 properties termed as [ACID](https://en.wikipedia.org/wiki/ACID) Properties:
+
+* **A**tomicity
+* **C**onsistency
+* **I**solation
+* **D**urability
+
+### Atomicity
+
+Atomicity means that either all of the transactions will execute successfully or none of them will.
+
+### Consistency
+
+Consistency means that constraints are enforced for every committed transaction. That indicates that all Keys, Data types, Checks, and Triggers are successful and no constraint violation is triggered.
+
+### Isolation
+
+If two transactions are executing concurrently and working on the same data, then one transaction should not disturb the other transaction. Isolation guarantees that concurrently running transactions should not affect each other.
+
+### Durability 
+
+Durability means that once a transaction is complete, it guarantees that all of the changes are recorded in the database. If our system is suddenly affected by a system crash or a power outage, then all unfinished committed transactions may be replayed.
+
+
+
+## Object States in Hibernate 
+
+The three Object States in Hibernate are:
+
+* **Transient State**
+* **Persistent State**
+* **Detached State**
+
+An object of a persistent class (a class mapped to a relational database table) can be in one of three different states. These states are defined in relation to a **persistence context** (Session object). 
+
+### Transisent
+
+* When an object is created using the `new` operator and not yet associated with a Hibernate Session, then the object state is transient.
+* It doesn't represent a row in the database. 
+* Transient instances are garbage collected if the application does not hold a reference anymore.
+
+
+### Persistent
+
+* The object state is persistent when it is associated with the hibernate session.
+* The Persistent object represents a row in the database and has an identifier value. 
+* Transient instances can be made persistent by associating them with a Session.
+* The `save()`, `persist()` and `saveOrUpdate()` methods are used to associate a transient object with a session and make them persistent. 
+* Hibernate detects the changes made to persistent objects and synchronizes the state with the database. 
+* Whenever we get the data from the database using `get()` or `load()` methods, the data will be in the persistent state.
+
+### Detached
+
+* When a persistent object has its session closed, then it becomes detached. 
+* Any changes made to detached objects will not be saved automatically to the database. 
+* When a detached instance reattached with a new Session at a later point in time, it makes the object persistent again.
+* The Session class' `close()`, `evict(Object)`, and `clear()` methods are used to move a persistent object to the detached state.
+* The Session class' `update(Object)` and `merge(Object)` methods can used to reattach detached objects to a session. 
+
+**Object states:**
+
+![](./../images/object-states.png)
+
+
+	* [Caching]()
+	* [Named Queries]()
+
+## References
+
+* [Hibernate object states](https://docs.jboss.org/hibernate/core/3.3/reference/en/html/objectstate.html#objectstate-overview)
+* [Modifying persistent state](https://docs.jboss.org/hibernate/orm/6.0/userguide/html_single/Hibernate_User_Guide.html#pc-managed-state)
+
