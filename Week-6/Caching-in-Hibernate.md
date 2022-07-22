@@ -3,7 +3,7 @@
 Hibernate performs caching to **optimize the performance** of an application. It's used to reduce the number of database hits by storing data locally in a cache.
 
 
-![caching](./../images/cache.jpg)
+![caching](./../images/cache.png)
 
 
 ### First-Level Cache / L1 cache
