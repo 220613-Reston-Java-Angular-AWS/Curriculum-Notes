@@ -211,3 +211,12 @@ public class AppConfig {
 * Setter Injection occurs after constructor injection, essentially putting giving setter injection precedence over constructor injection
 * Setter Injection can easily change values, and does not create new bean instances, making it more flexible than constructor injection.
 * Setter Injection can resolve circular references (i.e. if Object A and Object B are dependent on each other, setter injection can be used to resolve this, whereas Constructor injection would throw a BeanCurrentlyInCreationException).
+
+   * ### [Spring Configuration](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-7/XML-vs-Annotation-vs-JavaConfig.md)
+   * ### []()
+   * ### []()
+   * ### []()
+   * ### []()
+   * ### []()
+   * ### []()
+   
