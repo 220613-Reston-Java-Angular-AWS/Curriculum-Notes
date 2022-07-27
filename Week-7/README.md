@@ -310,7 +310,7 @@ This page details an overview of the Spring MVC Framework and explains how to ut
 ## Spring Model View Controller Architecture
 The Spring MVC Framework, like many other MVC Frameworks, is a request driven structure, designed around a central Servlet which dispatches requests to controllers and offers functionality to support the web application. As a breif recap, Models represent data to be stored and/or retrieved from a database or environment, the View is the user interface and displays model data and the controller handles requests between the model and responds with appropriate views. Unlike other MVC frameworks, the Spring `DispatcherServlet` is completely itegrated with the Spring IoC container, allowing the use of every other Spring feature in addition to this functionality. A high level overview of this request processing structure can be viewed below:
 
-![Request Processing Workflow - Spring Web MVC DispatcherServlet](./../images.mvc.png)
+![Request Processing Workflow - Spring Web MVC DispatcherServlet](./../images/mvc.png)
 
 
 ### Dispatcher Servlet and MVC
@@ -581,8 +581,8 @@ public class LibraryRestController {
 ```
 
 
-   * ### []()
-   * ### []()
-   * ### []()
+   * ### [Controller](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-7/MVC%20Annotations-Controller.md)
+   * ### [Path Variable & Request Params](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-7/MVC%20Annotations-PathVariable.md)
+   * ### [Request Mapping](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-7/MVC-Annotation-RequestMapping.md)
   
    
