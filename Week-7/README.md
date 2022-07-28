@@ -727,8 +727,8 @@ It is super important to remember to keep classes and interfaces inside of the s
 
 Another, but not required tool, of Spring Boot is the Spring Boot CLI. The Spring Boot CLI allows for even faster application development or prototyping. The Spring Boot CLI runs groovy scripts, which gives Java-like syntax, but reduces the boilerplate code. [Spring Boot CLI](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-cli.html)
 
-   * ### []()
-   * ### []()
-   * ### []()
-   * ### []()
+   * ### [Spring Boot Actuator](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-7/Spring-Boot-Actuator.md)
+   * ### [Spring Boot Dev Tools](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-7/Spring-Boot-DevTools.md)
+   * ### [Spring Boot Profiles](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-7/Spring-Boot-Profiles.md)
+   * ### [Spring Boot Rest Template Requests](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-7/%23%20SpringBoot-RestTemplateRequests.md)
    
