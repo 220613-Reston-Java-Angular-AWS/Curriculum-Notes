@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+      http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
+
+
+<!--    The Application Context sets up our IoC container
+IoC means Inversion of Control : which means that Spring creates
+the dependencies that other objects rely on ,
+rather than the objects instantiating the dependencies-->
+
+
+<!--    Telling Spring to scan our project for @Repository and @Transactional-->
+    <tx:annotation-driven/>
+
+
+<!--    We want Spring to read through our app and configure @Controller-->
+    <mvc:annotation-driven/>
+
+
+<!--    we are telling Spring which packages to scan to find our beans -->
+
+    <context:component-scan base-package="com.revature.repos"/>
+    <context:component-scan base-package="com.revature.services"/>
+    <context:component-scan base-package="com.revature.controllers"/>
+
+
+
+<!--    DataSource Credentials-->
+    <bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://tiffany-obi-db.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres"/>
+        <property name="username" value="postgres"/>
+        <property name="password" value="postgres"/>
+    </bean>
+
+
+<!--    Session Factory bean that is going to work with hibernate-->
+    <bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+
+<!--        here we are wiring our dataSource bean into our session factory bean-->
+        <property name="dataSource" ref="dataSource"/>
+
+<!--     Annotation Mapping   -->
+
+        <property name="packagesToScan" value="com.revature.models"/>
+
+
+        <property name="hibernateProperties">
+
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">create</prop>
+            </props>
+
+        </property>
+    </bean>
+
+
+    <bean name="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+
+
+</beans>

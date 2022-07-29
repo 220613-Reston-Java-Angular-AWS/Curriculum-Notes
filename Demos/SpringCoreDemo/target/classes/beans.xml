@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    Based on the configuration of this file
+the IoC (Inversion of Control) container understands what beans it will depend on-->
+
+<!--    when we say beans we are basically talking about classes that have
+some kind of implementation logic -->
+
+<!--    Good practice is starting from your bean configuration file -->
+<!--    1: we are changing the way we organize our classes. meaning we will
+have another folder to house our packages-->
+
+<!--    here we are just configuring a normal bean-->
+    <bean name="pokemonDAO" class="com.revature.dao.PokemonDAOImpl"></bean>
+
+
+<!--    this is where we are manually defining our constructor injection via IoC container-->
+    <bean name="pokemonService" class="com.revature.service.PokemonServiceImpl">
+
+<!--   index = the position that the bean has in the arguments of the constructor that depends on it  -->
+<!--        Index: the bean's position within its dependent constructor?-->
+
+        <!--    ref = the bean that this bean depends on  -->
+        <constructor-arg index="0" ref="pokemonDAO"></constructor-arg>
+    </bean>
+
+
+
+</beans>
