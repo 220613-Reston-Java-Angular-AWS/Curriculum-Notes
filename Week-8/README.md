@@ -193,6 +193,6 @@ Webpack builds a [dependency graph](https://webpack.js.org/concepts/dependency-g
 
 
 
-** Click the link below to install Angula r**
+    **Click the link below to install Angular**
 
-   * ## [Angular CLI]()
+    * ### [Angular CLI]()
