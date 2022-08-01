@@ -88,9 +88,10 @@ To compile the TypeScript code, run the `tsc` command, followed by the name of t
 * [TypeScript Docs - 5 minutes overview of the Language](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
 
-   * ### []()
-   * ### []()
-   * ### []()
+   * ### [Variable - datatypes](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Variable-datatypes.md)
+   * ### [Classes & Access Modifiers](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Classes%26AccessModifiers.md)
+   * ### [Decorators](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Decorators.md)
+   * ### [Interfaces](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Interfaces.md)
    
 
 ##  History of Angular
@@ -195,4 +196,4 @@ Webpack builds a [dependency graph](https://webpack.js.org/concepts/dependency-g
 
     **Click the link below to install Angular**
 
-    * ### [Angular CLI]()
+    * ### [Angular CLI](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Angular-CLI.md)
