@@ -1,0 +1,12 @@
+2022-07-26 17:03:44 INFO  LoggingAspect:34 - Around advice for: class com.revature.services.AnimeServiceImpl: getAllAnimeShows
+2022-07-26 17:03:44 INFO  LoggingAspect:23 - Before advice for: class com.revature.services.AnimeServiceImpl: getAllAnimeShows
+2022-07-26 17:03:44 INFO  LoggingAspect:23 - Before advice for: class com.revature.repos.AnimeDAOImpl: selectAll
+2022-07-26 17:03:44 INFO  LoggingAspect:29 - After advice for: class com.revature.repos.AnimeDAOImpl: selectAll
+2022-07-26 17:03:44 INFO  LoggingAspect:29 - After advice for: class com.revature.services.AnimeServiceImpl: getAllAnimeShows
+2022-07-26 17:03:44 INFO  LoggingAspect:42 - End of All Advice
+2022-07-26 17:04:26 INFO  LoggingAspect:34 - Around advice for: class com.revature.services.AnimeServiceImpl: getAllAnimeShows
+2022-07-26 17:04:26 INFO  LoggingAspect:23 - Before advice for: class com.revature.services.AnimeServiceImpl: getAllAnimeShows
+2022-07-26 17:04:26 INFO  LoggingAspect:23 - Before advice for: class com.revature.repos.AnimeDAOImpl: selectAll
+2022-07-26 17:04:26 INFO  LoggingAspect:29 - After advice for: class com.revature.repos.AnimeDAOImpl: selectAll
+2022-07-26 17:04:26 INFO  LoggingAspect:29 - After advice for: class com.revature.services.AnimeServiceImpl: getAllAnimeShows
+2022-07-26 17:04:26 INFO  LoggingAspect:42 - End of All Advice

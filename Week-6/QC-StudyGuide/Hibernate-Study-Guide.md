@@ -1,0 +1,65 @@
+## Hibernate Study Guide
+
+- ORM Framework features, advantages, and disadvantages
+- JPA (Java Persistence API) standard
+  - JPA annotations
+    - @Column
+    - @Entity
+    - @Table
+    - @ForeignKey
+    - @GeneratedValue
+    - @Id
+    - @JoinColumn
+    - @JoinTable
+    - @OneToOne
+    - @OneToMany
+    - @ManyToOne
+    - @ManyToMany
+    - @NamedQuery
+    - @PersistenceContext
+    - @Transient
+- Hibernate interfaces
+  - Session
+  - SessionFactory
+  - Query
+  - Transaction
+  - Criteria
+    - Restrictions
+    - Projections
+- Hibernate configuration
+  - XML vs Java annotations vs Programmatic
+  - SQL dialect
+  - hbm2ddl
+  - show_sql
+- Mapping objects to database entries
+- Eager vs lazy loading
+- HQL (Hibernate Query Language)
+- JPQL (Java Persistence Query Language)
+- Caching
+  - L1 vs L2 caching
+  - Enabling L2 cache with 3rd party library
+- NamedQuery
+- Native SQL with Hibernate
+- Object states
+  - Transient
+  - Persistent
+  - Detached
+- Proxy objects
+- Dynamic Insert vs Dynamic Update
+- Automatic dirty checking
+- Transactional write-behind
+- Transaction propagation strategies
+  - Mandatory
+  - Nested
+  - Never
+  - Not supported
+  - Required
+  - Requires new
+  - Supports
+- Hibernate exceptions
+  - LazyInitializationException
+  - NonUniqueObjectException
+  - StaleStateException
+  - ConstraintViolationException
+  - MappingException
+  - SQLGrammarException

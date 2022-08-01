@@ -1,0 +1,6 @@
+2022-07-26 12:22:00 INFO  Main:26 - Car(model=Jetta, make=Volkswagen, year=2021, cylinders=6)
+2022-07-26 12:22:00 INFO  Main:26 - Car(model=Elantra, make=Hyndai, year=2016, cylinders=4)
+2022-07-26 12:22:00 INFO  Main:26 - Car(model=Camero, make=Chevy, year=2011, cylinders=8)
+2022-07-26 12:25:19 INFO  Main:26 - Car(model=Jetta, make=Volkswagen, year=2021, cylinders=6)
+2022-07-26 12:25:19 INFO  Main:26 - Car(model=Elantra, make=Hyndai, year=2016, cylinders=4)
+2022-07-26 12:25:19 INFO  Main:26 - Car(model=Camero, make=Chevy, year=2011, cylinders=8)
