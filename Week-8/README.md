@@ -566,5 +566,5 @@ For Example: `<p appText> Text inside....</p>`
 
 * [Angular Docs - Attribute directives](https://angular.io/guide/attribute-directives)
 
-   * ### []()
-   * ### []()
+   * ### [Data Binding](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Data-Binding.md)
+  
