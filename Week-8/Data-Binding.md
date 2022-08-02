@@ -1,4 +1,4 @@
-## Data Binding
+# Data Binding
 
 * In Angular, Data Binding provides the communication between a component and the DOM. 
 * It is a technique used to bind the data *from an HTML template to a Component class* or *from a Component class to an HTML template*.  
