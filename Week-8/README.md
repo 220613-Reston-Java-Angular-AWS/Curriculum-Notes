@@ -838,7 +838,7 @@ In *app.component.html* file,
 * [Angular Docs - Custom Pipes](https://angular.io/guide/pipes#custom-pipes)
 * [Custom Pipes](https://codecraft.tv/courses/angular/pipes/custom-pipes/)
 
-   * ## []()
-   * ## []()
-   * ## []()
+   * ## [Services & Dependency Injection](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Services%26DependencyInjection.md)
+   * ## [RxJS - Observables](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Observables.md)
+   * ## [RxJS - Subjects](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Subjects.md)
    
