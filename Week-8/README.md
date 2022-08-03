@@ -197,3 +197,648 @@ Webpack builds a [dependency graph](https://webpack.js.org/concepts/dependency-g
     **Click the link below to install Angular**
 
     * ### [Angular CLI](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Angular-CLI.md)
+    
+<br>
+
+# Tuesday 
+
+## Angular Components
+
+Components are the basic building blocks in the Angular application. Components contain the data & UI logic that defines the view and behavior of the web application.
+
+Components in Angular are defined using a [@Component](https://angular.io/api/core/Component) decorator. It includes a selector, template, style, and other properties, and it specifies the metadata required to process the component.
+
+Angular applications can have multiple components. Each component handles a small part of UI. These components work together to produce the complete user interface of the application. An Angular application has one **root component** (AppComponent) which is specified in the bootstrap array under the main **ngModule** module defined in the **app.module.ts** file.
+
+## `@Component` Decorator
+
+In *src/app*, we can find the below files referred to as a root component of the application.
+
+* **app.component.css** -  holds all the CSS styles 
+* **app.component.html**  -  this is template contains typical HTML elements and alters the HTML based on our app's logic and DOM manipulations. 
+* **app.component.ts** -  contains typescript code to control the component behavior.
+
+Let's have a look at the app.component.ts file under app folder and understand the code behind the root component of the application.
+
+```typescript
+import { Component } from '@angular/core';
+ @Component ({
+ selector: 'app-root',
+ templateUrl: './app.component.html' ,
+ styleUrls: ['./app.component.css']
+ })
+ export class AppComponent {
+ title = 'myfirstapp';
+ } 
+```
+In this file, we export the *AppComponent* class, and we decorate it with the `@Component` decorator, imported from the `@angular/core` package, which takes a few metadata, such as:
+
+* **selector:** A CSS selector that tells Angular to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. For example, if an app's HTML contains <app-root></app-root>, then Angular inserts an instance of the AppComponent view between those tags.
+
+* **templateUrl:** The module-relative address of this component's HTML template. Alternatively, you can provide the HTML template inline, as the value of the **template** property. 
+
+* **styleUrls:** This is an array of relative paths to where the component can find the styles used to style the HTML view. Alternatively, you can provide the CSS Style inline, as the value of the **styles** property.
+
+The template is an HTML file in Angular. Let's have a look at the app.component.html file under app folder.
+```html
+<h3> Hello World </h3>
+<p> {{ title}} app is running...</p>
+```
+The `title` inside the double curly bracket used for rendering the view. Angular looks for a title property in our component and binds the property to our view. This is called **data binding**.
+
+AppComponent uses an inline template and style to render the view of the application:
+
+```typescript
+import { Component } from ‘@angular/core’;
+ @Component ({
+ selector: 'app-root',
+ template: `
+ <h3> Hello World</h3>
+ <p> {{ title}} app is running... </p>
+ ` ,
+ styles: ['h3:{ background-color : red;}', 'p{font-weight:bold}']
+ })
+ export class AppComponent {
+    title = 'myfirstapp';
+ } 
+ ```
+
+> **Note:** In the case of a Multi-line template, you can use BackTicks/graves (`` ` ``) to enclose the template string.
+
+**How to create a component in Angular?**
+
+Run the `ng generate component <component_name>` or `ng g c <component-name>` command in the terminal to create a component
+ 
+
+For example: When we run `ng g c server` in the terminal, CLI creates a component and registers this component in the AppModule. Now, you're able to see a *server* folder inside *src/app*. This *server* folder contains 4 files - *server.component.html*, *server.component.spec.ts*, *server.component.ts* and *server.component.css*.
+
+
+## References
+
+* [Angular Docs - Introduction to components and templates](https://angular.io/guide/architecture-components)
+
+
+## Components Life Cycle Hooks
+
+Angular creates a component; renders it; creates and renders its children; checks it when it’s data-bound properties change; and destroys it before removing it from the DOM. These events are called **"Lifecycle Hooks"**. These Lifecycle hooks have eight different function calls which correspond to the lifecycle event. Every angular component has a life cycle event carried out in 2 different phases -  one linked to the component itself and the other linked to the children of that component.
+
+## Eight lifecycle hooks in Angular
+
+The below diagram illustrates the order in which the eight hooks are executed.
+
+![](./../images/hooks.png)
+
+**constructor()** - The constructor of the component class gets executed first, before the execution of any other lifecycle hook events. If we need to inject any dependencies into the component, then the constructor is the best place to do so.
+
+**ngOnChanges()** - Called whenever the input properties of the component change. It returns a *SimpleChanges* object which holds any current and previous property values.
+
+**ngOnInit()** - Called once to initialize the component and set the input properties. It initializes the component after Angular first displays the data-bound properties. 
+
+**ngDoCheck()** - Called during all change-detection runs that Angular can't detect on its own. Also called immediately after the `ngOnChanges()` method.
+
+**ngAfterContentInit()** - Invoked once after Angular performs any content projection into the component’s view.
+
+**ngAfterContentChecked()** - Invoked after each time Angular checks for content projected into the component. It's called after `ngAfterContentInit()` and every subsequent `ngDoCheck()`.
+
+**ngAfterViewInit()** - Invoked after Angular initializes the component's views and its child views.
+
+**ngAfterViewChecked()** - Invoked after each time Angular checks for the content projected into the component. a It called after `ngAfterViewInit()` and every subsequent `ngAfterContentChecked()`.
+
+**ngOnDestroy()** - Invoked before Angular destroys the directive or component.
+
+## Refereneces
+
+* [Angular Docs - Hooking into the component lifecycle](https://angular.io/guide/lifecycle-hooks)
+
+
+## @NgModule
+
+Every Angular application consists of at least one module, the root module. We bootstrap that module to launch the application.
+
+NgModules are TypeScript classes decorated with the [@NgModule](https://angular.io/api/forms/NgModel) decorator imported from the `@angular/core` package.
+
+NgModule takes metadata and describes how to compile a component's template and how to create an injector at runtime. It identifies the module's own components, directives, and pipes and makes them public through the export property which can be used by external components.
+
+The Angular CLI generates the basic *AppModule* (src/app/app.module.ts file) when creating a new application.
+
+```typescript
+// imports
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+
+// @NgModule decorator with its metadata
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
+
+`@NgModule` takes the below metadata to launch the application:
+
+* **declarations** —  contains a list of components, directives, and pipes, which belong to this module. 
+
+* **imports** —  contains a list of modules, which are used by the component templates in this module reference.  For example, we import *BrowserModule* to have browser-specific services such as DOM rendering, sanitization, and location. 
+
+* **providers** — the list of service providers that the application needs.
+
+* **bootstrap** — contains the root component of the application
+
+Angular CLI creates an application with one component (AppComponent), so it is in both the declarations and the bootstrap arrays.
+
+## Bootstrapping in Angular:
+
+The steps involved in starting an angular application:
+
+* The *main.ts* is an entry point of an angular application.
+* Then, we bootstrap an angular application and we pass *app.module.ts* as an argument. In *app.module.ts*, we tell the Angular to bootstrap the *AppComponent*.
+* Then, Angular analyzes this *AppComponent* and knows there is an `app-root` selector defined.
+* Now, Angular able to handle `app-root` in the *index.html* file.
+* Finally, the *index.html* file is loaded on the browser.
+
+## References
+
+* [Angular Docs - NgModules](https://angular.io/guide/ngmodules)
+* [Angular Docs - Launching your app with a root module](https://angular.io/guide/bootstrapping)
+
+## Angular Directives
+
+Angular directives allow us to manipulate the DOM. The directive is a marker on a DOM element that tells Angular to change the appearance, behavior, and layout of the DOM element and its children.  In Angular, most directives begin with ng, where ng stands for Angular, and extend the HTML. 
+
+### Types of Directive 
+
+There are three kinds of directives in Angular:
+
+1. **Component Directives** - Component directives alter the details of how the component should be processed, instantiated, and used at runtime. 
+
+2. **Structural Directives** - Structural directives are used to manipulate and change the structure of the DOM elements. 
+
+3. **Attribute Directives** - Attribute directives are used to change the look and behavior of the DOM elements.
+
+## Structural directives
+
+Structural directives are used for adding, removing, or manipulating DOM elements. Structural directives start with an asterisk (*) followed by a directive name.  There are three built-in structural directives - **ngIf**, **ngFor** and **ngSwitch**.
+
+### ngIf Directive
+
+The `*ngIf` directive allows us to add or remove DOM Elements based upon the Boolean expression. It doesn't hide the elements, but generally adds or removes them physically from the DOM.
+
+*Example:* 
+```html
+<p *ngIf="true">
+  Expression is true, this paragraph is in DOM.
+</p>
+<p *ngIf="false">
+  Expression is false, this paragraph is not in DOM.
+</p>
+```
+We can also have an **else block** associated with an `*ngIf` directive.
+
+*Example:*
+```html
+<div *ngIf="5>10; else elseBlock">  
+5 is greater than 10....
+</div>  
+<ng-template #elseBlock>  
+10 is greater than 5... 
+</ng-template>  
+```
+
+### ngFor Directive
+
+ The `*ngFor` directive is used to repeat a part of the HTML template once per each item from an iterable list.
+
+ For example, we can iterate an array items defined in *app.component* class.
+ ```typescript
+ import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  customers : Customer[] = [
+    {id : 234 , name: 'John'},
+    {id : 235 , name: 'Adam'},
+    {id : 236 , name: 'Nick'}
+  ];
+}
+class Customer { 
+  id :number;
+  name: string;
+} 
+```
+In app. component.html, iterate over the *customers* object using `*ngFor` directive.
+```html
+<tr *ngFor="let customer of customers;">
+  <td>{{customer.id}}</td>
+  <td>{{customer.name}}</td>   
+</tr>
+```
+
+### ngSwitch Directive
+
+The Angular *NgSwitch* has a set of cooperating directives: **NgSwitch**, **NgSwitchCase**, and **NgSwitchDefault**.
+
+The syntax for `ngSwitch` Directive:
+```html
+<container_element [ngSwitch]="switch_expression">  
+    <inner_element *ngSwitchCase="match-1">...</inner_element>  
+    <inner_element *ngSwitchCase="match-2">...</inner_element>  
+    <inner_element *ngSwitchCase="match-3">...</inner_element>  
+    <inner_element *ngSwitchDefault>...</inner_element>  
+</container_element>
+``` 
+*NgSwitch* is an attribute directive that controls the behavior of the other two switch structural directives - *NgSwitchCase* and *NgSwitchDefault*. That's why we write *NgSwitch* as `[ngSwitch]`, *NgSwitchCase* as `*ngSwitchCase`, and *NgSwitchDefault* as `*ngSwitchDefault`.
+
+*NgSwitchCase* displays its element when its value matches the switch value. *NgSwitchDefault* displays its element when no sibling *NgSwitchCase* matches the switch value.
+
+*Example:*
+```html
+<div class = 'input-num'>
+Enter the number<input type='text' [(ngModel)]="num" />
+</div>
+<div [ngSwitch]="num">
+  <div *ngSwitchCase="'1'">You entered - One</div>
+  <div *ngSwitchCase="'2'">You entered - Two</div>
+  <div *ngSwitchCase="'3'">You entered - Three</div>
+  <div *ngSwitchCase="'4'">You entered - Four</div>
+  <div *ngSwitchCase="'5'">You entered - Five</div>
+  <div *ngSwitchDefault> ...default </div>
+</div>
+```
+
+
+### `<ng-template>`  
+
+Structural directives can work with the HTML5 `<ng-template>` element, which is designed to hold template code. 
+
+*Example:*
+```html
+<ng-template [ngIf]='true'>
+  <p>I am the content to show</p>
+</ng-template>
+```
+
+## References
+
+* [Angular Docs - Structural directives](https://angular.io/guide/structural-directives)
+
+
+## Attribute Directives
+
+Attribute directives are used to change the look and behavior of the DOM elements.There are two built-in attribute directives - **ngClass** and **ngStyle**.
+
+### ngClass Directive
+
+The `[ngClass]` directive is used for adding or removing the CSS classes on an HTML element. It allows us to apply CSS classes dynamically based on expression evaluation. 
+
+**Syntax:** `<some-element [ngClass]="value"> ....</some-element>`
+
+The value can be 
+* **string** - the CSS classes declared as string. For example, `<some-element [ngClass]="'first second'">...</some-element>` where `first` and `second` are the two CSS Classes delimited by space. Both the `first` and `second` CSS style will be applied to the element.
+
+* **Array** - the CSS classes declared as Array elements. For example,`<some-element [ngClass]="['first', 'second']">...</some-element>` 
+
+* **Object** - in which *keys* are CSS classes and *values* are expression that  evaluates true or false.  The CSS Class applied to the element when the expression evaluates a truthy value, else they will be removed. For example,`<some-element [ngClass]="{'first': true, 'second': true, 'third': false}">...</some-element>`
+
+**Example:**
+The CSS classes in the *app.component.css* file:
+```css
+.red { 
+    background-color: red;
+}
+.size20 {
+    font-size: 20px; 
+    font-style: italic;
+}
+```
+Using `[ngClass]` directive in the *app.template.html* file, to add or remove CSS Classes on the element.
+```html
+<h3 [ngClass]="'red'"> Need your attention</h3>
+<div [ngClass]="['red','size20']"> Red Background, Text with Size 20px  </div>
+<div [ngClass]="{'red':false,'size20':true}">Text with Size 20px</div>
+ ```
+
+### ngStyle Directive
+
+The `[ngStyle]` directive allows us to dynamically change the style of HTML element based on the expression.
+
+**Syntax:** `<some-element [ngStyle]="objExp">...</some-element>`
+
+**Example:**
+```html
+Enter the username: <input type = 'text' [(ngModel)] = 'name'>
+<div [ngStyle]="{'background-color':username === 'Admin' ? 'green' : 'red' }"></<div>
+```
+
+### Custom Directives
+
+We can create our custom directives to use in the Angular component with the CLI command `ng generate directive <name of the directive>`.
+
+**For example**, When we run this command `ng generate directive text` in a terminal, the CLI creates *text.directive.ts* file and corresponding test file *text.directive.spec.ts* under *src/app* folder in our application. Also, CLI declares this directive class under *AppModule*.
+
+Lets have a look at text.directive.ts file.
+```typescript
+import { Directive} from '@angular/core';
+
+@Directive({
+  selector: '[appText]'
+})
+export class TextDirective {
+	//You can add custom styling of DOM Elements here....
+    constructor() {
+    
+    }
+}
+```
+
+Then, you use this directive in the template of the root AppComponent and apply the directive as an attribute. 
+
+For Example: `<p appText> Text inside....</p>`
+
+## References
+
+* [Angular Docs - Attribute directives](https://angular.io/guide/attribute-directives)
+
+   * ### [Data Binding](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Data-Binding.md)
+  
+  <br>
+  
+# Wednesday 
+
+## Pipes
+
+Pipes provide a way to transform values in an Angular template. Pipes are used with a Pipe (`|`) character, and take integers, strings, arrays, and date as input and returns a desired formatted output which can be displayed in the browser.
+
+For example, a Date object shows the date in this format: `Sat Aug 03 2019 19:48:11 GMT+0530 (India Standard Time)` which is not easy for the normal users to understand. It’s better to have the date in this format `Saturday, 03 Aug 2019 07:50 PM`. This can be achieved using pipes. 
+
+**Syntax:** `{{title | uppercase}}`
+
+![](./../images/pipes.png)
+
+Pipes can be easily used in HTML templates. For example,
+
+```typescript
+lastLoggedInTime = new Date(2018, 5, 25);
+```
+Here, the difference in using pipes.
+
+```html
+<h3> Without date Pipe </h3>
+<div>
+    Last Logged in @ {{lastLoggedInTime}}
+    <!-- OUTPUT  Last Logged in @ Mon Jun 25 2018 11:48:11 GMT+0530 (India Standard Time) -->
+</div>Copy
+<h3> With date Pipe </h3>
+<div>
+    Last Logged in @ {{lastLoggedInTime | date}}
+    <!-- OUTPUT  Last Logged in @ Jun 25, 2018 -->
+</div>
+```
+### Parameterizing a pipe
+
+Pipes accept the any number of optional parameters to fine-tune their output. To add parameters to a pipe, follow the pipe name with a colon ( : ) and then the parameter value. For example,
+
+```html
+<p>Date Of birth : {{ birthday | date:"MM/dd/yy" }} </p>
+<!-- OUTPUT Date Of birth : 05/19/87 -->
+```
+### Chaining pipes
+
+We can chain pipe together in effective combinations. For example,
+
+```html
+<p>Date Of birth : {{ birthday | date | uppercase}} </p>
+<!-- OUTPUT Date Of birth : MAY 19, 1997 -->
+```
+
+### Built-in pipes
+
+Angular has the following built-in pipes:
+
+* **Date pipe** - Used for formatting dates.
+
+* **Decimal pipe** - Used for formatting numbers. 
+The syntax for Decimal Pipe: `{{ value_expression | number : digitInfo }}` where, `digitInfo` is optional. 
+The represntaion of `digitInfo`: `{minIntegerDigits}.{minFractionDigits}-{maxFractionDigits}`.
+Where,
+`minIntegerDigits` - minimum integers before the decimal point (default is 1).
+`minFractionDigits` - minimum digits after the decimal point (default is 0).
+`maxFractionDigits` - maximum after the decimal point (default is 3).
+If `minFractionDigits` and `maxFractionDigits` value is 0, then the number is rounded off to nearest value.
+*Example:*
+```html
+<p>{{3.676 | number}}</p>
+<!--output '3.676'-->
+<p>{{ 3.67 | number:'3.4-6'}}</p>
+<!--output '003.1400'-->
+<p>{{-2.5 | number:'1.0-0'}}</p>
+<!--output '-3'-->
+```
+
+* **Currency pipe** - Used for formatting currencies.
+*Example:*
+```html
+<p>{{75 | currency}}</p>
+<!-- output '$75.00' --> 
+
+<p>A: {{ 75 | currency:'CAD'}}</p>
+<!-- output 'CA$75.00' -->
+
+<p>A: {{ 75 | currency:'CAD':'code'}}</p>
+<!-- output 'CAD75.00' -->
+```
+
+* **Percent pipe** - Used for formatting percentage values.
+*Example:*
+```html
+<p>{{ 26 | percent}}</p>
+<!--output '26%'-->
+
+<p>{{ 134.95 | percent:'4.3-5'}}</p>
+<!--output '134.950%'-->
+```
+
+* **Slice pipe** - Used for Slicing strings.
+*Example:*
+```html
+<p>{{'abcdefghij' | slice:0:4}} </p>
+<!-- output 'abcd' -->
+
+<p>{{'abcdefghij' | slice:4:0}} </p>
+<!-- output '' -->
+
+<p>{{'abcdefghij' |slice:-4}} </p>
+<!-- output 'ghij' -->
+```
+
+* **Lowercase pipe** - Used for converting strings into lowercase.
+*Example:*
+```html
+<p>{{'tHIs is sUndAY' | lowercase}}</p> 
+<!-- output "this is sunday" --> 
+```
+* **Uppercase pipe** - Used for converting strings into uppercase.
+*Example:*
+```html
+<p>{{'tHIs is sUndAY' | uppercase}}</p> 
+<!-- output "THIS IS SUNDAY" --> 
+```
+* **Titlecase pipe** - Used for converting strings into title case.
+*Example:*
+```html
+<p>{{'tHIs is a sUndAY' | titlecase}}</p> 
+<!-- output "This Is Sunday" --> 
+```
+* **Json pipe** - Used for Converting values into a JSON-format representation. 
+*Example:*
+```typescript
+@Component({
+  selector: 'json-pipe',
+  template: `<div>
+    <p>With JSON pipe: {{object | json}} </p>
+    <!-- With JSON pipe: { "foo": "bar",  "xyz": 3, "numbers": [ 1, 2, 3, 4, 5 ]  } --> 
+
+    <p>Without JSON pipe: {{object}} </p>
+    <!-- Without JSON pipe: [object Object] -->
+  </div>`
+})
+export class JsonPipeComponent {
+  object: Object = { "foo": "bar",  "xyz": 3, "numbers": [ 1, 2, 3, 4, 5 ]};
+}
+```
+* **Async Pipe**  - Used for unwrapping values from an asynchronous primitive. The async pipe subscribes to an *Observable* or *Promise* and returns the latest value it has emitted. 
+*Example: Here, we bind the Promise with the template. Clicking the Resolve button resolves the promise.*
+```typescript
+@Component({
+  selector: 'async -pipe',
+  template: `<div>
+    <h3> Async Pipes for Promise</h3>
+    <button (click)="clicked()">{{ arrived ? 'Reset' : 'Resolve' }}</button>
+    <p>Wait for it... {{ logMessage | async }}</p>
+  </div>`
+})
+export class AsyncPipeComponent {
+  logMessage: Promise<string>|null = null;
+  arrived: boolean = false;
+ 
+  private resolve: Function|null = null;
+ 
+  constructor() { this.reset(); }
+ 
+  reset() {
+    this.arrived = false;
+    this.logMessage = new Promise<string>((resolve, reject) => { this.resolve = resolve; });
+  }
+ 
+  clicked() {
+    if (this.arrived) {
+      this.reset();
+    } else {
+      this.resolve !('Hello User!!!!');
+      this.arrived = true;
+    }
+  }
+}
+```
+
+## References
+
+* [Angular Docs - Pipes](https://angular.io/guide/pipes)
+* [Built-In Pipes](https://angular.io/guide/pipes)
+
+### Custom Pipes
+
+We can create custom pipes using the `ng g pipe <pipe-name>` command in the terminal with the Angular CLI.
+
+**For example**, we create a custom pipe to count words by running the `ng g pipe wordcount` command in the terminal. The CLI creates 2 files - *wordcount.pipe.spec.ts* and *wordcount.pipe.ts* under *src/app* folder and updates the *app.module.ts* file.
+
+**app.module.ts**
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+// Custom Pipe imported here by Angular CLI
+import { WordcountPipe } from './wordcount.pipe';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    WordcountPipe  
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+In *wordcount.pipe.ts* file, we write the logic for word count.
+
+```typescript
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({name: 'wordcount'})
+export class WordcountPipe implements PipeTransform {
+  transform(value: any, args?: any): number {
+    return value.trim().split(' ').length;
+  }
+}
+```
+
+* We import the `@Pipe` decorator from the core Angular library. If the Class is decorated with the `@Pipe` decorator, Angular knows that class is a pipe.
+
+* In the `@Pipe` decorator, we define the pipe *name* that used within template expressions. 
+
+* The pipe class implements the **PipeTransform** interface to perform a transformation.
+
+* There is a **transform** method that accepts an input value followed by optional parameters and returns the transformed value.
+
+```typescript
+interface PipeTransform {
+  transform(value: any, ...args: any[]): any
+}
+```
+In *app.component.html* file,
+```html
+<p> {{ "Angular is an application design framework" | wordcount}} </p>
+<!--output '6' -->
+```
+
+We can have additional arguments to the **transform** method for each parameter passed to the pipe.
+
+*Example:*
+```typescript
+@Pipe({name: 'powerUp'})
+export class powerUpPipe implements PipeTransform {
+  transform(value: number, power?: number): number {
+    return Math.pow(value, isNaN(power) ? 1 : power);
+  }
+}
+```
+In *app.component.html* file,
+```html
+<p> {{ 2 | powerUp }} </p>
+<!--output '2' -->
+<p> {{ 2 | powerUp : 3}} </p>
+<!--output '8' -->
+<p> {{ 5 | powerUp : 2}} </p>
+<!--output '25' -->
+```
+
+## References
+
+* [Angular Docs - Custom Pipes](https://angular.io/guide/pipes#custom-pipes)
+* [Custom Pipes](https://codecraft.tv/courses/angular/pipes/custom-pipes/)
+
+   * ## [Services & Dependency Injection](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Services%26DependencyInjection.md)
+   * ## [RxJS - Observables](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Observables.md)
+   * ## [RxJS - Subjects](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Subjects.md)
+   
