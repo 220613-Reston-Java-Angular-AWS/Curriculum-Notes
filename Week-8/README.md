@@ -1429,4 +1429,4 @@ describe('Cat Helper', function() {
 ## Karma
 Karma is a tool that allows you to execute source code against test code for multiple browsers. Essentially, it runs your web-based JavaScript unit tests against browsers. It will even watch your code and rerun the tests if the code changes. Once the code has executed, it will present the results to the developer. One of the more popular frameworks for unit testing with Karma is Jasmine. 
 	
-	* ## [Testing in Angular w/ Jasmine & Karma ](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Testing-in-Angular-with-Jasmine%26Karma.md)
+   * ## [Testing in Angular w/ Jasmine & Karma](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Testing-in-Angular-with-Jasmine%26Karma.md)
