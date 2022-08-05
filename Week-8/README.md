@@ -1216,5 +1216,217 @@ getCats(): Observable<Cat[]> {
 }
 ```
 
-   * ## [Routing](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-8/Routing.md)
-   * ## [Routing guards](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-8/Routing-guards.md)
+   * ### [Routing](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-8/Routing.md)
+   * ### [Routing guards](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-8/Routing-guards.md)
+	
+# Friday 
+
+## JavaScript Unit Testing with Jasmine
+
+#### References
+* [Getting started - docs](https://jasmine.github.io/setup/nodejs.html)
+* [Test suite tutorial](https://jasmine.github.io/tutorials/your_first_suite)
+
+### Jasmine unit testing
+
+Jasmine is a JavaScript library for unit testing. It has a simple API that lets you declare test suites and test cases and perform assert statements.
+
+Once you install Jasmine and 
+configure it properly, you get access to a few helpful testing functions: `describe()` for declaring test suites, `it()` for individual test cases
+(or specs), and `expect()` for asserting conditions. Let's look at a simple example.
+
+```javascript
+function sumOfArray(arr) {
+  let sum = 0;
+  for (let i=0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+describe('test of sum function', () => {
+  it('should sum properly', () => {
+    let arr = [3,6,2,1];
+    expect(sumOfArray(arr)).toEqual(12);
+  });
+});
+```
+
+As you can see, both `describe` and `it` functions take a string description and a callback function as parameters. There are also other functions
+we can use such as `beforeEach`, `beforeAll`, `afterEach`, and `afterAll`. These run before and after either the entire test suite or individual test cases.
+
+Finally, there are other assert methods that can be used and combined for more complex asserts. You can check the Jasmine documentation for more information.
+
+### Setup
+*This guide assumes you have node.js set up.*
+
+We're going to create an application, we'll call the CatApp. We'll talk about the code in this repository later, but for now, let's just examine the project directory:
+
+```
+CatApp
+ |- app
+ |  |- app.js
+ |  |- catHelper.js
+ |  |- catService.js
+ |- README.md
+```
+
+Our first step is to install Jasmine. We're going to install Jasmine as part of our project. The command to install Jasmine locally to our project is `npm install --save-dev jasmine`. The `--save-dev` is important to ensure that the Jasmine code is not packaged with your production application.
+
+Next we want to set up some folders for our tests to live in. Fortunately, Jasmine has the ability to do this for you. Run the command `npx jasmine init`.
+
+Let's take another look at our project:
+```
+CatApp
+ |- app
+ |  |- app.js
+ |  |- catHelper.js
+ |  |- catService.js
+ |- node_modules
+ |- spec
+ |  |- support
+ |  |  |-jasmine.json
+ |- package-lock.json
+ |- README.md
+```
+You see that the command has created a `spec` folder that includes a Jasmine configuration file, `jasmine.json`. The default configuration specifies that our testing files should end in `spec.js`.
+
+### Specs
+In Jasmine, a testing file is called a spec. Within the spec file, we can create our test suites with our tests in them. We can run our specs with the command `npx jasmine`.
+
+Example:
+
+```
+CatApp
+ |- app
+ |  |- app.js
+ |  |- catHelper.js
+ |  |- catService.js
+ |- node_modules
+ |- spec
+ |  |- support
+ |  |  |-jasmine.json
+ |  |- helper.spec.js
+ |- package-lock.json
+ |- README.md
+```
+_catHelper.js_:
+```JavaScript
+const service = require('./catService');
+
+function changeColor(cat, color) {
+    cat.color = color;
+}
+
+function printCat(cat) {
+    return cat.name + ' is ' + cat.color;
+}
+
+function getCatList() {
+    return service.getCats().then(data => {
+        data.forEach(element => {
+            element.color = element.color.toUpperCase();
+        });
+        return data;
+    });
+}
+
+exports.changeColor = changeColor;
+exports.printCat = printCat;
+exports.getCatList = getCatList;
+```
+
+_helper.spec.js_
+```JavaScript
+let catHelper = require('../app/catHelper');
+
+describe('Cat Helper', function() {
+    let cat;
+
+    beforeEach(function() {
+        cat = {name: 'Happy', color: 'Blue'};
+    });
+
+    it('returns the name of the cat and the color of the cat', function() {
+        let expected = 'Happy is Blue';
+        expect(catHelper.printCat(cat)).toBe(expected);
+    })
+  
+    it('Changes the color of the cat to the given color.', function() {
+        catHelper.changeColor(cat, 'Black');
+        expect(cat.color).toBe('Black');
+    })
+});
+```
+
+In the above example, we used the `beforeEach()` function to run a function prior to every test.
+## Spies
+Here's what our `catService.js` looks like:
+```JavaScript
+const fetch = require('node-fetch');
+
+async function getCats() {
+    return await fetch('https://localhost:8080/cats').then((response) => {
+        return response.json();
+    });
+}
+
+exports.getCats = getCats;
+```
+We can't really test this code, or any code that relies upon it because we don't have access to the server that this code is attempting to retrieve data from. In the previous example, in `catHelper.js`, we have a function called `getCatList`. All getCatList seems to do is change the color to all-caps. To test that code, we'll need to mock this service. Fortunately, we can mock our services using `spies`.
+
+In Jasmine, a `spy` is an object that "spies" upon any and all calls to a specific function. When we make a call to that function, the spy will step in and do whatever we tell it to do.
+
+Here's an example. Note that we have added a `afterEach()` to tear down our objects after each test.
+
+```JavaScript
+let catHelper = require('../app/catHelper');
+let catService = require('../app/catService');
+
+describe('Cat Helper', function() {
+    let cat;
+    let catList = [];
+
+    beforeEach(function() {
+        cat = {name: 'Happy', color: 'Blue'};
+        catList.push({name: 'Happy', color: 'Blue'});
+        catList.push({name: 'Happy', color: 'Blue'});
+        catList.push({name: 'Happy', color: 'Blue'});
+
+        spyOn(catService, "getCats").and.returnValue(
+            Promise.resolve(catList)
+        );
+    });
+
+    afterEach(function() {
+        cat = null;
+        catList = [];
+    })
+
+    it('returns the name of the cat and the color of the cat', function(done) {
+        let expected = 'Happy is Blue';
+        expect(catHelper.printCat(cat)).toBe(expected);
+        done();
+    })
+  
+    it('Changes the color of the cat to the given color.', function(done) {
+        catHelper.changeColor(cat, 'Black');
+        expect(cat.color).toBe('Black');
+        done();
+    })
+
+    it('returns three cats with the color "BLUE"', function(done) {
+        catHelper.getCatList().then(data => {
+            expect(data.length).toBe(3);
+            data.forEach((cat) => {
+                expect(cat.color).toBe('BLUE');
+            });
+            done();
+        });
+    })
+});
+```
+## Karma
+Karma is a tool that allows you to execute source code against test code for multiple browsers. Essentially, it runs your web-based JavaScript unit tests against browsers. It will even watch your code and rerun the tests if the code changes. Once the code has executed, it will present the results to the developer. One of the more popular frameworks for unit testing with Karma is Jasmine. 
+	
+   * ## [Testing in Angular w/ Jasmine & Karma](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/newMain/Week-8/Testing-in-Angular-with-Jasmine%26Karma.md)
