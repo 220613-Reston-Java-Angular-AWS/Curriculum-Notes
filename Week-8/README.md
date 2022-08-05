@@ -1216,5 +1216,5 @@ getCats(): Observable<Cat[]> {
 }
 ```
 
-   * ## []()
-   * ## []()
+   * ## [Routing](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-8/Routing.md)
+   * ## [Routing guards](https://github.com/220613-Reston-Java-Angular-AWS/Curriculum-Notes/blob/main/Week-8/Routing-guards.md)
