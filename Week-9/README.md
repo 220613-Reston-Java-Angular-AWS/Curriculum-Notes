@@ -7,7 +7,7 @@ Resources associates can use to lookup information about the technology
 ## AWS Elastic Compute Cloud (EC2)
 Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
 
-[](./../images/ec-2.pg)
+[](./../images/ec-2.png)
 
 ##### Amazon EC2 provides:
 * Virtual computing environments, known as instances
