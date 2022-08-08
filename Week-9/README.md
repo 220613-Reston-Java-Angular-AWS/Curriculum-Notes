@@ -260,4 +260,4 @@ You can use Amazon S3 to host a static website. On a *static website*, individua
 
 ### References
 * [S3 Documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html)
-* [Configuring a bucket as a static website using the AWS Management Console]
+* [Configuring a bucket as a static website using the AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html)
