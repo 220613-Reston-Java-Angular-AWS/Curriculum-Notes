@@ -1193,6 +1193,3 @@ You can launch different types of instances from a single AMI. An instance type 
 ### References
 * [AWS EC2 Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
 
-   * ### []()
-   * ### []()
-   * ### []()
