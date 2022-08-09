@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<!-- the double curly braces are Angular's interpolation binding syntax
+this binding property makes available this app components 'title' property
+in our html header tag -->
+<!-- <app-heroes></app-heroes>  we ar enotlonger using this element becuase we will replace
+it with the router outlet-->
+<nav>
+  <!-- a 'routerLink' attribute has to be set to a string that matches an existing path -->
+  <a routerLink="/heroes"> Heroes </a>
+  <br>
+  <br>
+  <a routerLink="/dashboard"> Dashboard </a>
+</nav>
+
+<router-outlet></router-outlet>
+<app-messages></app-messages>
