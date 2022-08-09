@@ -1,0 +1,70 @@
+<!-- <h2>{{hero.name}}'s Details</h2>  -->
+<!-- {{propertyname from component.ts file}} this is one way binding -->
+<!-- <div> <span> id:</span> {{hero.id}}</div>
+<div> <span> name:</span> {{hero.name | uppercase}}</div> -->
+<!-- Pipes are a good way to format strings, currency, dates, and others datas to be displayed -->
+
+
+<!-- <div>
+    <label for="name"> Hero name: </label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="name"> -->
+    <!-- [(ngModel)] lives in the FormsModule , this is how we are able to achieve two-way-binding
+    it is achieved by combining property binding and event binding -->
+<!-- </div> -->
+
+<h2> My Heroes</h2>
+
+<!-- this is where we can add a new hero -->
+
+<div> 
+    <label for="new-hero"> Hero Name: </label>
+    <input id="new-hero" #heroName/>
+
+    <!-- button with a click event that will pass the value to the add method then clear the input -->
+    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''"> 
+        Add Hero
+    </button>
+</div>
+
+
+<!-- // this is the list of all heroes -->
+
+<ul class="heroes">
+
+    <!-- here we are using the *ngFor repeating structural directive to create a list element for every hero in heroes -->
+    <li *ngFor="let hero of heroes">
+
+        <!-- 'class binding' can add or remove a CSS class conditionally -->
+        <!-- <button [class.selected]=" hero === selectedHero" type="button" (click)="onSelect(hero)">
+            <span class="badge"> {{hero.id}}</span>
+            <span class="name"> {{hero.name}} </span>
+        </button> we removed the button becuase we introduced routing -->
+
+        <a routerLink="/detail/{{hero.id}}">
+            <span class="badge"> {{hero.id}}</span>
+            {{hero.name}}
+        </a>
+        <button type="button" class="delete" title="delete hero" (click)="delete(hero)">X</button>
+    </li>
+
+</ul>
+
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail>  we are commenting out this element becuase we introduced routing-->
+<!-- above is an example of property binding which falls under 'one way binding'  -->
+
+<!-- instead of having the code below display the hero's details, weve created a hero-detail component 
+    and we are declaring that the components hero will be the selected hero on this hero component -->
+
+<!--adding a hero section  -->
+<!-- 
+<div *ngIf="selectedHero">
+
+    <h2> {{selectedHero.name | uppercase}}'s Details</h2>
+    <div> id: {{selectedHero.id}}</div>
+
+    <div>
+        <label for="hero-name"> Hero name: </label>
+        <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+    </div>
+
+</div> -->
