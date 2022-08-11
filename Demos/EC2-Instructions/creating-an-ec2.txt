@@ -1,0 +1,51 @@
+# Creating an EC2 instance in the free tier
+
+this guide will help you create an EC2 instance that will be free if you are still within the free tier (1 year). be careful to only have one EC2 instance running at a time to avoid charges.
+
+1. navigate to the AWS management console.
+2. navigate to the EC2 page. (click "services" at the top and search EC2)
+3. on the left sidebar, find "Instances" under "Instances" and click that.
+4. click the orange "launch instances" button.
+5. give your EC2 a name. this is just its display name in AWS; it doesn't mean anything anywhere else.
+6. first you'll choose an AMI. we'll use the free tier Amazon Linux 2 AMI (Kernel 5.10).
+7. next, you'll choose an instance type. the only free tier option is t2.micro, so make sure this is the one you choose.
+8. next you'll make a key pair. if you choose `Create new key pair`, you'll be prompted to download a private key file (`.pem`). **do not lose this file or you will not be able to access your EC2 anymore**. you will not have another opportunity to download it ever again, so keep it safe.
+    - **make sure that you never push a private key file to a public location (like a git repository).** not only does this put your EC2 at risk, it also may flag AWS that your key was compromised and they will invalidate it, so you will have to terminate your EC2 instance and make a new one.
+rsa is more sommon and is usually supported on all os's
+9. next, you'll set up network settings. this allows you to set up initial inbound rules for your EC2's security group. you can use one that already exists (if you have one on your RDS, it might be easiest to just use that one and add rules as needed) or just create a new one here. choose to allow SSH (a network protocal that is different from hhtp but does similar actions)from your IP only to keep it as secure as possible,
+ then choose `Allow HTTP traffic from the internet` so that your deployed web application will be accessible.
+    - **IT IS VERY IMPORTANT TO RESTRICT ACCESS TO YOUR EC2!!! DON'T LET SOMEONE HACK INTO YOUR EC2 AND START MINING CRYPTO OR SOMETHING AND RACKING UP HUGE CHARGES ON YOUR AWS BILL!!! YOU WILL BE VERY SAD!!!** i highly recommend that you do NOT ever let your SSH inbound rule be set to all traffic/0.0.0.0/0, in order to keep your EC2 secure. make sure it is restricted to ONLY your IP, and trusted people if necessary. yes, you need to have the `.pem` key to access it, but if anything happens to that file and you don't have your SSH rule restricted, someone could get into your EC2. better safe than sorry with things like this.
+10. next, you'll configure storage. this is where we can set up initial EBS volumes (storage) for our EC2. the default is a general purpose SSD at 8GB. you can get up to 30GB within the free tier, but we don't really need that, so you can leave it as the default if you want to.
+11. there is nothing we need in the Advanced details right now. click "Launch instance" (orange button).
+12. now, wait a few minutes for your EC2 to launch. go back to the Instances page and you may need to refresh a few times until the instance state is "running".
+13. now, you can SSH into your EC2 instance!
+
+## Connecting to your EC2
+
+1. from the EC2 instances page, go to your instance and find/copy either the public IP or public DNS.
+2. if you are on a Mac, open up your terminal. if you are on Windows, open up Git Bash (or use PuTTY or another SSH client if you prefer).
+3. run the following command to connect to your EC2:
+``` sh
+ssh -i path-to-your-private-key-file.pem ec2-user@EC2.IP.ADDRESS.OR.DNS
+```
+for example, i might have something like this:
+``` sh
+ssh -i Documents/my-key.pem ec2-user@11.111.11.111
+```
+4. you may get a warning that your private key file permissions are too open. if so, run this to change the permissions so that only the owner of the file can read it (with no write or execute access). `chmod 400 path-to-your-private-key-file.pem` then, try running the command in step 3 again.
+5. you should now be connected to your EC2! if you got a timeout, you may want to make sure your SSH inbound rule in your EC2's security group is correctly open to your IP.
+6. once you're connected, update your EC2 using the following command:
+```
+sudo yum update
+```
+7. you're in! feel free to try out maneuvering around your EC2's file system, creating files/folders, etc. to get used to it and practice unix commands.
+
+## Terminating an EC2 instance
+
+when you're all done with your EC2 (maybe after you've deployed your application and presented it, or just after you've tested it all out and explored if someone else on your team is doing the deployment part), you'll need to terminate it to help avoid charges. EC2s generally aren't too expensive, especially t2.micro instances (i have some small apps running that total like, $8 a month), but why pay for something you're not even using?
+
+1. navigate to the AWS management console and go to the EC2 page. click on Instances.
+2. click on the instance ID of the instance you want to terminate.
+3. drop down "Instance state" in the top right.
+4. choose "Terminate instance".
+5. it will ask you to confirm. click Terminate.

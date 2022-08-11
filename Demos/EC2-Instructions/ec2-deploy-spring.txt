@@ -1,0 +1,63 @@
+# Manually deploying a Spring Boot app
+
+
+# push spring boot demos up to personal githubs  *****
+
+this guide will help you deploy your Spring Boot web app on an EC2.
+
+//move pem file from download to documents ***
+
+1. SSH into your EC2.
+``` sh
+ssh -i PATH-TO-KEY.pem ec2-user@IP-OR-DNS-OF-YOUR-EC2 // once were still in the instance dont worry about this
+```
+//this command is available in aws .. go to 'connect to instance' then 'ssh client'
+2. Make sure that you've updated everything.
+``` sh
+sudo yum update
+```
+3. Install Java, Maven, and Git on your EC2 using the yum package manager.
+``` sh
+# java 8
+sudo 
+
+# maven
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+sudo yum install -y apache-maven
+
+# git
+sudo yum install git -y
+```
+4. Next, we'll use Git to pull our web app.
+``` sh
+# if you haven't cloned it yet
+git clone https://github.com/YOUR-ORG-OR-USERNAME/YOUR-PROJECT.git
+
+# if you already have and you're pulling changes
+cd YOUR-PROJECT/
+git pull origin main
+```
+5. If you were using a .gitignore to ignore your application.properties, you will need to re-create that file again locally on the EC2.
+``` sh
+touch ~/YOUR-PROJECT/src/main/resources/application.properties
+
+# open the file with your text editor of choice:
+nano ~/YOUR-PROJECT/src/main/resources/application.properties
+vim ~/YOUR-PROJECT/src/main/resources/application.properties
+
+```
+use vim because it is easier to work with u can copy nd paste the text in
+then us ':x' to save and quit
+6. Now, we can run the application using Maven with the Spring Boot plugin.
+``` sh
+mvn spring-boot:run 
+```
+    - Note: this will run the app in the background. It will print the process ID which you can save so that you can easily stop it later by running `kill -9 PROCESS-ID-HERE || true`
+9. Your application is running now! Go and add a Custom TCP rule for port 8080 on your EC2's security group that allows All traffic (ipv4).
+10. You can send requests to your app using the public IP or DNS from your computer.
+    - the URL will be something like `11.111.11.111:8080/pets`
+
+click blue link on ec2 to get security groups
+
+11. Make sure that your EC2 has access to the RDS that it's using so that your application can connect to the database. See the [EC2 to RDS communication guide](./ec2-to-rds-comm.md) to set this up if you haven't already. You only need the first section; everything else is optional.
