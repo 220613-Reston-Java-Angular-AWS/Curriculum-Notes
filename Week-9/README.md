@@ -317,7 +317,7 @@ Development principle which focuses on the automation of the Dev Ops pipeline to
 ## Continuous Deployment
 Development principle which automates all phases of the Dev Ops Pipeline.
 
-![DevOps Concepts - Visualized](./DevOps.png)
+![DevOps Concepts - Visualized](./../images/DevOps.png)
 
 <br> 
 
