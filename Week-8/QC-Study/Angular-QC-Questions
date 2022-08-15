@@ -1,0 +1,55 @@
+# Angular QC Questions
+
+1.  What makes a “single page application” (SPA) different from a normal web page?
+    
+2.  Explain the difference between server-side and client-side rendering
+    
+3.  What are some features of the Angular framework?
+    
+4.  How does TypeScript relate to JavaScript? What are the major benefits of using it over JavaScript?
+    
+5.  List the data types of TypeScript
+    
+6.  How would you create a new Angular project?
+    
+7.  What is a component? How would you create one? List some other commands using the Angular CLI
+    
+8.  What files make up a component? What is the “spec” file used for?
+    
+9.  Explain the relevance of npm to Angular projects. Which file does npm use to track dependencies?
+    
+10.  List some decorators for Angular apps
+    
+11.  What is the lifecycle of a component? List some lifecycle hooks
+    
+12.  What is a directive and what are the different types? How to tell these directives apart with syntax?
+    
+13.  What is the benefit of using a directive like NgClass over the class attribute, or even property binding to the class attribute?
+    
+14.  What is a pipe? A service?
+    
+15.  How would you create a custom pipe? What about a service?
+    
+16.  How does dependency injection work in Angular?
+    
+17.  What is an Angular module? What properties should you set inside it?
+    
+18.  What’s the difference between a JavaScript module and Angular module? What are some common Angular modules?
+    
+19.  How would you lazy load a module?
+    
+20.  How have you used the HttpClient? What methods does it have and what do they return?
+    
+21.  What is an Observable? What’s the difference between it and a Promise?
+    
+22.  What forms of data binding does Angular support? Explain the syntax for each
+    
+23.  What does Webpack do for your ng project?
+    
+24.  How would you implement routing in your project?
+    
+25.  What is an EventEmitter and when would you use one?
+    
+26.  What’s the difference between using reactive and template-driven forms? How would you setup each?
+    
+27.  How would you run your unit tests for an Angular project?

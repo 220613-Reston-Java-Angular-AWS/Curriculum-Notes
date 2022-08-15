@@ -1,0 +1,77 @@
+# EC2 to RDS Communication
+
+when you have an EC2 running an application that needs to interact with an RDS database, there are some steps that need to be taken in order for the EC2 to have access to the RDS.
+
+## Configuring the Security Group
+
+security groups are a way of configuring groups of IP addresses and how they are allowed to access your AWS resource. in this case, we will set an inbound rule (meaning that it is a rule about incoming traffic) that allows requests to come in from your EC2 if they are coming into a particular port (in this case, the port at which your database is accepting traffic - for example, a PostgreSQL database is running on port 5432 by default.)
+
+1. navigate to the EC2 page on the AWS console.
+2. click Instances, then click on the instance ID for your EC2 that you want to use to access the RDS.
+3. you should see a **private IPv4 address**. copy this.
+4. navigate to the RDS page on the AWS console.
+5. click DB Instances, then click on the DB identifier for the database you want to access.
+6. scroll down to Security group rules, then click on the security group ID (twice).
+7. scroll down to Inbound rules, then click Edit inbound rules.
+8. click "Add rule".
+9. set the new rule's type to your DB type. (PostgreSQL, Oracle RDS, etc.) if you don't see your type, just choose Custom TCP then set the Port range to the port for that RDBMS.
+10. set the Source to Custom, then paste in the EC2 IP address that you copied in step 3.
+11. you may want to give it a description so that you remember that this was the IP for the EC2.
+12. click Save rules.
+13. your EC2 should now have access to your RDS!
+
+- end here for now - 
+
+## Keeping your connection credentials safe
+
+in order to connect to your database, not only do you need to know the endpoint and port, but you also need a username and password. on the database side, best practice is to create users using DCL with only the permissions they need. regardless, you don't want to expose your username/password to the world, even if you're sure that your database's inbound rules are secured.
+
+what this means is that you shouldn't push the username/password in your configuration files to github - it's better to use something like environment variables. on your EC2, you can set environment variables just like you would from any linux-based terminal:
+```
+export DB_USER=postgres
+export DB_PASS=p4ssw0rd
+```
+then, you can access these environment variables from your configuration files with the `${DB_USER}` syntax.
+
+however, with large numbers of EC2 instances and/or other resources that may need this information, the more maintainable approach would be to set up these credentials using AWS Parameter Store:
+
+1. navigate to the Systems Manager service on the AWS console.
+2. find and click Parameter Store along the left side (under Application Management).
+3. click Create parameter.
+4. give the parameter a name (e.g. DB_USER). you can add a description if you'd like so you remember what it is later.
+5. choose Standard tier and choose String for the type.
+6. choose text as the Data type, then enter the value.
+7. it may not hurt to add a tag - this can be a good way to group together related parameters, such as connection info for the same database.
+8. click Create parameter.
+9. repeat steps 3-8 for the database password.
+10. connect to your EC2.
+11. open the `.bashrc` file in the home directory in your preferred text editor. (e.g. `vi .bashrc`)
+12. add these AWS CLI commands to get the values from the Parameter Store and set your environment variables. obviously you may need to change the region depending on what region you're in, and you may need to change the name if you named your parameters differently.
+```
+export DB_USER=$(aws --region=us-east-2 --output=text ssm get-parameter --name 'DB_USER' --query 'Parameter.Value')
+export DB_PASS=$(aws --region=us-east-2 --output=text ssm get-parameter --name 'DB_PASS' --query 'Parameter.Value')
+```
+13. log out and log back in to your EC2.
+12. this may give you a warning "Unable to locate credentials". this means that your EC2 is lacking its access and secret access keys. if that is the case, continue with these steps.
+13. navigate to IAM in the AWS console.
+14. find and click Users under Access Management on the left.
+15. click Add Users.
+16. give your user a username (e.g. ec2-user).
+17. choose Access key - Programmatic access as the credential type.
+18. choose Add user to group and create a new group.
+19. add tags if you'd like (e.g. Name - ec2-user)
+20. click Create user.
+21. now you will be given the access key and secret access key. **this is the last time you will have access to the secret access key, so make sure that you put it in a safe place where you will not lose it.** you may want to download the .csv just in case, but you need to keep it safe.
+22. after you complete, it should show the summary of your user.
+23. go to the Groups tab and click on the group.
+24. go to the Permissions tab and click Add permissions.
+25. choose Create inline policy.
+26. for Service, choose Systems Manager.
+27. for Actions, under Access level, drop down Read and find GetParameter. check it.
+28. under Resources, check Any in this account.
+29. under Request conditions, it may be smart to check Source IP and paste in your EC2 IP for the most security.
+30. give your policy a name (e.g. EC2GetParameter) then click Create policy.
+31. on your EC2, run `aws configure`.
+32. enter the access key that you were just given in step 23, hit enter, then enter the secret access key.
+33. if you would like to enter your default region, you can, or just hit enter.
+34. hit enter again to skip the default output format (it is JSON by default).
