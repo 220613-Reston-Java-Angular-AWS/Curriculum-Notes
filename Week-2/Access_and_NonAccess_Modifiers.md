@@ -3,9 +3,9 @@
 
 There are four access modifiers in Java:
 - `public`: Available anywhere
-- `private`: Access within the same package and the class's subclasses
+- `protected`: Access within the same package and the class's subclasses
 - `default`: Access within the same package.
-- `protected`: Access only within the same class.
+- `private`: Access only within the same class.
 
 These modifiers help determine what files in the application have access to the classes, methods, or fields in a class, method, or field.
 
